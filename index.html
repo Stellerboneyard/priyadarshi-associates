@@ -1,0 +1,1676 @@
+html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Priyadarshi & Associates — Chartered Accountants in Patna, Bihar</title>
+<meta name="description" content="Priyadarshi & Associates — Leading CA firm in Patna offering audit, taxation, GST, company registration, and financial advisory services across Bihar since 2005.">
+<meta name="keywords" content="CA in Patna, Chartered Accountant Patna, GST filing Patna, Income Tax Patna, Company Registration Bihar, Tax Consultant Patna, CA firm Bihar">
+<meta property="og:title" content="Priyadarshi & Associates — Chartered Accountants in Patna">
+<meta property="og:description" content="Expert CA services: Audit, Taxation, GST, Corporate & Startup services in Patna, Bihar. 500+ clients. 20+ years experience.">
+<meta property="og:type" content="website">
+<meta name="geo.region" content="IN-BR">
+<meta name="geo.placename" content="Patna, Bihar">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"AccountingService","name":"Priyadarshi & Associates","url":"https://priyadarshiassociates.in","telephone":"+916123456789","email":"info@priyadarshiassociates.in","foundingDate":"2005","address":{"@type":"PostalAddress","streetAddress":"Fraser Road","addressLocality":"Patna","addressRegion":"Bihar","postalCode":"800001","addressCountry":"IN"},"areaServed":["Bihar","Jharkhand"],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"127"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0B1A2F;--navy-mid:#0F2347;--navy-lite:#1A3A6B;
+  --gold:#C9A84C;--gold-lt:#E0C070;--gold-pale:#F8F0DC;
+  --cream:#FAFAF7;--white:#FFFFFF;--ink:#1C2333;--ink-mid:#4A5568;--ink-lt:#718096;
+  --border:#E2E8F0;--border-g:rgba(201,168,76,.22);
+  --wa:#25D366;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'DM Sans',system-ui,sans-serif;
+  --mono:'DM Mono',monospace;
+  --nav-h:72px;
+  --ease:cubic-bezier(.4,0,.2,1);
+  --sh-sm:0 1px 4px rgba(11,26,47,.07),0 2px 10px rgba(11,26,47,.05);
+  --sh-md:0 4px 20px rgba(11,26,47,.10),0 8px 40px rgba(11,26,47,.06);
+  --sh-lg:0 12px 48px rgba(11,26,47,.14),0 24px 80px rgba(11,26,47,.09);
+  --sh-xl:0 24px 80px rgba(11,26,47,.20),0 48px 120px rgba(11,26,47,.12);
+  --sh-gold:0 8px 32px rgba(201,168,76,.28)
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;font-size:16px}
+body{font-family:var(--sans);color:var(--ink);background:var(--white);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+.page{display:none;animation:pgIn .35s var(--ease) both}
+.page.active{display:block}
+@keyframes pgIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── ALERT BANNER ── */
+#alertBanner{background:linear-gradient(90deg,#C53030,#E53E3E);padding:10px 0;position:relative;z-index:950}
+#alertBanner.hidden{display:none}
+.alert-inner{max-width:1280px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.alert-pulse{width:8px;height:8px;border-radius:50%;background:#fff;animation:pulse 1.5s infinite;flex-shrink:0}
+.alert-text{font-size:.8rem;color:#fff;font-weight:500;flex:1}
+.alert-text strong{font-weight:700}
+.alert-cta{background:rgba(255,255,255,.2);color:#fff;border:1px solid rgba(255,255,255,.4);padding:5px 14px;border-radius:4px;font-size:.74rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:background .2s;white-space:nowrap;flex-shrink:0}
+.alert-cta:hover{background:rgba(255,255,255,.35)}
+.alert-close{background:none;border:none;color:rgba(255,255,255,.7);font-size:1.1rem;cursor:pointer;padding:0 4px;flex-shrink:0}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+
+/* ── TOPBAR ── */
+#topbar{background:var(--navy);padding:9px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+.topbar-inner{max-width:1280px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.topbar-links{display:flex;align-items:center;gap:24px}
+.topbar-link{display:flex;align-items:center;gap:7px;font-size:.77rem;color:rgba(255,255,255,.65);transition:color .2s}
+.topbar-link:hover{color:var(--gold)}
+.topbar-link svg{width:13px;height:13px;flex-shrink:0}
+.topbar-pill{display:flex;align-items:center;gap:6px;font-size:.72rem;color:rgba(255,255,255,.45);font-family:var(--mono);letter-spacing:.04em}
+.topbar-dot{width:6px;height:6px;border-radius:50%;background:#22c55e;animation:pulse 2s infinite}
+
+/* ── NAV ── */
+#nav{position:fixed;top:0;left:0;right:0;z-index:900}
+.nav-topbar-wrap{background:var(--navy)}
+.nav-main{background:rgba(255,255,255,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);box-shadow:0 2px 16px rgba(11,26,47,.06)}
+.nav-inner{max-width:1280px;margin:0 auto;padding:0 28px;height:var(--nav-h);display:flex;align-items:center;gap:20px}
+.nav-logo{display:flex;align-items:center;gap:12px;cursor:pointer;flex-shrink:0}
+.logo-emblem{width:42px;height:42px;background:linear-gradient(135deg,var(--navy),var(--navy-lite));border-radius:10px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.logo-emblem::after{content:'';position:absolute;top:-8px;right:-8px;width:22px;height:22px;background:var(--gold);border-radius:50%;opacity:.18}
+.logo-emblem-text{font-family:var(--serif);font-size:.95rem;font-weight:600;color:var(--gold);position:relative;z-index:1}
+.logo-name{font-family:var(--serif);font-size:1rem;font-weight:600;color:var(--navy);letter-spacing:-.01em;line-height:1.15}
+.logo-sub{font-size:.62rem;color:var(--ink-lt);letter-spacing:.1em;text-transform:uppercase;font-weight:500}
+.nav-links{display:flex;align-items:center;flex:1;gap:2px;height:var(--nav-h)}
+.nav-item{position:relative;height:100%;display:flex;align-items:center}
+.nav-btn{display:flex;align-items:center;gap:5px;padding:8px 12px;font-size:.83rem;font-weight:500;color:var(--ink-mid);border-radius:6px;transition:all .2s;white-space:nowrap;position:relative}
+.nav-btn:hover,.nav-btn.active{color:var(--navy)}
+.nav-btn::after{content:'';position:absolute;bottom:-1px;left:10px;right:10px;height:2px;background:var(--gold);transform:scaleX(0);transition:transform .25s var(--ease);border-radius:1px 1px 0 0}
+.nav-btn:hover::after,.nav-btn.active::after{transform:scaleX(1)}
+.nav-chev{width:12px;height:12px;color:var(--ink-lt);transition:transform .2s}
+.nav-item:hover .nav-chev{transform:rotate(180deg)}
+.mega{position:absolute;top:calc(100% + 1px);left:50%;transform:translateX(-50%) translateY(8px);background:var(--white);border:1px solid var(--border);border-radius:16px;box-shadow:var(--sh-xl);padding:28px;opacity:0;visibility:hidden;pointer-events:none;transition:all .2s var(--ease);z-index:100;width:760px}
+.nav-item:hover .mega{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);pointer-events:auto}
+.mega-head{font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-lt);margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid var(--border)}
+.mega-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.mega-link{display:flex;align-items:flex-start;gap:10px;padding:11px 12px;border-radius:10px;transition:background .15s;cursor:pointer}
+.mega-link:hover{background:var(--cream)}
+.mega-icon{width:34px;height:34px;border-radius:8px;background:var(--gold-pale);display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0;transition:all .2s}
+.mega-link:hover .mega-icon{background:var(--gold)}
+.mega-title{font-size:.84rem;font-weight:600;color:var(--ink);margin-bottom:1px}
+.mega-link:hover .mega-title{color:var(--navy)}
+.mega-desc{font-size:.72rem;color:var(--ink-lt);line-height:1.35}
+.nav-search-wrap{position:relative}
+.nav-search-input{width:180px;padding:8px 14px 8px 34px;border:1.5px solid var(--border);border-radius:7px;font-family:var(--sans);font-size:.82rem;color:var(--ink);background:var(--cream);outline:none;transition:all .25s}
+.nav-search-input:focus{border-color:var(--gold);background:var(--white);width:230px;box-shadow:0 0 0 3px rgba(201,168,76,.12)}
+.nav-search-input::placeholder{color:var(--ink-lt)}
+.nav-search-icon{position:absolute;left:10px;top:50%;transform:translateY(-50%);width:14px;height:14px;color:var(--ink-lt);pointer-events:none}
+.search-dropdown{position:absolute;top:calc(100% + 8px);left:0;background:var(--white);border:1px solid var(--border);border-radius:10px;box-shadow:var(--sh-lg);z-index:200;overflow:hidden;display:none;min-width:280px}
+.search-dropdown.open{display:block;animation:pgIn .15s var(--ease)}
+.search-item{display:flex;align-items:center;gap:10px;padding:11px 14px;cursor:pointer;transition:background .15s}
+.search-item:hover{background:var(--cream)}
+.search-item-icon{width:30px;height:30px;background:var(--gold-pale);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:.82rem;flex-shrink:0}
+.search-item-name{font-size:.84rem;font-weight:500;color:var(--ink)}
+.search-item-cat{font-size:.71rem;color:var(--ink-lt)}
+.search-no-result{padding:16px 14px;font-size:.84rem;color:var(--ink-lt);text-align:center}
+.nav-cta-wrap{display:flex;align-items:center;gap:10px;margin-left:auto;flex-shrink:0}
+.nav-phone{display:flex;align-items:center;gap:7px;padding:8px 14px;border:1.5px solid var(--border);border-radius:7px;font-size:.79rem;font-weight:600;color:var(--navy);transition:all .2s}
+.nav-phone:hover{border-color:var(--gold);color:var(--gold)}
+.nav-phone svg{width:14px;height:14px}
+.btn-nav{background:var(--gold);color:var(--navy);padding:10px 20px;border-radius:7px;font-size:.82rem;font-weight:600;transition:all .2s;box-shadow:0 2px 12px rgba(201,168,76,.3)}
+.btn-nav:hover{background:var(--gold-lt);transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;padding:8px;margin-left:auto}
+.hamburger span{display:block;width:22px;height:2px;background:var(--navy);border-radius:1px;transition:all .3s}
+.mobile-menu{display:none;position:fixed;top:var(--nav-h);left:0;right:0;background:var(--white);border-bottom:1px solid var(--border);z-index:800;padding:16px 20px 24px;flex-direction:column;gap:2px;max-height:calc(100vh - var(--nav-h));overflow-y:auto}
+.mobile-menu.open{display:flex}
+.mob-link{display:block;width:100%;text-align:left;padding:13px 16px;font-size:.92rem;font-weight:500;color:var(--ink-mid);border-radius:8px;transition:all .2s}
+.mob-link:hover,.mob-link.active{background:var(--gold-pale);color:var(--navy)}
+.mob-sep{height:1px;background:var(--border);margin:8px 0}
+.mob-search-wrap{position:relative;padding:4px 0 8px}
+.mob-search-input{width:100%;padding:11px 14px 11px 36px;border:1.5px solid var(--border);border-radius:8px;font-family:var(--sans);font-size:.9rem;color:var(--ink);background:var(--cream);outline:none}
+.mob-search-input:focus{border-color:var(--gold)}
+.mob-search-icon{position:absolute;left:12px;top:53%;transform:translateY(-50%);width:15px;height:15px;color:var(--ink-lt)}
+
+/* ── BUTTONS ── */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:7px;font-size:.875rem;font-weight:600;letter-spacing:.02em;transition:all .25s var(--ease);white-space:nowrap}
+.btn-primary{background:var(--gold);color:var(--navy);box-shadow:0 4px 16px rgba(201,168,76,.32)}
+.btn-primary:hover{background:var(--gold-lt);transform:translateY(-2px);box-shadow:var(--sh-gold)}
+.btn-dark{background:var(--navy);color:var(--white)}
+.btn-dark:hover{background:var(--navy-mid);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--navy);border:1.5px solid var(--border)}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-1px)}
+.btn-white{background:var(--white);color:var(--navy);box-shadow:var(--sh-md)}
+.btn-white:hover{background:var(--cream);transform:translateY(-2px)}
+.btn-lg{padding:16px 36px;font-size:1rem}
+.btn-sm{padding:10px 18px;font-size:.8rem}
+.btn-wa{background:var(--wa);color:var(--white);display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:7px;font-size:.82rem;font-weight:600;transition:all .2s}
+.btn-wa:hover{background:#1fb855;transform:translateY(-1px)}
+
+/* ── HERO ── */
+.hero{background:var(--navy);min-height:90vh;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:var(--nav-h)}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 65% 40%,rgba(26,58,107,.9),transparent 60%),linear-gradient(135deg,#0B1A2F 0%,#0D2244 55%,#0B1A2F 100%)}
+.hero-grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse at center,rgba(0,0,0,.4) 0%,transparent 75%)}
+.hero-orb{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,.08) 0%,transparent 70%);top:-200px;right:-100px;pointer-events:none}
+.hero-inner{position:relative;z-index:2;max-width:1280px;margin:0 auto;padding:80px 28px;display:grid;grid-template-columns:1fr 460px;gap:80px;align-items:center}
+.hero-kicker{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border:1px solid rgba(201,168,76,.25);border-radius:100px;background:rgba(201,168,76,.06);margin-bottom:28px}
+.hero-kicker-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite}
+.hero-kicker-text{font-size:.73rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-family:var(--mono)}
+.hero-title{font-family:var(--serif);font-size:clamp(2.8rem,5.5vw,5.2rem);font-weight:300;line-height:1.07;color:var(--white);letter-spacing:-.025em;margin-bottom:24px}
+.hero-title em{font-style:italic;color:var(--gold-lt)}
+.hero-desc{font-size:1.05rem;color:rgba(255,255,255,.62);line-height:1.78;max-width:500px;margin-bottom:36px}
+.hero-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:52px}
+.hero-trust{display:flex;align-items:center;gap:32px;padding-top:32px;border-top:1px solid rgba(255,255,255,.08)}
+.hero-stat-num{font-family:var(--serif);font-size:2.2rem;font-weight:300;color:var(--white);line-height:1}
+.hero-stat-label{font-size:.7rem;color:rgba(255,255,255,.45);letter-spacing:.08em;text-transform:uppercase;margin-top:3px;font-family:var(--mono)}
+.hero-stat-div{width:1px;height:44px;background:rgba(255,255,255,.1)}
+.hero-card{background:rgba(255,255,255,.05);backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,.12);border-radius:20px;overflow:hidden}
+.hero-card-head{background:linear-gradient(135deg,var(--gold),#A87B20);padding:26px 30px}
+.hero-card-head-title{font-family:var(--serif);font-size:1.45rem;font-weight:600;color:var(--navy);margin-bottom:3px}
+.hero-card-head-sub{font-size:.78rem;color:rgba(11,26,47,.6)}
+.hero-card-body{padding:26px 30px}
+.hf-group{margin-bottom:16px}
+.hf-label{display:block;font-size:.74rem;font-weight:600;color:rgba(255,255,255,.65);margin-bottom:6px;letter-spacing:.03em}
+.hf-input{width:100%;padding:12px 15px;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.12);border-radius:7px;color:var(--white);font-family:var(--sans);font-size:.88rem;outline:none;transition:border-color .2s}
+.hf-input:focus{border-color:var(--gold)}
+.hf-input::placeholder{color:rgba(255,255,255,.3)}
+.hf-select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,.4)' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.hf-select option{background:var(--navy-mid);color:var(--white)}
+.hero-card-disclaimer{font-size:.7rem;color:rgba(255,255,255,.38);text-align:center;margin-top:10px}
+
+/* ── RATING STRIP ── */
+.rating-strip{background:var(--white);border-bottom:2px solid var(--gold-pale);padding:14px 0}
+.rating-inner{max-width:1280px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap}
+.rating-item{display:flex;align-items:center;gap:10px}
+.rating-logo{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-lt)}
+.rating-stars{color:#FBBC04;font-size:1.05rem;letter-spacing:2px}
+.rating-score{font-family:var(--serif);font-size:1.4rem;font-weight:600;color:var(--ink)}
+.rating-count{font-size:.78rem;color:var(--ink-lt)}
+.rating-div{width:1px;height:28px;background:var(--border)}
+.rating-badge{display:flex;align-items:center;gap:7px;padding:6px 14px;border:1px solid var(--border);border-radius:100px}
+.rating-badge-icon{font-size:.9rem}
+.rating-badge-text{font-size:.78rem;font-weight:600;color:var(--ink-mid)}
+
+/* ── TRUST BAR ── */
+.trust-bar{background:var(--cream);border-bottom:1px solid var(--border);padding:18px 0}
+.trust-inner{max-width:1280px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:10px;font-size:.81rem;font-weight:500;color:var(--ink-mid)}
+.trust-icon{width:30px;height:30px;background:linear-gradient(135deg,var(--navy),var(--navy-lite));border-radius:7px;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:.82rem;flex-shrink:0}
+.trust-div{width:1px;height:22px;background:var(--border)}
+
+/* ── SECTIONS ── */
+.section{padding:96px 0}
+.section-sm{padding:64px 0}
+.wrap{max-width:1280px;margin:0 auto;padding:0 28px}
+.section-head{margin-bottom:56px}
+.section-head.center{text-align:center;max-width:640px;margin:0 auto 56px}
+.overline{font-family:var(--mono);font-size:.7rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.overline::before{content:'';width:28px;height:1px;background:var(--gold)}
+.section-head.center .overline{justify-content:center}
+.section-head.center .overline::before{display:none}
+.h1{font-family:var(--serif);font-size:clamp(2rem,3.8vw,3.2rem);font-weight:400;line-height:1.15;color:var(--ink)}
+.h1 em{font-style:italic;color:var(--gold)}
+.h2{font-family:var(--serif);font-size:clamp(1.6rem,2.8vw,2.4rem);font-weight:500;line-height:1.2;color:var(--ink)}
+.h2 em{font-style:italic;color:var(--gold)}
+.sub{font-size:1rem;color:var(--ink-mid);line-height:1.72;margin-top:12px}
+
+/* ── TICKER ── */
+.ticker-bar{background:var(--gold);padding:11px 0;overflow:hidden}
+.ticker-inner{max-width:1280px;margin:0 auto;padding:0 28px;display:flex;align-items:center;gap:20px}
+.ticker-label{font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(11,26,47,.75);white-space:nowrap;display:flex;align-items:center;gap:6px;flex-shrink:0}
+.ticker-track-wrap{overflow:hidden;flex:1}
+.ticker-track{display:flex;gap:48px;animation:ticker 30s linear infinite;width:max-content}
+.ticker-track:hover{animation-play-state:paused}
+.ticker-item{font-size:.79rem;color:var(--navy);white-space:nowrap;display:flex;align-items:center;gap:8px}
+.ticker-date{font-weight:700}
+.ticker-urg{background:rgba(11,26,47,.18);color:var(--navy);font-size:.62rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:2px 7px;border-radius:3px}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ── SOCIAL PROOF ── */
+.sp-bar{background:var(--navy);padding:10px 0;overflow:hidden}
+.sp-inner{max-width:1280px;margin:0 auto;padding:0 28px;display:flex;align-items:center;gap:16px}
+.sp-label{font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);white-space:nowrap;flex-shrink:0;display:flex;align-items:center;gap:7px}
+.sp-live-dot{width:6px;height:6px;border-radius:50%;background:#22c55e;animation:pulse 1.5s infinite}
+.sp-track-wrap{overflow:hidden;flex:1}
+.sp-track{display:flex;gap:40px;animation:ticker 22s linear infinite;width:max-content}
+.sp-item{display:flex;align-items:center;gap:8px;white-space:nowrap;font-size:.77rem;color:rgba(255,255,255,.5)}
+.sp-item em{color:rgba(255,255,255,.85);font-style:normal;font-weight:600}
+.sp-time{color:rgba(255,255,255,.28);font-size:.68rem;font-family:var(--mono)}
+
+/* ── QUICK SERVICES ── */
+.stap{padding:72px 0;background:var(--white)}
+.stap-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:44px}
+.stap-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:20px 14px 17px;text-align:center;cursor:pointer;transition:all .25s var(--ease);position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;gap:11px}
+.stap-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--gold);transform:scaleX(0);transition:transform .25s;transform-origin:center}
+.stap-card:hover{transform:translateY(-5px);box-shadow:var(--sh-lg);border-color:rgba(201,168,76,.35)}
+.stap-card:hover::after{transform:scaleX(1)}
+.stap-card:hover .stap-icon{background:var(--gold)}
+.stap-icon{width:54px;height:54px;border-radius:13px;background:var(--gold-pale);display:flex;align-items:center;justify-content:center;font-size:1.4rem;transition:all .25s;flex-shrink:0}
+.stap-name{font-family:var(--serif);font-size:.9rem;font-weight:500;color:var(--ink);line-height:1.3}
+.stap-badge{position:absolute;top:9px;right:9px;background:var(--gold);color:var(--navy);font-size:.57rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 7px;border-radius:20px}
+.stap-popular{border-color:rgba(201,168,76,.3);background:linear-gradient(150deg,var(--white) 60%,var(--gold-pale))}
+
+/* ── SERVICES GRID ── */
+.services-section{background:var(--cream)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px}
+.svc-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:32px 28px;cursor:pointer;transition:all .3s var(--ease);position:relative;overflow:hidden}
+.svc-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--navy),var(--navy-lite));opacity:0;transition:opacity .3s}
+.svc-card:hover{border-color:transparent;transform:translateY(-6px);box-shadow:var(--sh-lg)}
+.svc-card:hover::before{opacity:1}
+.svc-card>*{position:relative;z-index:1}
+.svc-icon{width:52px;height:52px;background:var(--gold-pale);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.35rem;margin-bottom:20px;transition:background .3s}
+.svc-card:hover .svc-icon{background:rgba(201,168,76,.2)}
+.svc-title{font-family:var(--serif);font-size:1.22rem;font-weight:600;color:var(--ink);margin-bottom:9px;transition:color .3s}
+.svc-card:hover .svc-title{color:var(--white)}
+.svc-desc{font-size:.86rem;color:var(--ink-mid);line-height:1.63;margin-bottom:16px;transition:color .3s}
+.svc-card:hover .svc-desc{color:rgba(255,255,255,.62)}
+.svc-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:18px}
+.svc-tag{padding:4px 9px;border-radius:100px;font-size:.68rem;font-weight:600;background:var(--cream);color:var(--ink-mid);border:1px solid var(--border);transition:all .3s}
+.svc-card:hover .svc-tag{background:rgba(255,255,255,.1);color:rgba(255,255,255,.65);border-color:rgba(255,255,255,.12)}
+.svc-arrow{display:flex;align-items:center;gap:6px;font-size:.8rem;font-weight:600;color:var(--gold);transition:gap .2s}
+.svc-card:hover .svc-arrow{gap:10px}
+.svc-num{position:absolute;top:18px;right:22px;font-family:var(--mono);font-size:.62rem;color:var(--border);transition:color .3s}
+.svc-card:hover .svc-num{color:rgba(255,255,255,.12)}
+
+/* ── STATS ── */
+.stats-section{background:var(--navy);padding:72px 0}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.06);border-radius:14px;overflow:hidden}
+.stat-card{background:var(--navy);padding:44px 32px;text-align:center;transition:background .25s;position:relative}
+.stat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);transform:scaleX(0);transition:transform .4s}
+.stat-card:hover{background:var(--navy-mid)}
+.stat-card:hover::before{transform:scaleX(1)}
+.stat-num{font-family:var(--serif);font-size:clamp(2.4rem,4vw,3.8rem);font-weight:300;color:var(--white);line-height:1;margin-bottom:8px}
+.stat-label{font-size:.77rem;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.1em;font-family:var(--mono)}
+
+/* ── WHY US ── */
+.why-section{background:var(--white)}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.why-features{display:flex;flex-direction:column;gap:0;margin-top:36px}
+.why-feat{display:flex;gap:18px;padding:22px 0;border-bottom:1px solid var(--border);transition:padding-left .2s}
+.why-feat:last-child{border-bottom:none}
+.why-feat:hover{padding-left:8px}
+.why-feat-icon{width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,var(--navy),var(--navy-lite));display:flex;align-items:center;justify-content:center;color:var(--gold);flex-shrink:0;font-size:1.05rem}
+.why-feat-title{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:4px}
+.why-feat-desc{font-size:.85rem;color:var(--ink-mid);line-height:1.62}
+.why-visual{background:linear-gradient(135deg,var(--navy),var(--navy-lite) 60%,rgba(201,168,76,.1) 100%);border-radius:20px;aspect-ratio:4/5;display:flex;flex-direction:column;justify-content:flex-end;padding:40px;position:relative;overflow:hidden}
+.why-visual::before{content:'';position:absolute;top:-30%;right:-20%;width:80%;height:80%;background:radial-gradient(circle,rgba(201,168,76,.1),transparent 65%)}
+.why-visual-quote{font-family:var(--serif);font-size:1.5rem;font-weight:300;font-style:italic;color:rgba(255,255,255,.88);line-height:1.5;margin-bottom:22px;position:relative;z-index:1}
+.why-visual-qm{font-size:5rem;color:rgba(201,168,76,.22);font-family:var(--serif);line-height:.5;display:block;margin-bottom:8px}
+.why-visual-author-name{font-family:var(--serif);font-size:.95rem;font-weight:500;color:var(--gold);position:relative;z-index:1}
+.why-visual-author-role{font-size:.73rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);position:relative;z-index:1}
+
+/* ── PROCESS ── */
+.process-section{background:var(--navy);padding:88px 0}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:56px;position:relative}
+.process-steps::before{content:'';position:absolute;top:27px;left:12.5%;right:12.5%;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,.35),rgba(201,168,76,.35),transparent)}
+.process-step{text-align:center;padding:0 18px}
+.process-dot{width:54px;height:54px;border-radius:50%;background:var(--navy);border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:.82rem;font-weight:500;color:var(--gold);margin:0 auto 22px;position:relative;z-index:1;transition:all .25s}
+.process-step:hover .process-dot{background:var(--gold);color:var(--navy)}
+.process-step-title{font-family:var(--serif);font-size:1.05rem;font-weight:600;color:var(--white);margin-bottom:8px}
+.process-step-desc{font-size:.82rem;color:rgba(255,255,255,.48);line-height:1.62}
+
+/* ── TESTIMONIALS ── */
+.testi-section{background:var(--white)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px}
+.testi-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:30px;transition:all .25s}
+.testi-card:hover{box-shadow:var(--sh-md);border-color:var(--border-g);transform:translateY(-3px)}
+.testi-stars{color:var(--gold);letter-spacing:2px;font-size:.83rem;margin-bottom:16px}
+.testi-text{font-family:var(--serif);font-size:1.02rem;font-style:italic;color:var(--ink);line-height:1.65;margin-bottom:22px}
+.testi-author{display:flex;align-items:center;gap:12px}
+.testi-av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-lt));display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:1rem;font-weight:600;color:var(--navy);flex-shrink:0}
+.testi-name{font-size:.84rem;font-weight:600;color:var(--ink)}
+.testi-role{font-size:.73rem;color:var(--ink-lt)}
+
+/* ── INDUSTRIES ── */
+.industries-section{background:var(--cream)}
+.ind-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-top:44px}
+.ind-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:24px 16px;text-align:center;transition:all .22s}
+.ind-card:hover{border-color:var(--gold);box-shadow:var(--sh-md);transform:translateY(-3px)}
+.ind-icon{font-size:1.9rem;margin-bottom:10px}
+.ind-name{font-size:.79rem;font-weight:600;color:var(--navy)}
+
+/* ── COMPARISON TABLE ── */
+.compare-section{background:var(--white);padding:88px 0}
+.compare-table-wrap{overflow-x:auto;margin-top:48px;border-radius:14px;box-shadow:var(--sh-md);border:1px solid var(--border)}
+.compare-table{width:100%;border-collapse:collapse;min-width:560px}
+.compare-table th{padding:20px 22px;font-family:var(--serif);font-size:1rem;font-weight:600;text-align:center;border-bottom:2px solid var(--border)}
+.compare-table th:first-child{text-align:left;color:var(--ink-lt);font-size:.75rem;font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;font-weight:500;background:var(--cream)}
+.compare-table th.col-us{background:linear-gradient(135deg,var(--navy),var(--navy-lite));color:var(--white);border-bottom:2px solid var(--gold)}
+.compare-table th.col-us .col-rec{display:block;font-size:.66rem;font-family:var(--mono);font-weight:500;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-top:3px}
+.compare-table th.col-big,.compare-table th.col-diy{color:var(--ink-mid);background:var(--cream)}
+.compare-table td{padding:15px 22px;border-bottom:1px solid var(--border);font-size:.88rem;color:var(--ink-mid);text-align:center}
+.compare-table td:first-child{text-align:left;font-weight:500;color:var(--ink);background:var(--cream)}
+.compare-table tr:last-child td{border-bottom:none}
+.compare-table tr:hover td{background:#fafafa}
+.compare-table tr:hover td:first-child{background:var(--gold-pale)}
+.compare-table td.col-us{background:rgba(11,26,47,.025);font-weight:600;color:var(--navy)}
+.ck-yes{color:#22c55e;font-size:1.1rem;font-weight:700}
+.ck-no{color:#e53e3e;font-size:1.1rem;font-weight:700}
+.ck-part{color:#d97706;font-size:.85rem;font-weight:600}
+
+/* ── LOCAL SEO ── */
+.local-section{background:var(--navy);padding:80px 0}
+.local-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:44px}
+.local-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:22px;transition:all .22s;cursor:pointer}
+.local-card:hover{background:rgba(255,255,255,.09);border-color:rgba(201,168,76,.3);transform:translateY(-3px)}
+.local-city{font-family:var(--serif);font-size:1.12rem;font-weight:600;color:var(--white);margin-bottom:4px;display:flex;align-items:center;gap:8px}
+.local-state{font-size:.72rem;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px;font-family:var(--mono)}
+.local-tags{display:flex;flex-wrap:wrap;gap:5px}
+.local-tag{padding:3px 9px;border-radius:100px;font-size:.67rem;font-weight:600;background:rgba(255,255,255,.08);color:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.1)}
+
+/* ── BLOG ── */
+.blog-section{background:var(--cream);padding:88px 0}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+.blog-card{background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:all .25s;cursor:pointer}
+.blog-card:hover{box-shadow:var(--sh-lg);transform:translateY(-4px)}
+.blog-card-img{height:156px;background:linear-gradient(135deg,var(--navy),var(--navy-lite));display:flex;align-items:center;justify-content:center;font-size:2.8rem;position:relative}
+.blog-cat{position:absolute;top:12px;left:12px;background:var(--gold);color:var(--navy);font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:100px}
+.blog-card-body{padding:22px}
+.blog-date{font-size:.72rem;color:var(--ink-lt);font-family:var(--mono);margin-bottom:8px}
+.blog-title{font-family:var(--serif);font-size:1.08rem;font-weight:600;color:var(--ink);line-height:1.4;margin-bottom:10px}
+.blog-card:hover .blog-title{color:var(--navy)}
+.blog-desc{font-size:.84rem;color:var(--ink-lt);line-height:1.6;margin-bottom:14px}
+.blog-read{font-size:.78rem;font-weight:600;color:var(--gold);display:flex;align-items:center;gap:5px}
+.blog-arr{transition:transform .2s}
+.blog-card:hover .blog-arr{transform:translateX(4px)}
+
+/* ── CTA ── */
+.cta-strip{background:linear-gradient(135deg,var(--gold) 0%,#8A6D1A 100%);padding:80px 0;text-align:center}
+.cta-strip h2{font-family:var(--serif);font-size:clamp(1.8rem,4vw,3rem);font-weight:400;color:var(--white);margin-bottom:14px}
+.cta-strip p{font-size:1rem;color:rgba(255,255,255,.82);margin-bottom:32px;max-width:460px;margin-left:auto;margin-right:auto}
+
+/* ── FOOTER ── */
+footer{background:#070F1C;padding:76px 0 0}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:56px;margin-bottom:52px}
+.footer-brand-name{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--white);margin-bottom:3px}
+.footer-brand-sub{font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-family:var(--mono)}
+.footer-brand-desc{font-size:.84rem;color:rgba(255,255,255,.42);line-height:1.72;margin-top:14px;max-width:260px}
+.footer-col-title{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.38);margin-bottom:18px;font-family:var(--mono)}
+.footer-links{display:flex;flex-direction:column;gap:9px}
+.footer-link{font-size:.84rem;color:rgba(255,255,255,.5);transition:color .2s;cursor:pointer}
+.footer-link:hover{color:var(--gold)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding:22px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.footer-copy{font-size:.77rem;color:rgba(255,255,255,.28)}
+.footer-reg{font-size:.77rem;color:rgba(255,255,255,.28)}
+
+/* ── SERVICE HERO ── */
+.svc-hero{background:var(--navy);padding-top:var(--nav-h);min-height:52vh;display:flex;align-items:center;position:relative;overflow:hidden}
+.svc-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 70% 50%,rgba(26,58,107,.8),transparent 60%),linear-gradient(135deg,#0B1A2F,#0D2244)}
+.svc-hero::after{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.025) 1px,transparent 1px);background-size:28px 28px}
+.svc-hero-inner{position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:64px 28px}
+.breadcrumb{display:flex;align-items:center;gap:8px;margin-bottom:20px}
+.bc-item{font-size:.78rem;color:rgba(255,255,255,.4);cursor:pointer}
+.bc-sep{color:rgba(255,255,255,.2);font-size:.7rem}
+.bc-cur{color:var(--gold);font-size:.78rem}
+.svc-hero h1{font-family:var(--serif);font-size:clamp(2.2rem,5vw,4rem);font-weight:300;color:var(--white);line-height:1.1;margin-bottom:18px}
+.svc-hero h1 em{font-style:italic;color:var(--gold-lt)}
+.svc-hero-desc{font-size:1.02rem;color:rgba(255,255,255,.62);max-width:580px;line-height:1.75}
+.svc-hero-badges{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
+.svc-hero-badge{display:flex;align-items:center;gap:6px;padding:7px 14px;border:1px solid rgba(255,255,255,.1);border-radius:100px;font-size:.76rem;color:rgba(255,255,255,.65);background:rgba(255,255,255,.04)}
+
+/* ── TABS ── */
+.tabs-nav{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:var(--nav-h);z-index:200}
+.tabs-nav-inner{max-width:1280px;margin:0 auto;padding:0 28px;display:flex;overflow-x:auto;scrollbar-width:none}
+.tabs-nav-inner::-webkit-scrollbar{display:none}
+.tab-btn{display:flex;align-items:center;gap:7px;padding:17px 22px;font-size:.83rem;font-weight:600;color:var(--ink-lt);border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .2s;white-space:nowrap;background:none;border-left:none;border-right:none;border-top:none}
+.tab-btn:hover{color:var(--navy)}
+.tab-btn.active{color:var(--navy);border-bottom-color:var(--gold)}
+.tab-content{display:none}
+.tab-content.active{display:block;animation:pgIn .3s var(--ease)}
+
+/* ── RELATED SERVICES ── */
+.related-section{background:var(--cream);padding:48px 0;border-top:1px solid var(--border)}
+.related-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px}
+.related-card{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:16px;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:12px}
+.related-card:hover{border-color:var(--gold);box-shadow:var(--sh-md);transform:translateY(-2px)}
+.related-icon{font-size:1.2rem;flex-shrink:0}
+.related-name{font-size:.84rem;font-weight:600;color:var(--ink)}
+.related-arr{margin-left:auto;font-size:.8rem;color:var(--ink-lt);transition:color .2s}
+.related-card:hover .related-arr{color:var(--gold)}
+
+/* ── INFO CARDS ── */
+.info-section{padding:80px 0}
+.info-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.info-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.info-grid-2x2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.info-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:26px}
+.info-icon{font-size:1.35rem;margin-bottom:13px}
+.info-card h4{font-family:var(--serif);font-size:1.05rem;font-weight:600;color:var(--ink);margin-bottom:7px}
+.info-card p{font-size:.85rem;line-height:1.68;color:var(--ink-mid)}
+.check-list{display:flex;flex-direction:column;gap:11px;margin-top:20px}
+.check-list li{display:flex;align-items:flex-start;gap:11px;font-size:.9rem;color:var(--ink-mid);line-height:1.55}
+.check-list li::before{content:'—';color:var(--gold);flex-shrink:0;margin-top:1px}
+.overview-text p{font-size:.95rem;color:var(--ink-mid);line-height:1.78;margin-bottom:14px}
+.overview-text h3{font-family:var(--serif);font-size:1.18rem;font-weight:600;color:var(--navy);margin:24px 0 10px}
+.quick-contact{background:linear-gradient(135deg,var(--gold),var(--gold-lt));border-radius:12px;padding:26px 22px;text-align:center}
+.quick-contact h4{font-family:var(--serif);font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:7px}
+.quick-contact p{font-size:.81rem;color:rgba(11,26,47,.65);margin-bottom:18px;line-height:1.5}
+
+/* ── PRICING ── */
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.pricing-card{background:var(--white);border:1.5px solid var(--border);border-radius:16px;padding:36px 30px;position:relative;transition:all .28s}
+.pricing-card:hover{box-shadow:var(--sh-lg);transform:translateY(-4px)}
+.pricing-card.featured{background:var(--navy);border-color:var(--gold)}
+.pricing-card.featured .pc-tier,.pricing-card.featured .pc-period,.pricing-card.featured .pc-name{color:rgba(255,255,255,.55)}
+.pricing-card.featured .pc-price{color:var(--white)}
+.pricing-card.featured .pc-feat{color:rgba(255,255,255,.72)}
+.pricing-card.featured .pc-feat-check{color:var(--gold-lt)}
+.pricing-pill{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--navy);font-size:.67rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 14px;border-radius:100px;white-space:nowrap}
+.pc-tier{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;font-family:var(--mono)}
+.pc-price{font-family:var(--serif);font-size:2.8rem;font-weight:300;color:var(--navy);line-height:1;margin-bottom:6px}
+.pc-price .curr{font-size:1.3rem;vertical-align:top;margin-top:7px;display:inline-block}
+.pc-period{font-size:.82rem;color:var(--ink-lt);margin-bottom:10px}
+.pc-name{font-size:.84rem;color:var(--ink-mid);margin-bottom:24px;padding-bottom:22px;border-bottom:1px solid var(--border);line-height:1.5}
+.pricing-card.featured .pc-name{border-bottom-color:rgba(255,255,255,.1)}
+.pc-feats{display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
+.pc-feat{display:flex;align-items:flex-start;gap:9px;font-size:.85rem;color:var(--ink-mid);line-height:1.45}
+.pc-feat-check{color:var(--gold);font-weight:700;flex-shrink:0;margin-top:1px}
+.btn-pc{width:100%;padding:13px;font-family:var(--sans);font-size:.8rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;border-radius:7px;transition:all .2s;cursor:pointer}
+.btn-pc-outline{background:transparent;color:var(--navy);border:1.5px solid var(--border)}
+.btn-pc-outline:hover{background:var(--gold-pale);border-color:var(--gold);color:var(--gold)}
+.btn-pc-gold{background:var(--gold);color:var(--navy);border:none}
+.btn-pc-gold:hover{background:var(--gold-lt)}
+.btn-pc-dark{background:var(--navy);color:var(--white);border:none}
+.btn-pc-dark:hover{background:var(--navy-mid)}
+
+/* ── FAQ ── */
+.faq-list{display:flex;flex-direction:column;gap:2px}
+.faq-item{background:var(--white);border:1px solid var(--border);border-radius:8px;overflow:hidden}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;padding:19px 22px;font-family:var(--serif);font-size:1.02rem;font-weight:500;color:var(--ink);cursor:pointer;background:none;border:none;text-align:left;gap:14px;transition:color .2s}
+.faq-q:hover{color:var(--gold)}
+.faq-icon{width:22px;height:22px;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.78rem;color:var(--gold);flex-shrink:0;transition:all .25s}
+.faq-a{display:none;padding:0 22px 18px;font-size:.9rem;line-height:1.75;color:var(--ink-mid)}
+.faq-item.open .faq-q{color:var(--gold)}
+.faq-item.open .faq-a{display:block}
+.faq-item.open .faq-icon{background:var(--gold);color:var(--navy);border-color:var(--gold);transform:rotate(45deg)}
+
+/* ── STEPS ── */
+.steps-list{display:flex;flex-direction:column;gap:14px;max-width:680px;margin-top:36px}
+.step-item{display:flex;gap:18px;align-items:flex-start;background:var(--white);border:1px solid var(--border);border-radius:10px;padding:22px 24px}
+.step-num{width:36px;height:36px;background:var(--gold-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:.82rem;font-weight:500;color:var(--gold);flex-shrink:0}
+.step-item h4{font-family:var(--serif);font-size:1.02rem;font-weight:600;color:var(--navy);margin-bottom:5px}
+.step-item p{font-size:.85rem;color:var(--ink-mid);line-height:1.62}
+
+/* ── CONTACT ── */
+.contact-layout{display:grid;grid-template-columns:1fr 1fr;gap:64px;padding:80px 0;align-items:start}
+.cf-group{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
+.cf-label{font-size:.74rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mid)}
+.cf-input{padding:13px 15px;border:1.5px solid var(--border);border-radius:7px;font-family:var(--sans);font-size:.9rem;color:var(--ink);background:var(--white);outline:none;transition:border-color .2s}
+.cf-input:focus{border-color:var(--gold)}
+.cf-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cf-select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236B7A99' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:38px}
+.cf-textarea{min-height:110px;resize:vertical}
+.ci-item{display:flex;gap:14px;align-items:flex-start;margin-bottom:22px}
+.ci-icon{width:42px;height:42px;background:var(--gold-pale);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.97rem;flex-shrink:0}
+.ci-label{font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:3px;font-family:var(--mono)}
+.ci-text{font-size:.88rem;color:var(--ink-mid);line-height:1.5}
+.consult-box{background:var(--gold-pale);border:1px solid var(--border-g);border-radius:12px;padding:26px;margin-top:24px}
+.consult-box h4{font-family:var(--serif);font-size:1.08rem;font-weight:600;color:var(--ink);margin-bottom:7px}
+.consult-box p{font-size:.84rem;color:var(--ink-mid);line-height:1.6;margin-bottom:16px}
+
+/* ── ABOUT TEAM ── */
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:48px}
+.team-card{background:var(--white);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:all .28s}
+.team-card:hover{box-shadow:var(--sh-lg);transform:translateY(-5px)}
+.team-photo{height:190px;background:linear-gradient(135deg,var(--navy),var(--navy-lite));display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:3rem;font-weight:300;color:rgba(255,255,255,.2)}
+.team-info{padding:22px 24px}
+.team-name{font-family:var(--serif);font-size:1.12rem;font-weight:600;color:var(--ink);margin-bottom:3px}
+.team-role{font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;font-family:var(--mono)}
+.team-bio{font-size:.83rem;color:var(--ink-mid);line-height:1.62;margin-bottom:14px}
+.team-quals{display:flex;flex-wrap:wrap;gap:5px}
+.team-qual{padding:4px 9px;border-radius:100px;font-size:.68rem;font-weight:700;background:var(--navy);color:var(--gold);letter-spacing:.04em}
+
+/* ── CALCULATORS ── */
+.calc-section{background:var(--white);padding:80px 0}
+.calc-tabs{display:flex;border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:28px;width:fit-content}
+.ctab{padding:11px 22px;font-size:.82rem;font-weight:600;color:var(--ink-lt);background:var(--white);border:none;transition:all .2s;cursor:pointer}
+.ctab.active{background:var(--navy);color:var(--white)}
+.ctab:hover:not(.active){background:var(--gold-pale);color:var(--gold)}
+.calc-layout{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.calc-form{display:flex;flex-direction:column;gap:14px}
+.calc-group{display:flex;flex-direction:column;gap:5px}
+.calc-group label{font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mid)}
+.calc-group input,.calc-group select{padding:11px 13px;border:1.5px solid var(--border);border-radius:6px;font-family:var(--sans);font-size:.9rem;color:var(--ink);background:var(--white);outline:none;transition:border-color .2s}
+.calc-group input:focus,.calc-group select:focus{border-color:var(--gold)}
+.calc-inp-prefix{position:relative}
+.calc-inp-prefix span{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--ink-lt);font-size:.9rem}
+.calc-inp-prefix input{padding-left:26px}
+.btn-calc{background:var(--navy);color:var(--white);padding:13px 26px;font-family:var(--sans);font-size:.82rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;border:none;border-radius:7px;cursor:pointer;transition:all .2s}
+.btn-calc:hover{background:var(--gold);color:var(--navy)}
+.calc-note{font-size:.73rem;color:var(--ink-lt);line-height:1.6;font-style:italic}
+.calc-result{background:var(--navy);border-radius:12px;padding:28px;position:relative;overflow:hidden}
+.calc-result::before{content:'';position:absolute;top:-30%;right:-20%;width:60%;height:100%;background:radial-gradient(circle,rgba(201,168,76,.12),transparent 65%)}
+.calc-result-title{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;position:relative;z-index:1;font-family:var(--mono)}
+.calc-row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.06);position:relative;z-index:1}
+.calc-row span{font-size:.84rem;color:rgba(255,255,255,.52)}
+.calc-row strong{font-family:var(--serif);font-size:1.05rem;color:var(--white)}
+.calc-total{margin-top:14px;padding-top:14px;border-top:1px solid rgba(201,168,76,.25);display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1}
+.calc-total span{font-size:.8rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gold)}
+.calc-total strong{font-family:var(--serif);font-size:1.75rem;font-weight:300;color:var(--white)}
+.calc-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;height:280px;text-align:center;position:relative;z-index:1}
+.calc-placeholder-icon{font-size:2.2rem;margin-bottom:14px;opacity:.35}
+.calc-placeholder p{font-size:.86rem;color:rgba(255,255,255,.35);line-height:1.62}
+.cpanel{display:none}
+.cpanel.active{display:block}
+
+/* ── DEADLINE CALENDAR ── */
+.deadline-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:36px}
+.dl-card{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:18px;transition:all .22s}
+.dl-card:hover{box-shadow:var(--sh-md);transform:translateY(-2px)}
+.dl-card.overdue{border-left:3px solid #e53e3e}
+.dl-card.upcoming{border-left:3px solid var(--gold)}
+.dl-card.future{border-left:3px solid #22c55e}
+.dl-badge{display:inline-block;font-size:.63rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:3px 8px;border-radius:3px;margin-bottom:9px;font-family:var(--mono)}
+.dl-badge.overdue{background:#fff5f5;color:#e53e3e}
+.dl-badge.upcoming{background:var(--gold-pale);color:#7A5D1A}
+.dl-badge.future{background:#f0fff4;color:#276749}
+.dl-month{font-size:.67rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-lt);margin-bottom:6px;font-family:var(--mono)}
+.dl-date{font-family:var(--serif);font-size:1.7rem;font-weight:500;color:var(--ink);line-height:1;margin-bottom:5px}
+.dl-title{font-size:.84rem;font-weight:600;color:var(--ink);margin-bottom:3px}
+.dl-desc{font-size:.76rem;color:var(--ink-lt);line-height:1.5}
+
+/* ── LEGAL ── */
+.legal-wrap{padding:80px 0;max-width:820px;margin:0 auto}
+.legal-wrap h1{font-family:var(--serif);font-size:2.4rem;font-weight:400;color:var(--ink);margin-bottom:6px}
+.legal-meta{font-size:.79rem;color:var(--ink-lt);margin-bottom:44px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.legal-wrap h2{font-family:var(--serif);font-size:1.28rem;font-weight:600;color:var(--ink);margin:34px 0 10px}
+.legal-wrap p{font-size:.91rem;color:var(--ink-mid);line-height:1.82;margin-bottom:12px}
+.legal-wrap ul{padding-left:18px;margin-bottom:12px;list-style:disc}
+.legal-wrap li{font-size:.91rem;color:var(--ink-mid);line-height:1.8;margin-bottom:5px}
+
+/* ── SERVICE MODAL ── */
+#svcModal{display:none;position:fixed;inset:0;z-index:9999;background:rgba(11,26,47,.6);backdrop-filter:blur(5px);align-items:center;justify-content:center;padding:24px}
+#svcModal.open{display:flex}
+.svc-modal-box{background:var(--white);border-radius:16px;max-width:500px;width:100%;box-shadow:var(--sh-xl);overflow:hidden;animation:pgIn .25s var(--ease)}
+.svc-modal-head{background:var(--navy);padding:22px 26px;display:flex;justify-content:space-between;align-items:flex-start}
+.svc-modal-tag{font-size:.67rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:5px;font-family:var(--mono)}
+.svc-modal-title{font-family:var(--serif);font-size:1.42rem;font-weight:400;color:var(--white)}
+.svc-modal-close{background:rgba(255,255,255,.1);border:none;color:var(--white);width:30px;height:30px;border-radius:50%;font-size:.95rem;cursor:pointer;flex-shrink:0;margin-left:12px;transition:background .2s}
+.svc-modal-close:hover{background:rgba(255,255,255,.2)}
+.svc-modal-body{padding:26px}
+.svc-modal-desc{font-size:.9rem;color:var(--ink-mid);line-height:1.75;margin-bottom:18px}
+.svc-modal-list{display:flex;flex-direction:column;gap:8px;margin-bottom:22px;padding:0;list-style:none}
+.svc-modal-item{display:flex;align-items:flex-start;gap:9px;font-size:.85rem;color:var(--ink-mid);line-height:1.5}
+.svc-modal-item::before{content:'—';color:var(--gold);flex-shrink:0;margin-top:1px}
+.svc-modal-actions{display:flex;gap:10px;flex-wrap:wrap}
+
+/* ── BLOG PAGE ── */
+.blog-full-grid{display:grid;grid-template-columns:2fr 1fr;gap:48px;padding:80px 0;align-items:start}
+.blog-sidebar{position:sticky;top:calc(var(--nav-h) + 20px)}
+.blog-sidebar-card{background:var(--cream);border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:20px}
+.blog-sidebar-title{font-family:var(--serif);font-size:1.05rem;font-weight:600;color:var(--ink);margin-bottom:14px}
+.blog-sidebar-item{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--border);cursor:pointer;transition:all .2s}
+.blog-sidebar-item:last-child{border-bottom:none}
+.blog-sidebar-item:hover{padding-left:6px}
+.blog-sidebar-item-title{font-size:.84rem;font-weight:500;color:var(--ink);line-height:1.4;margin-bottom:3px}
+.blog-sidebar-item:hover .blog-sidebar-item-title{color:var(--gold)}
+.blog-sidebar-item-date{font-size:.7rem;color:var(--ink-lt);font-family:var(--mono)}
+.blog-article{background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:24px}
+.blog-article-img{height:200px;display:flex;align-items:center;justify-content:center;font-size:3rem;position:relative}
+.blog-article-content{padding:28px}
+.blog-article-meta{display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+.blog-article-cat{background:var(--gold);color:var(--navy);font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:100px}
+.blog-article-date{font-size:.72rem;color:var(--ink-lt);font-family:var(--mono)}
+.blog-article-read{font-size:.72rem;color:var(--ink-lt);font-family:var(--mono)}
+.blog-article-title{font-family:var(--serif);font-size:1.45rem;font-weight:600;color:var(--ink);line-height:1.3;margin-bottom:12px}
+.blog-article-excerpt{font-size:.9rem;color:var(--ink-mid);line-height:1.72;margin-bottom:18px}
+.blog-read-more{display:inline-flex;align-items:center;gap:6px;font-size:.82rem;font-weight:600;color:var(--gold)}
+.blog-search-wrap{position:relative;margin-bottom:16px}
+.blog-search-input{width:100%;padding:11px 14px 11px 36px;border:1.5px solid var(--border);border-radius:8px;font-family:var(--sans);font-size:.88rem;color:var(--ink);background:var(--white);outline:none}
+.blog-search-input:focus{border-color:var(--gold)}
+.blog-search-icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:14px;height:14px;color:var(--ink-lt)}
+
+/* ── MOBILE STICKY BAR ── */
+.mob-cta-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:8990;background:var(--white);border-top:1px solid var(--border);padding:12px 16px;box-shadow:0 -4px 24px rgba(11,26,47,.12)}
+.mob-cta-inner{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mob-cta-btn{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px;border-radius:8px;font-size:.82rem;font-weight:700;transition:all .2s;text-decoration:none}
+.mob-cta-call{background:var(--navy);color:var(--white)}
+.mob-cta-wa{background:var(--wa);color:var(--white)}
+
+/* ── WA FLOAT ── */
+.wa-float{position:fixed;bottom:26px;right:26px;z-index:9999;display:flex;flex-direction:column;align-items:flex-end;gap:9px}
+.wa-btn{width:54px;height:54px;background:var(--wa);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.42);transition:all .25s;text-decoration:none;animation:waPulse 2.5s ease infinite}
+.wa-btn:hover{transform:scale(1.1)}
+.wa-btn svg{width:26px;height:26px;fill:white}
+.wa-tip{background:var(--navy);color:var(--white);font-size:.76rem;font-weight:500;padding:7px 13px;border-radius:5px;white-space:nowrap;opacity:0;transform:translateX(8px);transition:all .25s;pointer-events:none}
+.wa-float:hover .wa-tip{opacity:1;transform:translateX(0)}
+@keyframes waPulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.42)}50%{box-shadow:0 4px 28px rgba(37,211,102,.65),0 0 0 8px rgba(37,211,102,.1)}}
+.back-top{position:fixed;bottom:92px;right:26px;z-index:9998;width:38px;height:38px;background:var(--white);border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:var(--sh-sm);opacity:0;pointer-events:none;transition:all .25s}
+.back-top.vis{opacity:1;pointer-events:all}
+.back-top:hover{background:var(--gold-pale);border-color:var(--gold)}
+.back-top svg{width:15px;height:15px;stroke:var(--gold);fill:none;stroke-width:2.5}
+.cookie{position:fixed;bottom:0;left:0;right:0;z-index:9990;background:var(--navy);border-top:1px solid rgba(201,168,76,.18);padding:16px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;transform:translateY(100%);transition:transform .4s var(--ease)}
+.cookie.vis{transform:translateY(0)}
+.cookie-text{font-size:.82rem;color:rgba(255,255,255,.62);line-height:1.55;max-width:600px}
+.cookie-text a{color:var(--gold)}
+.cookie-actions{display:flex;gap:8px;flex-shrink:0}
+.cookie-accept{background:var(--gold);color:var(--navy);padding:9px 18px;border:none;border-radius:5px;font-size:.77rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;cursor:pointer}
+.cookie-decline{background:transparent;color:rgba(255,255,255,.42);padding:9px 14px;border:1px solid rgba(255,255,255,.12);border-radius:5px;font-size:.77rem;cursor:pointer}
+.toast{position:fixed;bottom:100px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--navy);color:var(--white);padding:14px 26px;border-radius:8px;font-size:.88rem;font-weight:500;box-shadow:var(--sh-lg);opacity:0;pointer-events:none;transition:all .3s var(--ease);z-index:99999;display:flex;align-items:center;gap:10px;border-left:3px solid var(--gold)}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1200px){.stap-grid{grid-template-columns:repeat(4,1fr)}.ind-grid{grid-template-columns:repeat(3,1fr)}.footer-grid{grid-template-columns:1fr 1fr;gap:36px}.local-grid{grid-template-columns:repeat(2,1fr)}.blog-full-grid{grid-template-columns:1fr}}
+@media(max-width:1024px){.hero-inner{grid-template-columns:1fr}.hero-right{display:none}.why-grid{grid-template-columns:1fr}.why-visual{display:none}.svc-grid{grid-template-columns:1fr 1fr}.process-steps{grid-template-columns:1fr 1fr}.process-steps::before{display:none}.testi-grid{grid-template-columns:1fr 1fr}.calc-layout{grid-template-columns:1fr}.info-grid-2{grid-template-columns:1fr}.contact-layout{grid-template-columns:1fr}.team-grid{grid-template-columns:1fr 1fr}.deadline-grid{grid-template-columns:1fr 1fr}.stap-grid{grid-template-columns:repeat(3,1fr)}.blog-grid{grid-template-columns:1fr 1fr}.related-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){:root{--nav-h:64px}#topbar{display:none}.nav-links,.nav-cta-wrap,.nav-search-wrap{display:none}.hamburger{display:flex}.svc-grid{grid-template-columns:1fr}.stats-grid{grid-template-columns:1fr 1fr}.testi-grid{grid-template-columns:1fr}.team-grid{grid-template-columns:1fr}.process-steps{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr;gap:24px}.footer-bottom{flex-direction:column;text-align:center}.pricing-grid{grid-template-columns:1fr}.info-grid-3{grid-template-columns:1fr}.stap-grid{grid-template-columns:repeat(2,1fr)}.ind-grid{grid-template-columns:repeat(2,1fr)}.deadline-grid{grid-template-columns:1fr 1fr}.cookie{flex-direction:column;align-items:flex-start;gap:12px}.cf-row{grid-template-columns:1fr}.trust-div{display:none}.hero-trust{gap:18px}.hero-stat-div{height:30px}.mob-cta-bar{display:block}.wa-float{bottom:88px}.back-top{bottom:160px}.blog-grid{grid-template-columns:1fr}.local-grid{grid-template-columns:1fr 1fr}.related-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.stap-grid{grid-template-columns:repeat(2,1fr)}.deadline-grid{grid-template-columns:1fr}.local-grid{grid-template-columns:1fr}.related-grid{grid-template-columns:1fr}}
+@media print{nav,.wa-float,.back-top,.cookie,.ticker-bar,.cta-strip,.process-section,.mob-cta-bar,.sp-bar,#alertBanner{display:none!important}.page{display:block!important}body{background:#fff;color:#000}}
+</style>
+</head>
+<body>
+
+<!-- ── TOAST ── -->
+<div class="toast" id="toast"></div>
+
+<!-- ── ALERT BANNER ── -->
+<div id="alertBanner">
+  <div class="alert-inner">
+    <div style="display:flex;align-items:center;gap:10px;flex:1">
+      <div class="alert-pulse"></div>
+      <p class="alert-text" id="alertText">⏰ <strong>Loading upcoming deadlines...</strong></p>
+    </div>
+    <button class="alert-cta" onclick="nav('contact')">File Now →</button>
+    <button class="alert-close" onclick="document.getElementById('alertBanner').classList.add('hidden')">✕</button>
+  </div>
+</div>
+
+<!-- ── MOBILE STICKY BAR ── -->
+<div class="mob-cta-bar">
+  <div class="mob-cta-inner">
+    <a href="tel:+916123456789" class="mob-cta-btn mob-cta-call">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.8 11.17 19.79 19.79 0 01.73 2.48 2 2 0 012.71.5h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 8.09a16 16 0 006.29 6.29l.86-.87a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+      Call Now
+    </a>
+    <a href="https://wa.me/916123456789" target="_blank" class="mob-cta-btn mob-cta-wa">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a3.178 3.178 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.526 5.847L.057 23.882l6.19-1.444A11.938 11.938 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.852 0-3.586-.5-5.083-1.374l-.364-.216-3.764.877.924-3.668-.237-.376A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+</div>
+
+<!-- ── WA FLOAT + BACK TOP ── -->
+<div class="wa-float">
+  <div class="wa-tip">Chat on WhatsApp</div>
+  <a class="wa-btn" href="https://wa.me/916123456789?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20CA%20services." target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a3.178 3.178 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.526 5.847L.057 23.882l6.19-1.444A11.938 11.938 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.852 0-3.586-.5-5.083-1.374l-.364-.216-3.764.877.924-3.668-.237-.376A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+  </a>
+</div>
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+  <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"></polyline></svg>
+</button>
+<div class="cookie" id="cookieBanner">
+  <p class="cookie-text">We use cookies to enhance your experience. By continuing to browse, you agree to our <a href="#" onclick="nav('privacy');return false">Privacy Policy</a>.</p>
+  <div class="cookie-actions">
+    <button class="cookie-decline" onclick="dismissCookie(false)">Decline</button>
+    <button class="cookie-accept" onclick="dismissCookie(true)">Accept All</button>
+  </div>
+</div>
+
+<!-- ── SERVICE MODAL ── -->
+<div id="svcModal">
+  <div class="svc-modal-box">
+    <div class="svc-modal-head">
+      <div><div class="svc-modal-tag" id="svcModalTag"></div><h3 class="svc-modal-title" id="svcModalTitle"></h3></div>
+      <button class="svc-modal-close" onclick="closeSvcModal()">✕</button>
+    </div>
+    <div class="svc-modal-body">
+      <p class="svc-modal-desc" id="svcModalDesc"></p>
+      <ul class="svc-modal-list" id="svcModalList"></ul>
+      <div class="svc-modal-actions">
+        <button onclick="nav('contact');closeSvcModal()" class="btn btn-dark btn-sm">Free Consultation</button>
+        <a id="svcModalWA" href="#" target="_blank" class="btn-wa btn-sm">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a3.178 3.178 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.526 5.847L.057 23.882l6.19-1.444A11.938 11.938 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.852 0-3.586-.5-5.083-1.374l-.364-.216-3.764.877.924-3.668-.237-.376A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ NAV ══════════ -->
+<div id="nav">
+  <div class="nav-topbar-wrap">
+    <div id="topbar">
+      <div class="topbar-inner">
+        <div class="topbar-links">
+          <a class="topbar-link" href="tel:+916123456789"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.8 11.17 19.79 19.79 0 01.73 2.48 2 2 0 012.71.5h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 8.09a16 16 0 006.29 6.29l.86-.87a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>+91 612 345 6789</a>
+          <a class="topbar-link" href="mailto:info@priyadarshiassociates.in"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@priyadarshiassociates.in</a>
+          <span class="topbar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Fraser Road, Patna – 800001</span>
+        </div>
+        <span class="topbar-pill"><span class="topbar-dot"></span> Mon–Sat: 10AM–7PM</span>
+      </div>
+    </div>
+  </div>
+  <div class="nav-main">
+    <div class="nav-inner">
+      <div class="nav-logo" onclick="nav('home')">
+        <div class="logo-emblem"><span class="logo-emblem-text">P&amp;</span></div>
+        <div><div class="logo-name">Priyadarshi &amp; Associates</div><div class="logo-sub">Chartered Accountants · Est. 2005</div></div>
+      </div>
+      <div class="nav-links">
+        <div class="nav-item"><button class="nav-btn active" id="nb-home" onclick="nav('home')">Home</button></div>
+        <div class="nav-item"><button class="nav-btn" id="nb-about" onclick="nav('about')">About</button></div>
+        <div class="nav-item">
+          <button class="nav-btn" id="nb-services">Services <svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="mega">
+            <div class="mega-head">Our Service Areas</div>
+            <div class="mega-grid">
+              <div class="mega-link" onclick="nav('audit')"><div class="mega-icon">📋</div><div><div class="mega-title">Audit &amp; Assurance</div><div class="mega-desc">Statutory, tax &amp; internal audit</div></div></div>
+              <div class="mega-link" onclick="nav('tax')"><div class="mega-icon">📊</div><div><div class="mega-title">Taxation</div><div class="mega-desc">Income tax, TDS, NRI filing</div></div></div>
+              <div class="mega-link" onclick="nav('gst')"><div class="mega-icon">🧾</div><div><div class="mega-title">GST Services</div><div class="mega-desc">Registration, returns &amp; ITC</div></div></div>
+              <div class="mega-link" onclick="nav('corp')"><div class="mega-icon">🏢</div><div><div class="mega-title">Corporate Affairs</div><div class="mega-desc">Incorporation &amp; ROC compliance</div></div></div>
+              <div class="mega-link" onclick="nav('advisory')"><div class="mega-icon">💡</div><div><div class="mega-title">Financial Advisory</div><div class="mega-desc">Valuation, CFO &amp; due diligence</div></div></div>
+              <div class="mega-link" onclick="nav('startup')"><div class="mega-icon">🚀</div><div><div class="mega-title">Startup Services</div><div class="mega-desc">DPIIT, ESOP &amp; funding support</div></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item"><button class="nav-btn" id="nb-tools" onclick="nav('tools')">Tax Tools</button></div>
+        <div class="nav-item"><button class="nav-btn" id="nb-blog" onclick="nav('blog')">Resources</button></div>
+        <div class="nav-item"><button class="nav-btn" id="nb-contact" onclick="nav('contact')">Contact</button></div>
+      </div>
+      <div class="nav-search-wrap">
+        <svg class="nav-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input class="nav-search-input" type="text" placeholder="Search services..." id="navSearch" autocomplete="off" oninput="handleSearch(this.value)" onfocus="handleSearch(this.value)" onblur="setTimeout(()=>closeSearch(),200)">
+        <div class="search-dropdown" id="searchDropdown"></div>
+      </div>
+      <div class="nav-cta-wrap">
+        <a class="nav-phone" href="tel:+916123456789"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.8 11.17 19.79 19.79 0 01.73 2.48 2 2 0 012.71.5h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 8.09a16 16 0 006.29 6.29l.86-.87a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>+91 612 345 6789</a>
+        <button class="btn-nav" onclick="nav('contact')">Get Consultation</button>
+      </div>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</div>
+
+<!-- ── MOBILE MENU ── -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mob-search-wrap">
+    <svg class="mob-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input class="mob-search-input" type="text" placeholder="Search services..." oninput="handleMobSearch(this.value)" id="mobSearchInput">
+  </div>
+  <div id="mobSearchResults"></div>
+  <button class="mob-link active" onclick="nav('home');closeMenu()">Home</button>
+  <button class="mob-link" onclick="nav('about');closeMenu()">About Us</button>
+  <div class="mob-sep"></div>
+  <button class="mob-link" onclick="nav('audit');closeMenu()">📋 Audit &amp; Assurance</button>
+  <button class="mob-link" onclick="nav('tax');closeMenu()">📊 Taxation</button>
+  <button class="mob-link" onclick="nav('gst');closeMenu()">🧾 GST Services</button>
+  <button class="mob-link" onclick="nav('corp');closeMenu()">🏢 Corporate Affairs</button>
+  <button class="mob-link" onclick="nav('advisory');closeMenu()">💡 Financial Advisory</button>
+  <button class="mob-link" onclick="nav('startup');closeMenu()">🚀 Startup Services</button>
+  <div class="mob-sep"></div>
+  <button class="mob-link" onclick="nav('tools');closeMenu()">🧮 Tax Calculators</button>
+  <button class="mob-link" onclick="nav('blog');closeMenu()">📰 Resources</button>
+  <button class="mob-link" onclick="nav('contact');closeMenu()">✉️ Contact Us</button>
+  <div style="padding:12px 16px 0">
+    <a class="btn-wa" href="https://wa.me/916123456789" target="_blank" style="width:100%;justify-content:center;display:flex">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a3.178 3.178 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.526 5.847L.057 23.882l6.19-1.444A11.938 11.938 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.852 0-3.586-.5-5.083-1.374l-.364-.216-3.764.877.924-3.668-.237-.376A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+      WhatsApp Us
+    </a>
+  </div>
+</div>
+
+<!-- ════════════════════════════
+     HOME PAGE
+════════════════════════════════ -->
+<div id="pg-home" class="page active">
+<section class="hero">
+  <div class="hero-bg"></div><div class="hero-grid-bg"></div><div class="hero-orb"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-kicker"><span class="hero-kicker-dot"></span><span class="hero-kicker-text">Patna's Most Trusted CA Firm · Est. 2005</span></div>
+      <h1 class="hero-title">Expert <em>Financial</em><br>Guidance for<br>Every Business</h1>
+      <p class="hero-desc">From startup registration to complex tax planning — Priyadarshi &amp; Associates delivers precision-driven CA services trusted by 500+ clients across Bihar.</p>
+      <div class="hero-actions">
+        <button class="btn btn-primary btn-lg" onclick="nav('contact')">Book Free Consultation</button>
+        <a class="btn-wa" href="https://wa.me/916123456789?text=Hello%2C%20I%20need%20CA%20services." target="_blank">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a3.178 3.178 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.526 5.847L.057 23.882l6.19-1.444A11.938 11.938 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.852 0-3.586-.5-5.083-1.374l-.364-.216-3.764.877.924-3.668-.237-.376A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+      <div class="hero-trust">
+        <div><div class="hero-stat-num"><span class="counter" data-target="500">0</span>+</div><div class="hero-stat-label">Happy Clients</div></div>
+        <div class="hero-stat-div"></div>
+        <div><div class="hero-stat-num"><span class="counter" data-target="20">0</span>+</div><div class="hero-stat-label">Years Experience</div></div>
+        <div class="hero-stat-div"></div>
+        <div><div class="hero-stat-num">4.9★</div><div class="hero-stat-label">Google Rating</div></div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-card">
+        <div class="hero-card-head"><div class="hero-card-head-title">Quick Enquiry</div><div class="hero-card-head-sub">Free 30-minute consultation</div></div>
+        <div class="hero-card-body">
+          <div class="hf-group"><label class="hf-label">Your Name</label><input class="hf-input" type="text" id="hf-name" placeholder="Rahul Sharma"></div>
+          <div class="hf-group"><label class="hf-label">Phone / WhatsApp</label><input class="hf-input" type="tel" id="hf-phone" placeholder="+91 98765 43210"></div>
+          <div class="hf-group"><label class="hf-label">Service Required</label>
+            <select class="hf-input hf-select" id="hf-service">
+              <option value="">Select a service...</option>
+              <option>Income Tax Filing</option><option>GST Registration / Returns</option>
+              <option>Company Incorporation</option><option>Audit &amp; Assurance</option>
+              <option>Financial Advisory</option><option>Startup Services</option><option>Other</option>
+            </select>
+          </div>
+          <button class="btn btn-primary" style="width:100%;justify-content:center" onclick="heroEnquiry(this)">Send Enquiry →</button>
+          <p class="hero-card-disclaimer">✓ 100% Confidential &nbsp;·&nbsp; ✓ No spam &nbsp;·&nbsp; ✓ Reply within 2 hrs</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="rating-strip">
+  <div class="rating-inner">
+    <div class="rating-item"><span class="rating-logo">Google</span><span class="rating-stars">★★★★★</span><span class="rating-score">4.9</span><span class="rating-count">(127 reviews)</span></div>
+    <div class="rating-div"></div>
+    <div class="rating-item"><span class="rating-logo">Justdial</span><span class="rating-stars">★★★★★</span><span class="rating-score">4.8</span><span class="rating-count">(89 ratings)</span></div>
+    <div class="rating-div"></div>
+    <div class="rating-badge"><span class="rating-badge-icon">🏆</span><span class="rating-badge-text">Top CA Firm in Patna 2024</span></div>
+    <div class="rating-badge"><span class="rating-badge-icon">✅</span><span class="rating-badge-text">ICAI Registered Firm</span></div>
+    <div class="rating-badge"><span class="rating-badge-icon">🔒</span><span class="rating-badge-text">ISO 9001:2015 Certified</span></div>
+  </div>
+</div>
+
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item"><div class="trust-icon">⚡</div>Same-Day Response</div>
+    <div class="trust-div"></div>
+    <div class="trust-item"><div class="trust-icon">🔒</div>100% Confidential</div>
+    <div class="trust-div"></div>
+    <div class="trust-item"><div class="trust-icon">📅</div>Zero Penalty Record</div>
+    <div class="trust-div"></div>
+    <div class="trust-item"><div class="trust-icon">🏛️</div>ICAI Member Firm</div>
+    <div class="trust-div"></div>
+    <div class="trust-item"><div class="trust-icon">💬</div>Free First Consultation</div>
+  </div>
+</div>
+
+<div class="ticker-bar">
+  <div class="ticker-inner">
+    <div class="ticker-label">📅 Tax Deadlines</div>
+    <div class="ticker-track-wrap"><div class="ticker-track" id="tickerTrack"></div></div>
+  </div>
+</div>
+
+<div class="sp-bar">
+  <div class="sp-inner">
+    <div class="sp-label"><span class="sp-live-dot"></span> Live Activity</div>
+    <div class="sp-track-wrap">
+      <div class="sp-track">
+        <div class="sp-item">🏢 <em>Rajesh Traders, Patna</em> filed GST returns <span class="sp-time">2 hrs ago</span></div>
+        <div class="sp-item">✅ <em>Ananya Singh</em> completed ITR filing <span class="sp-time">4 hrs ago</span></div>
+        <div class="sp-item">🚀 <em>TechStart Innovations</em> registered as Pvt Ltd <span class="sp-time">Yesterday</span></div>
+        <div class="sp-item">📊 <em>Mehta &amp; Sons</em> completed tax audit <span class="sp-time">2 days ago</span></div>
+        <div class="sp-item">🔖 <em>Dr. Priya Verma</em> saved ₹1.2L in tax <span class="sp-time">3 days ago</span></div>
+        <div class="sp-item">🏭 <em>Bihar Agro Pvt Ltd</em> availed ITC reconciliation <span class="sp-time">4 days ago</span></div>
+        <div class="sp-item">🏢 <em>Rajesh Traders, Patna</em> filed GST returns <span class="sp-time">2 hrs ago</span></div>
+        <div class="sp-item">✅ <em>Ananya Singh</em> completed ITR filing <span class="sp-time">4 hrs ago</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="stap">
+  <div class="wrap">
+    <div class="section-head center"><div class="overline">Quick Access</div><h2 class="h2">Our Most Requested <em>Services</em></h2></div>
+    <div class="stap-grid">
+      <div class="stap-card stap-popular" onclick="nav('tax')"><span class="stap-badge">Popular</span><div class="stap-icon">📊</div><div class="stap-name">Income Tax Filing</div></div>
+      <div class="stap-card" onclick="nav('gst')"><div class="stap-icon">🧾</div><div class="stap-name">GST Registration &amp; Returns</div></div>
+      <div class="stap-card" onclick="nav('corp')"><div class="stap-icon">🏢</div><div class="stap-name">Company Registration</div></div>
+      <div class="stap-card" onclick="nav('audit')"><div class="stap-icon">📋</div><div class="stap-name">Audit &amp; Assurance</div></div>
+      <div class="stap-card" onclick="nav('tools')"><div class="stap-icon">🧮</div><div class="stap-name">Tax Calculator</div></div>
+      <div class="stap-card" onclick="nav('advisory')"><div class="stap-icon">💡</div><div class="stap-name">Financial Advisory</div></div>
+      <div class="stap-card" onclick="nav('startup')"><span class="stap-badge">New</span><div class="stap-icon">🚀</div><div class="stap-name">Startup Services</div></div>
+      <div class="stap-card" onclick="openSvcModal('tds')"><div class="stap-icon">📑</div><div class="stap-name">TDS / TCS Compliance</div></div>
+      <div class="stap-card" onclick="openSvcModal('nri')"><div class="stap-icon">✈️</div><div class="stap-name">NRI Tax Services</div></div>
+      <div class="stap-card" onclick="nav('contact')"><div class="stap-icon">📞</div><div class="stap-name">Free Consultation</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section services-section">
+  <div class="wrap">
+    <div class="section-head center"><div class="overline">What We Do</div><h2 class="h2">Comprehensive CA <em>Services</em></h2><p class="sub">Full-spectrum financial and compliance services tailored for businesses and individuals across Bihar.</p></div>
+    <div class="svc-grid">
+      <div class="svc-card" onclick="nav('audit')"><span class="svc-num">01</span><div class="svc-icon">📋</div><div class="svc-title">Audit &amp; Assurance</div><p class="svc-desc">Statutory, tax, internal, and concurrent audits conducted with meticulous attention to accuracy and compliance.</p><div class="svc-tags"><span class="svc-tag">Statutory Audit</span><span class="svc-tag">Tax Audit</span><span class="svc-tag">Internal Audit</span></div><div class="svc-arrow">Explore Service →</div></div>
+      <div class="svc-card" onclick="nav('tax')"><span class="svc-num">02</span><div class="svc-icon">📊</div><div class="svc-title">Taxation Services</div><p class="svc-desc">Expert income tax planning, ITR filing, TDS compliance, and NRI taxation services to minimise your tax burden legally.</p><div class="svc-tags"><span class="svc-tag">ITR Filing</span><span class="svc-tag">TDS</span><span class="svc-tag">NRI Tax</span></div><div class="svc-arrow">Explore Service →</div></div>
+      <div class="svc-card" onclick="nav('gst')"><span class="svc-num">03</span><div class="svc-icon">🧾</div><div class="svc-title">GST Services</div><p class="svc-desc">End-to-end GST management — registration, monthly returns, annual filing, notices, and ITC reconciliation.</p><div class="svc-tags"><span class="svc-tag">GST Reg</span><span class="svc-tag">GSTR Filing</span><span class="svc-tag">ITC</span></div><div class="svc-arrow">Explore Service →</div></div>
+      <div class="svc-card" onclick="nav('corp')"><span class="svc-num">04</span><div class="svc-icon">🏢</div><div class="svc-title">Corporate Affairs</div><p class="svc-desc">Company incorporation, ROC filings, MCA compliance, and secretarial services for all business structures.</p><div class="svc-tags"><span class="svc-tag">Pvt Ltd</span><span class="svc-tag">LLP</span><span class="svc-tag">ROC Filings</span></div><div class="svc-arrow">Explore Service →</div></div>
+      <div class="svc-card" onclick="nav('advisory')"><span class="svc-num">05</span><div class="svc-icon">💡</div><div class="svc-title">Financial Advisory</div><p class="svc-desc">Business valuation, virtual CFO, project finance, due diligence, and CMA data preparation for loan sanctions.</p><div class="svc-tags"><span class="svc-tag">Valuation</span><span class="svc-tag">Virtual CFO</span><span class="svc-tag">Due Diligence</span></div><div class="svc-arrow">Explore Service →</div></div>
+      <div class="svc-card" onclick="nav('startup')"><span class="svc-num">06</span><div class="svc-icon">🚀</div><div class="svc-title">Startup Services</div><p class="svc-desc">DPIIT recognition, ESOP structuring, investor-ready financials, and startup tax exemptions under Section 80-IAC.</p><div class="svc-tags"><span class="svc-tag">DPIIT</span><span class="svc-tag">ESOP</span><span class="svc-tag">Sec 80-IAC</span></div><div class="svc-arrow">Explore Service →</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="stats-section">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat-card"><div class="stat-num"><span class="counter" data-target="500">0</span>+</div><div class="stat-label">Clients Served</div></div>
+      <div class="stat-card"><div class="stat-num"><span class="counter" data-target="20">0</span>+</div><div class="stat-label">Years Experience</div></div>
+      <div class="stat-card"><div class="stat-num">₹<span class="counter" data-target="50">0</span>Cr+</div><div class="stat-label">Tax Savings Delivered</div></div>
+      <div class="stat-card"><div class="stat-num"><span class="counter" data-target="1200">0</span>+</div><div class="stat-label">ITRs Filed Annually</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section why-section">
+  <div class="wrap">
+    <div class="why-grid">
+      <div class="why-visual">
+        <span class="why-visual-qm">"</span>
+        <p class="why-visual-quote">Priyadarshi &amp; Associates saved us over ₹8 lakhs in taxes last year with proactive planning we never expected.</p>
+        <div class="why-visual-author-name">Vikram Sinha</div>
+        <div class="why-visual-author-role">MD, Sinha Infrastructure Pvt Ltd</div>
+      </div>
+      <div>
+        <div class="section-head"><div class="overline">Why Choose Us</div><h2 class="h2">The Priyadarshi <em>Difference</em></h2><p class="sub">We combine deep technical expertise with genuine client care — because your financial success is our reputation.</p></div>
+        <div class="why-features">
+          <div class="why-feat"><div class="why-feat-icon">🎯</div><div><div class="why-feat-title">Proactive Tax Planning</div><p class="why-feat-desc">We don't just file — we strategise year-round to legally minimise your tax burden before deadlines arrive.</p></div></div>
+          <div class="why-feat"><div class="why-feat-icon">⚡</div><div><div class="why-feat-title">Same-Day Response</div><p class="why-feat-desc">All client queries answered within the same business day. No waiting, no confusion, no surprises.</p></div></div>
+          <div class="why-feat"><div class="why-feat-icon">🏛️</div><div><div class="why-feat-title">ICAI Registered Experts</div><p class="why-feat-desc">All CA partners are ICAI members with specialised certifications in taxation, audit, and corporate law.</p></div></div>
+          <div class="why-feat"><div class="why-feat-icon">🔒</div><div><div class="why-feat-title">Zero Penalty Record</div><p class="why-feat-desc">20+ years without a single client penalty for late filing — our compliance calendar never misses a date.</p></div></div>
+          <div class="why-feat"><div class="why-feat-icon">📱</div><div><div class="why-feat-title">Digital-First Convenience</div><p class="why-feat-desc">Share documents via WhatsApp, email, or our secure portal. No unnecessary office visits required.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="process-section">
+  <div class="wrap">
+    <div class="section-head center"><div class="overline" style="justify-content:center">How It Works</div><h2 class="h2" style="color:white">Get Started in <em style="color:var(--gold-lt)">4 Simple Steps</em></h2></div>
+    <div class="process-steps">
+      <div class="process-step"><div class="process-dot">01</div><div class="process-step-title">Free Consultation</div><p class="process-step-desc">Book a 30-minute call. We understand your needs and suggest the right service plan.</p></div>
+      <div class="process-step"><div class="process-dot">02</div><div class="process-step-title">Document Collection</div><p class="process-step-desc">Share documents via WhatsApp or email. Our secure system keeps everything organised.</p></div>
+      <div class="process-step"><div class="process-dot">03</div><div class="process-step-title">Expert Processing</div><p class="process-step-desc">Our CA team prepares, reviews, and optimises your filings with triple-check accuracy.</p></div>
+      <div class="process-step"><div class="process-dot">04</div><div class="process-step-title">Filing &amp; Reporting</div><p class="process-step-desc">We file on your behalf and send you confirmation with a complete summary report.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section testi-section">
+  <div class="wrap">
+    <div class="section-head center"><div class="overline">Client Stories</div><h2 class="h2">What Our <em>Clients Say</em></h2></div>
+    <div class="testi-grid">
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"The team handled our company audit in record time with zero errors. Their proactive approach saved us ₹6 lakhs in penalties we were unaware of."</p><div class="testi-author"><div class="testi-av">R</div><div><div class="testi-name">Ramesh Kumar</div><div class="testi-role">Director, Kumar Exports Pvt Ltd</div></div></div></div>
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"As an NRI, managing Indian taxes was a nightmare until I found Priyadarshi &amp; Associates. They handled everything remotely, professionally, and quickly."</p><div class="testi-author"><div class="testi-av">P</div><div><div class="testi-name">Priya Nair</div><div class="testi-role">NRI Client, UAE</div></div></div></div>
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"Our startup got DPIIT recognition within 3 weeks. Their knowledge of startup tax exemptions is exceptional. Highly recommended for any new business."</p><div class="testi-author"><div class="testi-av">A</div><div><div class="testi-name">Arjun Mehta</div><div class="testi-role">Founder, AgriTech Solutions</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section industries-section">
+  <div class="wrap">
+    <div class="section-head center"><div class="overline">Industries We Serve</div><h2 class="h2">Expertise Across <em>Every Sector</em></h2></div>
+    <div class="ind-grid">
+      <div class="ind-card"><div class="ind-icon">🏭</div><div class="ind-name">Manufacturing</div></div>
+      <div class="ind-card"><div class="ind-icon">🛒</div><div class="ind-name">Retail &amp; FMCG</div></div>
+      <div class="ind-card"><div class="ind-icon">💻</div><div class="ind-name">IT &amp; Startups</div></div>
+      <div class="ind-card"><div class="ind-icon">🏗️</div><div class="ind-name">Real Estate</div></div>
+      <div class="ind-card"><div class="ind-icon">🏥</div><div class="ind-name">Healthcare</div></div>
+      <div class="ind-card"><div class="ind-icon">🎓</div><div class="ind-name">Education</div></div>
+      <div class="ind-card"><div class="ind-icon">🌾</div><div class="ind-name">Agriculture</div></div>
+      <div class="ind-card"><div class="ind-icon">🚚</div><div class="ind-name">Logistics</div></div>
+      <div class="ind-card"><div class="ind-icon">🏦</div><div class="ind-name">Banking &amp; NBFC</div></div>
+      <div class="ind-card"><div class="ind-icon">⚖️</div><div class="ind-name">Legal &amp; Consulting</div></div>
+      <div class="ind-card"><div class="ind-icon">🍽️</div><div class="ind-name">Hospitality</div></div>
+      <div class="ind-card"><div class="ind-icon">📺</div><div class="ind-name">Media &amp; Advertising</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="compare-section">
+  <div class="wrap">
+    <div class="section-head center"><div class="overline">Why We Win</div><h2 class="h2">How We Compare to <em>Alternatives</em></h2></div>
+    <div class="compare-table-wrap">
+      <table class="compare-table">
+        <thead><tr>
+          <th>Feature</th>
+          <th class="col-us">Priyadarshi &amp; Associates<span class="col-rec">✓ Recommended</span></th>
+          <th class="col-big">Big National Firms</th>
+          <th class="col-diy">DIY / Online Portals</th>
+        </tr></thead>
+        <tbody>
+          <tr><td>Personal CA Relationship</td><td class="col-us"><span class="ck-yes">✓</span></td><td><span class="ck-no">✗</span></td><td><span class="ck-no">✗</span></td></tr>
+          <tr><td>Proactive Tax Planning</td><td class="col-us"><span class="ck-yes">✓</span></td><td><span class="ck-part">Sometimes</span></td><td><span class="ck-no">✗</span></td></tr>
+          <tr><td>Same-Day Response</td><td class="col-us"><span class="ck-yes">✓</span></td><td><span class="ck-no">✗</span></td><td><span class="ck-no">✗</span></td></tr>
+          <tr><td>Bihar-Specific Expertise</td><td class="col-us"><span class="ck-yes">✓</span></td><td><span class="ck-part">Limited</span></td><td><span class="ck-no">✗</span></td></tr>
+          <tr><td>Affordable Pricing</td><td class="col-us"><span class="ck-yes">✓</span></td><td><span class="ck-no">✗</span></td><td><span class="ck-yes">✓</span></td></tr>
+          <tr><td>GST Notice Handling</td><td class="col-us"><span class="ck-yes">✓</span></td><td><span class="ck-yes">✓</span></td><td><span class="ck-no">✗</span></td></tr>
+          <tr><td>WhatsApp Support</td><td class="col-us"><span class="ck-yes">✓</span></td><td><span class="ck-no">✗</span></td><td><span class="ck-no">✗</span></td></tr>
+          <tr><td>Startup Tax Exemptions</td><td class="col-us"><span class="ck-yes">✓</span></td><td><span class="ck-part">Sometimes</span></td><td><span class="ck-no">✗</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="local-section">
+  <div class="wrap">
+    <div class="section-head center"><div class="overline" style="justify-content:center;color:var(--gold)">Serving All of Bihar</div><h2 class="h2" style="color:white">CA Services Near <em style="color:var(--gold-lt)">You</em></h2></div>
+    <div class="local-grid">
+      <div class="local-card" onclick="nav('contact')"><div class="local-city">📍 Patna <span style="font-size:.7rem;color:var(--gold);font-family:var(--mono)">HQ</span></div><div class="local-state">Bihar · Capital City</div><div class="local-tags"><span class="local-tag">GST</span><span class="local-tag">Income Tax</span><span class="local-tag">Audit</span><span class="local-tag">Corporate</span></div></div>
+      <div class="local-card" onclick="nav('contact')"><div class="local-city">📍 Gaya</div><div class="local-state">Bihar · Pilgrim City</div><div class="local-tags"><span class="local-tag">ITR Filing</span><span class="local-tag">GST</span><span class="local-tag">MSME</span></div></div>
+      <div class="local-card" onclick="nav('contact')"><div class="local-city">📍 Muzaffarpur</div><div class="local-state">Bihar · North Bihar</div><div class="local-tags"><span class="local-tag">Tax Audit</span><span class="local-tag">Company Reg</span></div></div>
+      <div class="local-card" onclick="nav('contact')"><div class="local-city">📍 Bhagalpur</div><div class="local-state">Bihar · Silk City</div><div class="local-tags"><span class="local-tag">GST Returns</span><span class="local-tag">TDS</span></div></div>
+      <div class="local-card" onclick="nav('contact')"><div class="local-city">📍 Darbhanga</div><div class="local-state">Bihar · Cultural Hub</div><div class="local-tags"><span class="local-tag">ITR</span><span class="local-tag">GST</span><span class="local-tag">Startup</span></div></div>
+      <div class="local-card" onclick="nav('contact')"><div class="local-city">📍 Purnia</div><div class="local-state">Bihar · Eastern Bihar</div><div class="local-tags"><span class="local-tag">Tax Filing</span><span class="local-tag">Compliance</span></div></div>
+      <div class="local-card" onclick="nav('contact')"><div class="local-city">📍 Ara</div><div class="local-state">Bihar · Bhojpur District</div><div class="local-tags"><span class="local-tag">GST</span><span class="local-tag">Income Tax</span></div></div>
+      <div class="local-card" onclick="nav('contact')"><div class="local-city">📍 All Bihar</div><div class="local-state">Remote Services Available</div><div class="local-tags"><span class="local-tag">Online</span><span class="local-tag">WhatsApp</span><span class="local-tag">Email</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="blog-section">
+  <div class="wrap">
+    <div class="section-head center"><div class="overline">Knowledge Hub</div><h2 class="h2">Latest Tax &amp; Finance <em>Insights</em></h2></div>
+    <div class="blog-grid">
+      <div class="blog-card" onclick="nav('blog')"><div class="blog-card-img"><span class="blog-cat">Income Tax</span>📊</div><div class="blog-card-body"><div class="blog-date">June 2025</div><div class="blog-title">New Tax Regime vs Old Regime: Which Saves You More in FY 2025-26?</div><p class="blog-desc">A complete comparison with slab rates, deductions, and real-life examples to help you choose the right regime.</p><div class="blog-read">Read Article <span class="blog-arr">→</span></div></div></div>
+      <div class="blog-card" onclick="nav('blog')"><div class="blog-card-img"><span class="blog-cat">GST</span>🧾</div><div class="blog-card-body"><div class="blog-date">June 2025</div><div class="blog-title">GST ITC Reconciliation: Common Mistakes and How to Avoid Them</div><p class="blog-desc">ITC mismatches are the #1 cause of GST notices. Learn how to reconcile GSTR-2B with your purchase register.</p><div class="blog-read">Read Article <span class="blog-arr">→</span></div></div></div>
+      <div class="blog-card" onclick="nav('blog')"><div class="blog-card-img"><span class="blog-cat">Startup</span>🚀</div><div class="blog-card-body"><div class="blog-date">May 2025</div><div class="blog-title">DPIIT Recognition in 2025: Step-by-Step Process for Startups</div><p class="blog-desc">Everything you need to know about getting DPIIT recognition and the massive tax benefits under Section 80-IAC.</p><div class="blog-read">Read Article <span class="blog-arr">→</span></div></div></div>
+    </div>
+    <div style="text-align:center;margin-top:36px"><button class="btn btn-outline" onclick="nav('blog')">View All Articles →</button></div>
+  </div>
+</section>
+
+<section class="cta-strip">
+  <div class="wrap">
+    <h2>Ready to Simplify Your <em>Finances?</em></h2>
+    <p>Join 500+ businesses across Bihar who trust Priyadarshi &amp; Associates for stress-free compliance.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <button class="btn btn-white btn-lg" onclick="nav('contact')">Book Free Consultation</button>
+      <a class="btn-wa" href="https://wa.me/916123456789" target="_blank" style="padding:16px 28px;font-size:1rem">WhatsApp Us</a>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="footer-grid">
+    <div><div class="footer-brand-name">Priyadarshi &amp; Associates</div><div class="footer-brand-sub">Chartered Accountants</div><p class="footer-brand-desc">ICAI-registered CA firm in Patna, Bihar. Delivering precision-driven financial services since 2005.</p></div>
+    <div><div class="footer-col-title">Services</div><div class="footer-links"><span class="footer-link" onclick="nav('audit')">Audit &amp; Assurance</span><span class="footer-link" onclick="nav('tax')">Income Tax</span><span class="footer-link" onclick="nav('gst')">GST Services</span><span class="footer-link" onclick="nav('corp')">Corporate Affairs</span><span class="footer-link" onclick="nav('advisory')">Financial Advisory</span><span class="footer-link" onclick="nav('startup')">Startup Services</span></div></div>
+    <div><div class="footer-col-title">Company</div><div class="footer-links"><span class="footer-link" onclick="nav('about')">About Us</span><span class="footer-link" onclick="nav('tools')">Tax Calculators</span><span class="footer-link" onclick="nav('blog')">Resources</span><span class="footer-link" onclick="nav('contact')">Contact</span><span class="footer-link" onclick="nav('privacy')">Privacy Policy</span><span class="footer-link" onclick="nav('disclaimer')">Disclaimer</span></div></div>
+    <div><div class="footer-col-title">Contact</div><div class="footer-links"><span class="footer-link">📍 Fraser Road, Patna – 800001</span><a class="footer-link" href="tel:+916123456789">📞 +91 612 345 6789</a><a class="footer-link" href="mailto:info@priyadarshiassociates.in">✉️ info@priyadarshiassociates.in</a><span class="footer-link">🕐 Mon–Sat: 10AM–7PM</span></div></div>
+  </div>
+  <div class="footer-bottom"><span class="footer-copy">© 2025 Priyadarshi &amp; Associates. All rights reserved.</span><span class="footer-reg">ICAI Firm Reg. No. 000000C | GSTIN: 10XXXXX1234Z1</span></div>
+</div></footer>
+</div>
+
+<!-- ════════════════════
+     TOOLS PAGE
+════════════════════ -->
+<div id="pg-tools" class="page">
+  <div class="svc-hero"><div class="svc-hero-inner">
+    <div class="breadcrumb"><span class="bc-item" onclick="nav('home')">Home</span><span class="bc-sep">›</span><span class="bc-cur">Tax Tools</span></div>
+    <h1>Tax <em>Calculators</em> &amp; Deadline Tracker</h1>
+    <p class="svc-hero-desc">Free tools to estimate your tax liability, compute GST, calculate TDS, and track upcoming compliance deadlines.</p>
+  </div></div>
+  <div class="section-sm"><div class="wrap">
+    <div class="section-head"><div class="overline">Compliance Calendar</div><h2 class="h2">Upcoming <em>Due Dates</em></h2><p class="sub" style="max-width:none">Key statutory deadlines for FY 2025–26. Dates subject to official notifications.</p></div>
+    <div class="deadline-grid" id="deadlineCalendar"></div>
+  </div></div>
+  <div class="calc-section"><div class="wrap">
+    <div class="section-head"><div class="overline">Calculators</div><h2 class="h2">Tax <em>Calculators</em></h2><p style="font-size:.88rem;color:var(--ink-mid);margin-top:6px">Indicative calculations only. Consult a CA for accurate tax planning.</p></div>
+    <div class="calc-tabs">
+      <button class="ctab active" onclick="switchCalc('income',this)">Income Tax</button>
+      <button class="ctab" onclick="switchCalc('gst',this)">GST Calculator</button>
+      <button class="ctab" onclick="switchCalc('tds',this)">TDS Calculator</button>
+    </div>
+    <!-- INCOME TAX -->
+    <div class="cpanel active" id="cp-income">
+      <div class="calc-layout">
+        <div class="calc-form">
+          <div class="calc-group"><label>Assessment Year</label><select id="it-ay"><option>AY 2025-26</option><option>AY 2024-25</option></select></div>
+          <div class="calc-group"><label>Tax Regime</label><select id="it-regime" onchange="toggleOldFields()"><option value="new">New Regime (default)</option><option value="old">Old Regime</option></select></div>
+          <div class="calc-group"><label>Category</label><select id="it-category"><option value="individual">Individual (below 60)</option><option value="senior">Senior Citizen (60–79)</option><option value="supersenior">Super Senior (80+)</option></select></div>
+          <div class="calc-group"><label>Gross Annual Income (₹)</label><div class="calc-inp-prefix"><span>₹</span><input type="number" id="it-income" placeholder="e.g. 1200000" min="0"></div></div>
+          <div id="it-old-fields" style="display:none;flex-direction:column;gap:14px">
+            <div class="calc-group"><label>Section 80C Deductions (₹)</label><div class="calc-inp-prefix"><span>₹</span><input type="number" id="it-80c" placeholder="max 150000" min="0"></div></div>
+            <div class="calc-group"><label>Section 80D – Health Insurance (₹)</label><div class="calc-inp-prefix"><span>₹</span><input type="number" id="it-80d" placeholder="max 25000" min="0"></div></div>
+            <div class="calc-group"><label>HRA / Other Deductions (₹)</label><div class="calc-inp-prefix"><span>₹</span><input type="number" id="it-other" placeholder="0" min="0"></div></div>
+          </div>
+          <button class="btn-calc" onclick="calcIT()">Calculate Tax →</button>
+          <p class="calc-note">* Includes 4% Health &amp; Education Cess. Indicative only.</p>
+        </div>
+        <div class="calc-result"><div class="calc-result-title">Tax Computation</div><div id="it-result"><div class="calc-placeholder"><div class="calc-placeholder-icon">🧮</div><p>Enter your income details and click Calculate.</p></div></div></div>
+      </div>
+    </div>
+    <!-- GST -->
+    <div class="cpanel" id="cp-gst">
+      <div class="calc-layout">
+        <div class="calc-form">
+          <div class="calc-group"><label>Calculation Type</label><select id="gst-type"><option value="exclusive">Add GST to base amount</option><option value="inclusive">Extract GST from inclusive amount</option></select></div>
+          <div class="calc-group"><label>Amount (₹)</label><div class="calc-inp-prefix"><span>₹</span><input type="number" id="gst-amount" placeholder="e.g. 10000" min="0"></div></div>
+          <div class="calc-group"><label>GST Rate</label><select id="gst-rate"><option value="5">5%</option><option value="12">12%</option><option value="18" selected>18%</option><option value="28">28%</option><option value="0">0% / Exempt</option></select></div>
+          <div class="calc-group"><label>Transaction Type</label><select id="gst-txn"><option value="intra">Intra-state (CGST + SGST)</option><option value="inter">Inter-state (IGST)</option></select></div>
+          <button class="btn-calc" onclick="calcGST()">Calculate GST →</button>
+        </div>
+        <div class="calc-result"><div class="calc-result-title">GST Breakup</div><div id="gst-result"><div class="calc-placeholder"><div class="calc-placeholder-icon">🧾</div><p>Enter amount and GST rate to compute the tax breakup.</p></div></div></div>
+      </div>
+    </div>
+    <!-- TDS -->
+    <div class="cpanel" id="cp-tds">
+      <div class="calc-layout">
+        <div class="calc-form">
+          <div class="calc-group"><label>Payment Nature</label>
+            <select id="tds-nature">
+              <option value="194C_ind">Contractor – Individual/HUF (194C) – 1%</option>
+              <option value="194C_co">Contractor – Company (194C) – 2%</option>
+              <option value="194J_prof">Professional Services (194J) – 10%</option>
+              <option value="194J_tech">Technical Services (194J) – 2%</option>
+              <option value="194I_land">Rent – Land/Building (194I) – 10%</option>
+              <option value="194I_plant">Rent – Plant &amp; Machinery (194I) – 2%</option>
+              <option value="194A">Interest (194A) – 10%</option>
+              <option value="192">Salary (192) – As per slab</option>
+            </select>
+          </div>
+          <div class="calc-group"><label>Gross Payment Amount (₹)</label><div class="calc-inp-prefix"><span>₹</span><input type="number" id="tds-amount" placeholder="e.g. 50000" min="0"></div></div>
+          <div class="calc-group"><label>PAN Available?</label><select id="tds-pan"><option value="yes">Yes – Normal Rate</option><option value="no">No – Double Rate (Sec 206AA)</option></select></div>
+          <button class="btn-calc" onclick="calcTDS()">Calculate TDS →</button>
+          <p class="calc-note">* Threshold limits apply. Indicative only.</p>
+        </div>
+        <div class="calc-result"><div class="calc-result-title">TDS Computation</div><div id="tds-result"><div class="calc-placeholder"><div class="calc-placeholder-icon">💼</div><p>Select payment nature and enter amount to compute TDS.</p></div></div></div>
+      </div>
+    </div>
+  </div></div>
+  <div class="cta-strip"><div class="wrap"><h2>Need Expert Tax Advice?</h2><p>These calculators give indicative results. For accurate planning, speak to our CAs.</p><button class="btn btn-white btn-lg" onclick="nav('contact')">Book Free Consultation</button></div></div>
+  <footer><div class="wrap"><div class="footer-bottom"><span class="footer-copy">© 2025 Priyadarshi &amp; Associates. All rights reserved.</span></div></div></footer>
+</div>
+
+<!-- ════════ SERVICE PAGES (shared structure helper) ════════ -->
+
+<!-- AUDIT -->
+<div id="pg-audit" class="page">
+  <div class="svc-hero"><div class="svc-hero-inner">
+    <div class="breadcrumb"><span class="bc-item" onclick="nav('home')">Home</span><span class="bc-sep">›</span><span class="bc-item" onclick="nav('home')">Services</span><span class="bc-sep">›</span><span class="bc-cur">Audit &amp; Assurance</span></div>
+    <h1>Credibility Through<br><em>Rigorous Audit</em></h1>
+    <p class="svc-hero-desc">Independent, thorough, and regulation-compliant audit services that give stakeholders confidence in your financial statements.</p>
+    <div class="svc-hero-badges"><span class="svc-hero-badge">✦ Statutory Audit</span><span class="svc-hero-badge">✦ Tax Audit (44AB)</span><span class="svc-hero-badge">✦ Bank Audits</span><span class="svc-hero-badge">✦ Internal Audit</span></div>
+    <div style="margin-top:24px"><button class="btn btn-primary" onclick="nav('contact')">Get Audit Quote</button></div>
+  </div></div>
+  <div class="tabs-nav"><div class="tabs-nav-inner">
+    <button class="tab-btn active" onclick="switchTab('audit','overview',this)">Overview</button>
+    <button class="tab-btn" onclick="switchTab('audit','types',this)">Types of Audit</button>
+    <button class="tab-btn" onclick="switchTab('audit','process',this)">Our Process</button>
+    <button class="tab-btn" onclick="switchTab('audit','pricing',this)">Pricing</button>
+    <button class="tab-btn" onclick="switchTab('audit','faq',this)">FAQ</button>
+  </div></div>
+  <div id="audit-overview" class="tab-content active"><div class="info-section"><div class="wrap"><div class="info-grid-2">
+    <div class="overview-text">
+      <h2 class="h2">Audit with <em>Integrity</em></h2>
+      <p>Our audit practice combines technical rigour with commercial understanding. We go beyond ticking boxes — providing insights that strengthen your internal controls and financial governance.</p>
+      <p>With 20+ years of audit experience across manufacturing, trading, construction, NGOs, and banking, our team brings depth and precision to every engagement.</p>
+      <h3>What We Audit</h3>
+      <ul class="check-list"><li>Statutory Audit under Companies Act 2013</li><li>Tax Audit under Section 44AB of Income Tax Act</li><li>Internal Audit &amp; Management Audit</li><li>Bank Branch Audits (Concurrent &amp; Statutory)</li><li>Stock &amp; Debtors Audit for bank financing</li><li>NGO / Trust Audit</li><li>Fraud Investigation &amp; Forensic Audit</li></ul>
+    </div>
+    <div>
+      <div class="info-grid-2x2">
+        <div class="info-card"><div class="info-icon">📅</div><h4>Timely Completion</h4><p>Guaranteed completion before your regulatory deadline with zero extensions needed.</p></div>
+        <div class="info-card"><div class="info-icon">🔍</div><h4>Deep Scrutiny</h4><p>Every material transaction is independently verified by qualified professionals.</p></div>
+        <div class="info-card"><div class="info-icon">📝</div><h4>Management Letter</h4><p>Detailed management letter highlighting process improvements alongside the audit report.</p></div>
+        <div class="info-card"><div class="info-icon">🤝</div><h4>Minimal Disruption</h4><p>Efficient fieldwork planning ensures audit doesn't disrupt your daily operations.</p></div>
+      </div>
+      <div style="margin-top:18px"><div class="quick-contact"><h4>Get an Audit Quote</h4><p>Free 30-minute consultation with a senior CA partner.</p><button class="btn btn-dark btn-sm" onclick="nav('contact')">Book Now</button></div></div>
+    </div>
+  </div></div></div></div>
+  <div id="audit-types" class="tab-content"><div class="info-section"><div class="wrap">
+    <div class="section-head"><div class="overline">Audit Services</div><h2 class="h2">Types of <em>Audit</em></h2></div>
+    <div class="info-grid-3">
+      <div class="info-card"><div class="info-icon">🏢</div><h4>Statutory Audit</h4><p>Mandatory audit of financial statements under the Companies Act 2013 for all registered companies regardless of turnover. Includes signing of audit report and financial statements.</p></div>
+      <div class="info-card"><div class="info-icon">💰</div><h4>Tax Audit (Sec 44AB)</h4><p>Audit required under Income Tax Act for businesses with turnover above ₹1 crore (₹10 crore for digital). Filing of Form 3CA/3CB and 3CD within the due date.</p></div>
+      <div class="info-card"><div class="info-icon">🏦</div><h4>Bank Audits</h4><p>Concurrent audit and statutory branch audit services for nationalised and private sector banks. Experienced panel auditors on multiple bank panels.</p></div>
+      <div class="info-card"><div class="info-icon">🔎</div><h4>Internal Audit</h4><p>Risk-based internal audit to assess effectiveness of internal controls, identify process gaps, and recommend improvements for operational efficiency.</p></div>
+      <div class="info-card"><div class="info-icon">📦</div><h4>Stock Audit</h4><p>Physical verification of inventory required by banks for working capital borrowers. Detailed stock audit report with observations and valuation.</p></div>
+      <div class="info-card"><div class="info-icon">🕵️</div><h4>Forensic Audit</h4><p>Investigation of suspected fraud, misappropriation, or financial irregularities. Admissible report preparation for legal and regulatory proceedings.</p></div>
+    </div>
+  </div></div></div>
+  <div id="audit-process" class="tab-content"><div class="info-section"><div class="wrap">
+    <div class="section-head"><div class="overline">How We Work</div><h2 class="h2">Our Audit <em>Process</em></h2></div>
+    <div class="steps-list">
+      <div class="step-item"><div class="step-num">1</div><div><h4>Planning &amp; Risk Assessment</h4><p>Understanding your business, identifying material account heads, and assessing audit risk to plan an efficient, targeted audit programme.</p></div></div>
+      <div class="step-item"><div class="step-num">2</div><div><h4>Document &amp; Data Collection</h4><p>Collection of trial balance, ledgers, bank statements, contracts, and supporting documents through our secure digital portal.</p></div></div>
+      <div class="step-item"><div class="step-num">3</div><div><h4>Field Work &amp; Verification</h4><p>Physical verification, confirmations, analytical review, and vouching conducted by qualified CA staff under partner supervision.</p></div></div>
+      <div class="step-item"><div class="step-num">4</div><div><h4>Draft Review &amp; Discussion</h4><p>Draft audit report and management letter shared for your review. Discussion of findings and recommendations before finalisation.</p></div></div>
+      <div class="step-item"><div class="step-num">5</div><div><h4>Sign-Off &amp; Filing</h4><p>Final signed audit report issued. E-filing with ROC (statutory audit) or ITD (tax audit) completed within committed timelines.</p></div></div>
+    </div>
+  </div></div></div>
+  <div id="audit-pricing" class="tab-content"><div class="info-section"><div class="wrap">
+    <div class="section-head"><div class="overline">Investment</div><h2 class="h2">Transparent <em>Pricing</em></h2></div>
+    <div class="pricing-grid">
+      <div class="pricing-card"><div class="pc-tier">Small Business</div><div class="pc-price"><span class="curr">₹</span>15,000</div><div class="pc-period">onwards per year</div><div class="pc-name">Proprietorships and small companies with turnover up to ₹50 lakhs</div><ul class="pc-feats"><li class="pc-feat"><span class="pc-feat-check">✓</span>Tax Audit (Sec 44AB)</li><li class="pc-feat"><span class="pc-feat-check">✓</span>Basic financial statements</li><li class="pc-feat"><span class="pc-feat-check">✓</span>Audit report Form 3CB/3CD</li></ul><button class="btn-pc btn-pc-outline" onclick="nav('contact')">Get Quote</button></div>
+      <div class="pricing-card featured"><div class="pricing-pill">Most Popular</div><div class="pc-tier">Growing Business</div><div class="pc-price"><span class="curr">₹</span>35,000</div><div class="pc-period">onwards per year</div><div class="pc-name">Pvt Ltd companies with turnover ₹50 lakhs to ₹5 crores</div><ul class="pc-feats"><li class="pc-feat"><span class="pc-feat-check">✓</span>Statutory Audit (Companies Act)</li><li class="pc-feat"><span class="pc-feat-check">✓</span>Tax Audit if applicable</li><li class="pc-feat"><span class="pc-feat-check">✓</span>Management letter included</li><li class="pc-feat"><span class="pc-feat-check">✓</span>ROC filing support</li></ul><button class="btn-pc btn-pc-gold" onclick="nav('contact')">Get Quote</button></div>
+      <div class="pricing-card"><div class="pc-tier">Enterprise</div><div class="pc-price">Custom</div><div class="pc-period">based on scope</div><div class="pc-name">Turnover above ₹5 crores, multi-entity groups, and bank audits</div><ul class="pc-feats"><li class="pc-feat"><span class="pc-feat-check">✓</span>Full statutory &amp; tax audit</li><li class="pc-feat"><span class="pc-feat-check">✓</span>Internal audit programme</li><li class="pc-feat"><span class="pc-feat-check">✓</span>Dedicated partner</li></ul><button class="btn-pc btn-pc-dark" onclick="nav('contact')">Contact Us</button></div>
+    </div>
+  </div></div></div>
+  <div id="audit-faq" class="tab-content"><div class="info-section"><div class="wrap" style="max-width:800px">
+    <div class="section-head"><div class="overline">FAQ</div><h2 class="h2">Audit <em>Questions</em></h2></div>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Who is required to get a statutory audit done? <span class="faq-icon">+</span></button><div class="faq-a">All companies registered under the Companies Act 2013 — regardless of turnover — are required to get a statutory audit done every financial year. This includes private limited companies, public limited companies, and one-person companies.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What is the due date for tax audit? <span class="faq-icon">+</span></button><div class="faq-a">The tax audit report must be filed by 30th September of the assessment year (30th November if the taxpayer has international transactions). We always aim to complete audits well before these deadlines.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How long does an audit take? <span class="faq-icon">+</span></button><div class="faq-a">A small business tax audit typically takes 5–10 working days from receipt of all documents. A statutory audit for a mid-size company may take 15–25 working days. We provide a specific timeline commitment before beginning each engagement.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Can you conduct the audit remotely? <span class="faq-icon">+</span></button><div class="faq-a">Yes. We have a fully digital workflow for document collection and review. Most audits can be completed with zero physical visits using our secure document portal. Physical visits are arranged when inventory verification is required.</div></div>
+    </div>
+  </div></div></div>
+  <div class="related-section"><div class="wrap"><div style="font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-lt);margin-bottom:14px;font-family:var(--mono)">Related Services</div>
+    <div class="related-grid">
+      <div class="related-card" onclick="nav('tax')"><div class="related-icon">📊</div><div class="related-name">Taxation</div><div class="related-arr">→</div></div>
+      <div class="related-card" onclick="nav('gst')"><div class="related-icon">🧾</div><div class="related-name">GST Services</div><div class="related-arr">→</div></div>
+      <div class="related-card" onclick="nav('advisory')"><div class="related-icon">💡</div><div class="related-name">Financial Advisory</div><div class="related-arr">→</div></div>
+      <div class="related-card" onclick="nav('corp')"><div class="related-icon">🏢</div><div class="related-name">Corporate Affairs</div><div class="related-arr">→</div></div>
+    </div>
+  </div></div>
+  <div class="cta-strip"><div class="wrap"><h2>Get Your Audit Started</h2><p>Contact us today for a no-obligation discussion about your audit requirements.</p><button class="btn btn-white btn-lg" onclick="nav('contact')">Schedule Free Consultation</button></div></div>
+  <footer><div class="wrap"><div class="footer-bottom"><span class="footer-copy">© 2025 Priyadarshi &amp; Associates.</span></div></div></footer>
+</div>
+
+<!-- TAXATION -->
+<div id="pg-tax" class="page">
+  <div class="svc-hero"><div class="svc-hero-inner">
+    <div class="breadcrumb"><span class="bc-item" onclick="nav('home')">Home</span><span class="bc-sep">›</span><span class="bc-item" onclick="nav('home')">Services</span><span class="bc-sep">›</span><span class="bc-cur">Taxation</span></div>
+    <h1>Smarter Tax Planning.<br><em>More in Your Hands.</em></h1>
+    <p class="svc-hero-desc">End-to-end income tax services — from strategic planning to assessment representation — ensuring full compliance while minimising your legitimate tax burden.</p>
+    <div style="margin-top:24px"><button class="btn btn-primary" onclick="nav('contact')">Get Tax Advice</button></div>
+  </div></div>
+  <div class="tabs-nav"><div class="tabs-nav-inner">
+    <button class="tab-btn active" onclick="switchTab('tax','overview',this)">Overview</button>
+    <button class="tab-btn" onclick="switchTab('tax','services',this)">Services</button>
+    <button class="tab-btn" onclick="switchTab('tax','pricing',this)">Pricing</button>
+    <button class="tab-btn" onclick="switchTab('tax','faq',this)">FAQ</button>
+  </div></div>
+  <div id="tax-overview" class="tab-content active"><div class="info-section"><div class="wrap"><div class="info-grid-2">
+    <div class="overview-text">
+      <h2 class="h2">Complete Tax <em>Compliance</em></h2>
+      <p>We offer comprehensive income tax services for individuals, businesses, companies, and NRIs — combining compliance with proactive planning to legally minimize your tax outgo.</p>
+      <ul class="check-list"><li>ITR filing for individuals, firms, companies &amp; trusts</li><li>Advance tax computation and deposit</li><li>TDS/TCS compliance and return filing</li><li>Income tax scrutiny assessment representation</li><li>Appeal before CIT(A) and ITAT</li><li>Tax planning for HNIs and business owners</li><li>NRI taxation and FEMA compliance</li></ul>
+    </div>
+    <div>
+      <div class="info-grid-2x2">
+        <div class="info-card"><div class="info-icon">🗓️</div><h4>100% On-Time Filing</h4><p>Never miss an ITR, TDS, or advance tax deadline with our proactive reminder system.</p></div>
+        <div class="info-card"><div class="info-icon">⚖️</div><h4>Assessment Support</h4><p>Expert representation for notices, scrutiny, and appeals before income tax authorities.</p></div>
+        <div class="info-card"><div class="info-icon">💹</div><h4>Tax Optimization</h4><p>Legitimate tax planning strategies to reduce your effective tax rate year after year.</p></div>
+        <div class="info-card"><div class="info-icon">🌐</div><h4>NRI Services</h4><p>Specialized services for NRIs — DTAA benefits, repatriation, and Indian tax filing.</p></div>
+      </div>
+      <div style="margin-top:18px"><div class="quick-contact"><h4>Free Tax Consultation</h4><p>Let our experts analyze your situation and suggest the most tax-efficient approach.</p><button class="btn btn-dark btn-sm" onclick="nav('contact')">Book Now</button></div></div>
+    </div>
+  </div></div></div></div>
+  <div id="tax-services" class="tab-content"><div class="info-section"><div class="wrap">
+    <div class="section-head"><div class="overline">What We Cover</div><h2 class="h2">Tax <em>Services</em></h2></div>
+    <div class="info-grid-3">
+      <div class="info-card"><div class="info-icon">👤</div><h4>Individual ITR Filing</h4><p>ITR-1 through ITR-4 for salaried, professional, and business individuals. Includes computation, review, and e-filing with acknowledgment.</p></div>
+      <div class="info-card"><div class="info-icon">🏢</div><h4>Corporate Tax Filing</h4><p>ITR-6 for companies including tax audit, MAT computation, and e-filing. Expertise in complex provisions like Sec 80IC, 80IB.</p></div>
+      <div class="info-card"><div class="info-icon">💼</div><h4>TDS Compliance</h4><p>Monthly TDS computation, challan payment, quarterly TDS return filing (24Q, 26Q, 27Q), and issuance of Form 16/16A.</p></div>
+      <div class="info-card"><div class="info-icon">📈</div><h4>Advance Tax Planning</h4><p>Quarterly advance tax estimation, payment scheduling, and year-end tax forecasting to avoid interest under Sections 234B and 234C.</p></div>
+      <div class="info-card"><div class="info-icon">🔔</div><h4>Notice Handling</h4><p>Response drafting and submission for income tax notices — 143(1), 143(2), 148, 133(6), and others — with full representation.</p></div>
+      <div class="info-card"><div class="info-icon">⚖️</div><h4>Appeals &amp; Litigation</h4><p>CIT(A) and ITAT appeal filing and representation. Strong track record of successful outcomes in disputed assessments.</p></div>
+    </div>
+  </div></div></div>
+  <div id="tax-pricing" class="tab-content"><div class="info-section"><div class="wrap">
+    <div class="section-head"><div class="overline">Pricing</div><h2 class="h2">Affordable <em>Tax Services</em></h2></div>
+    <div class="pricing-grid">
+      <div class="pricing-card"><div class="pc-tier">Individual</div><div class="pc-price"><span class="curr">₹</span>1,500</div><div class="pc-period">onwards per year</div><div class="pc-name">For salaried individuals and simple income profiles</div><ul class="pc-feats"><li class="pc-feat"><span class="pc-feat-check">✓</span>ITR-1 / ITR-2 filing</li><li class="pc-feat"><span class="pc-feat-check">✓</span>Capital gains computation</li><li class="pc-feat"><span class="pc-feat-check">✓</span>Refund tracking</li></ul><button class="btn-pc btn-pc-outline" onclick="nav('contact')">Get Started</button></div>
+      <div class="pricing-card featured"><div class="pricing-pill">Best Value</div><div class="pc-tier">Business / Professional</div><div class="pc-price"><span class="curr">₹</span>8,000</div><div class="pc-period">onwards per year</div><div class="pc-name">For proprietorships, partnerships, and professionals</div><ul class="pc-feats"><li class="pc-feat"><span class="pc-feat-check">✓</span>ITR-3 / ITR-4 filing</li><li class="pc-feat"><span class="pc-feat-check">✓</span>P&amp;L and Balance Sheet</li><li class="pc-feat"><span class="pc-feat-check">✓</span>TDS compliance</li><li class="pc-feat"><span class="pc-feat-check">✓</span>Notice handling included</li></ul><button class="btn-pc btn-pc-gold" onclick="nav('contact')">Get Started</button></div>
+      <div class="pricing-card"><div class="pc-tier">Company</div><div class="pc-price"><span class="curr">₹</span>18,000</div><div class="pc-period">onwards per year</div><div class="pc-name">For private limited companies and LLPs</div><ul class="pc-feats"><li class="pc-feat"><span class="pc-feat-check">✓</span>ITR-6 / ITR-5 filing</li><li class="pc-feat"><span class="pc-feat-check">✓</span>Tax audit coordination</li><li class="pc-feat"><span class="pc-feat-check">✓</span>Annual tax planning review</li></ul><button class="btn-pc btn-pc-dark" onclick="nav('contact')">Get Started</button></div>
+    </div>
+  </div></div></div>
+  <div id="tax-faq" class="tab-content"><div class="info-section"><div class="wrap" style="max-width:800px">
+    <div class="section-head"><div class="overline">FAQ</div><h2 class="h2">Tax <em>Questions</em></h2></div>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What is the last date for filing income tax return? <span class="faq-icon">+</span></button><div class="faq-a">For individuals not requiring audit: 31st July. For businesses requiring tax audit: 31st October. For companies: 31st October. Belated returns can be filed up to 31st December but attract a late fee of ₹5,000.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Can I switch from old to new tax regime? <span class="faq-icon">+</span></button><div class="faq-a">Individuals with no business income can switch between old and new tax regimes every year. Business owners and professionals can only switch once. We analyze which regime is more beneficial for you before filing.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">I received a notice from the Income Tax department. What should I do? <span class="faq-icon">+</span></button><div class="faq-a">Don't panic. Share the notice with us immediately. Most notices are routine. We will review, draft a response, and handle all communication with the department on your behalf.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do NRIs need to file income tax returns in India? <span class="faq-icon">+</span></button><div class="faq-a">NRIs must file an ITR in India if their Indian-source income exceeds the basic exemption limit, or if they want to claim a refund of TDS deducted. We provide specialized NRI tax filing and DTAA advisory services.</div></div>
+    </div>
+  </div></div></div>
+  <div class="cta-strip"><div class="wrap"><h2>File Your Taxes Stress-Free</h2><p>Let our expert team handle your tax compliance from start to finish.</p><button class="btn btn-white btn-lg" onclick="nav('contact')">Get Tax Help Now</button></div></div>
+  <footer><div class="wrap"><div class="footer-bottom"><span class="footer-copy">© 2025 Priyadarshi &amp; Associates.</span></div></div></footer>
+</div>
+
+<!-- GST -->
+<div id="pg-gst" class="page">
+  <div class="svc-hero"><div class="svc-hero-inner">
+    <div class="breadcrumb"><span class="bc-item" onclick="nav('home')">Home</span><span class="bc-sep">›</span><span class="bc-item" onclick="nav('home')">Services</span><span class="bc-sep">›</span><span class="bc-cur">GST Services</span></div>
+    <h1>GST Compliance,<br><em>Simplified.</em></h1>
+    <p class="svc-hero-desc">From registration to monthly filing and input credit reconciliation — we manage your complete GST lifecycle so you can focus on business growth.</p>
+    <div style="margin-top:24px"><button class="btn btn-primary" onclick="nav('contact')">Start GST Compliance</button></div>
+  </div></div>
+  <div class="tabs-nav"><div class="tabs-nav-inner">
+    <button class="tab-btn active" onclick="switchTab('gst','overview',this)">Overview</button>
+    <button class="tab-btn" onclick="switchTab('gst','services',this)">Services</button>
+    <button class="tab-btn" onclick="switchTab('gst','pricing',this)">Pricing</button>
+    <button class="tab-btn" onclick="switchTab('gst','faq',this)">FAQ</button>
+  </div></div>
+  <div id="gst-overview" class="tab-content active"><div class="info-section"><div class="wrap"><div class="info-grid-2">
+    <div class="overview-text">
+      <h2 class="h2">Full-Spectrum <em>GST</em> Services</h2>
+      <p>GST compliance requires precision every month. A single mismatch in GSTR-2A/2B can lead to ITC denial. Our team ensures clean, reconciled, and timely filing every cycle.</p>
+      <ul class="check-list"><li>GST registration (new, amendment, cancellation)</li><li>Monthly/quarterly GSTR-1 and GSTR-3B filing</li><li>Annual return GSTR-9 and GSTR-9C (reconciliation)</li><li>Input Tax Credit (ITC) reconciliation</li><li>E-way bill management</li><li>GST audit and departmental representation</li></ul>
+    </div>
+    <div>
+      <div class="info-grid-2x2">
+        <div class="info-card"><div class="info-icon">⚡</div><h4>Same-Day Filing</h4><p>GSTR-1 and GSTR-3B filed on the same day documents are received — always before due date.</p></div>
+        <div class="info-card"><div class="info-icon">🔄</div><h4>ITC Reconciliation</h4><p>Monthly GSTR-2B vs books reconciliation to ensure maximum legitimate ITC claim.</p></div>
+        <div class="info-card"><div class="info-icon">🚨</div><h4>Notice Response</h4><p>GST department notices handled end-to-end, including SCN responses and personal hearings.</p></div>
+        <div class="info-card"><div class="info-icon">🏷️</div><h4>HSN / SAC Advice</h4><p>Classification advice for correct HSN codes and applicable GST rates for your products.</p></div>
+      </div>
+      <div style="margin-top:18px"><div class="quick-contact"><h4>GST Package from ₹1,500/mo</h4><p>Free 30-min consultation to assess your requirements.</p><button class="btn btn-dark btn-sm" onclick="nav('contact')">Get Quote</button></div></div>
+    </div>
+  </div></div></div></div>
+  <div id="gst-services" class="tab-content"><div class="info-section"><div class="wrap">
+    <div class="section-head"><div class="overline">What We Do</div><h2 class="h2">GST <em>Services</em></h2></div>
+    <div class="info-grid-3">
+      <div class="info-card"><div class="info-icon">📝</div><h4>GST Registration</h4><p>New GST registration, addition of business place, amendment of registration details, and voluntary/mandatory cancellation.</p></div>
+      <div class="info-card"><div class="info-icon">📅</div><h4>Return Filing</h4><p>GSTR-1 (outward supplies), GSTR-3B (monthly summary), CMP-08 (composition), GSTR-4 (annual for composition) — all returns filed accurately.</p></div>
+      <div class="info-card"><div class="info-icon">📊</div><h4>Annual Return</h4><p>GSTR-9 annual return and GSTR-9C reconciliation statement preparation and filing. Complete audit trail maintained.</p></div>
+      <div class="info-card"><div class="info-icon">🔃</div><h4>ITC Management</h4><p>Monthly reconciliation of purchase register with GSTR-2B, identification of mismatches, and vendor follow-up for missing ITC.</p></div>
+      <div class="info-card"><div class="info-icon">🚗</div><h4>E-Way Bills</h4><p>E-way bill generation, amendment, cancellation, and Part-B updating for all inter-state and intra-state consignments.</p></div>
+      <div class="info-card"><div class="info-icon">🏛️</div><h4>Dept. Representation</h4><p>Representation before GST officers for assessments, appeals before GSTAT, and High Court matters in collaboration with advocates.</p></div>
+    </div>
+  </div></div></div>
+  <div id="gst-pricing" class="tab-content"><div class="info-section"><div class="wrap">
+    <div class="section-head"><div class="overline">Pricing</div><h2 class="h2">GST <em>Plans</em></h2></div>
+    <div class="pricing-grid">
+      <div class="pricing-card"><div class="pc-tier">Basic</div><div class="pc-price"><span class="curr">₹</span>1,500</div><div class="pc-period">per month</div><div class="pc-name">For small businesses with up to 50 invoices/month</div><ul class="pc-feats"><li class="pc-feat"><span class="pc-feat-check">✓</span>GSTR-1 filing</li><li class="pc-feat"><span class="pc-feat-check">✓</span>GSTR-3B filing</li><li class="pc-feat"><span class="pc-feat-check">✓</span>Basic ITC check</li></ul><button class="btn-pc btn-pc-outline" onclick="nav('contact')">Get Started</button></div>
+      <div class="pricing-card featured"><div class="pricing-pill">Popular</div><div class="pc-tier">Standard</div><div class="pc-price"><span class="curr">₹</span>3,000</div><div class="pc-period">per month</div><div class="pc-name">For growing businesses with 50–200 invoices/month</div><ul class="pc-feats"><li class="pc-feat"><span class="pc-feat-check">✓</span>GSTR-1 &amp; 3B filing</li><li class="pc-feat"><span class="pc-feat-check">✓</span>Full ITC reconciliation</li><li class="pc-feat"><span class="pc-feat-check">✓</span>E-way bill support</li><li class="pc-feat"><span class="pc-feat-check">✓</span>Annual return included</li><li class="pc-feat"><span class="pc-feat-check">✓</span>Notice handling</li></ul><button class="btn-pc btn-pc-gold" onclick="nav('contact')">Get Started</button></div>
+      <div class="pricing-card"><div class="pc-tier">Premium</div><div class="pc-price">Custom</div><div class="pc-period">based on volume</div><div class="pc-name">High-volume businesses, multi-GSTIN, complex transactions</div><ul class="pc-feats"><li class="pc-feat"><span class="pc-feat-check">✓</span>All returns &amp; reconciliation</li><li class="pc-feat"><span class="pc-feat-check">✓</span>Multiple GSTINs</li><li class="pc-feat"><span class="pc-feat-check">✓</span>Dedicated GST manager</li></ul><button class="btn-pc btn-pc-dark" onclick="nav('contact')">Contact Us</button></div>
+    </div>
+  </div></div></div>
+  <div id="gst-faq" class="tab-content"><div class="info-section"><div class="wrap" style="max-width:800px">
+    <div class="section-head"><div class="overline">FAQ</div><h2 class="h2">GST <em>Questions</em></h2></div>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Who needs to register for GST? <span class="faq-icon">+</span></button><div class="faq-a">Any business with aggregate annual turnover exceeding ₹40 lakhs (₹20 lakhs for service providers) must register for GST. Certain categories like e-commerce sellers and inter-state suppliers must register regardless of turnover.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What happens if I miss the GST return due date? <span class="faq-icon">+</span></button><div class="faq-a">Late filing attracts a late fee of ₹50/day (₹20/day for nil returns), capped at ₹10,000. Additionally, interest at 18% p.a. is charged on unpaid tax. Our proactive filing ensures you never miss a due date.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What is GSTR-2B reconciliation and why does it matter? <span class="faq-icon">+</span></button><div class="faq-a">GSTR-2B is an auto-drafted statement showing ITC available based on your suppliers' GSTR-1 filings. Matching your purchase register with GSTR-2B ensures you claim only eligible ITC and avoid later reversals or demand notices.</div></div>
+    </div>
+  </div></div></div>
+  <div class="cta-strip"><div class="wrap"><h2>Get GST-Compliant Today</h2><p>Our GST team is ready to take over your complete compliance.</p><button class="btn btn-white btn-lg" onclick="nav('contact')">Talk to GST Expert</button></div></div>
+  <footer><div class="wrap"><div class="footer-bottom"><span class="footer-copy">© 2025 Priyadarshi &amp; Associates.</span></div></div></footer>
+</div>
+
+<!-- CORPORATE -->
+<div id="pg-corp" class="page">
+  <div class="svc-hero"><div class="svc-hero-inner">
+    <div class="breadcrumb"><span class="bc-item" onclick="nav('home')">Home</span><span class="bc-sep">›</span><span class="bc-item" onclick="nav('home')">Services</span><span class="bc-sep">›</span><span class="bc-cur">Corporate Affairs</span></div>
+    <h1>Build the Right<br><em>Legal Structure.</em></h1>
+    <p class="svc-hero-desc">Company incorporation, ROC compliance, and ongoing secretarial services to keep your corporate house in perfect order.</p>
+    <div style="margin-top:24px"><button class="btn btn-primary" onclick="nav('contact')">Incorporate Now</button></div>
+  </div></div>
+  <div class="tabs-nav"><div class="tabs-nav-inner">
+    <button class="tab-btn active" onclick="switchTab('corp','overview',this)">Overview</button>
+    <button class="tab-btn" onclick="switchTab('corp','services',this)">Services</button>
+    <button class="tab-btn" onclick="switchTab('corp','pricing',this)">Pricing</button>
+    <button class="tab-btn" onclick="switchTab('corp','faq',this)">FAQ</button>
+  </div></div>
+  <div id="corp-overview" class="tab-content active"><div class="info-section"><div class="wrap"><div class="info-grid-2">
+    <div class="overview-text">
+      <h2 class="h2">Corporate <em>Compliance</em> Made Easy</h2>
+      <p>Setting up and maintaining a company requires navigating MCA, ROC, and various statutory filings. We handle the full lifecycle — from incorporation to ongoing annual compliance.</p>
+      <ul class="check-list"><li>Private Limited Company incorporation</li><li>LLP formation and LLP agreement drafting</li><li>OPC and Section 8 company registration</li><li>Annual ROC filings (AOC-4, MGT-7)</li><li>Board and shareholder meeting support</li><li>Director appointment, removal, and KYC</li></ul>
+    </div>
+    <div>
+      <div class="info-grid-2x2">
+        <div class="info-card"><div class="info-icon">⚡</div><h4>Fast Incorporation</h4><p>Company incorporated and PAN/TAN allotted within 5–7 working days using SPICe+ route.</p></div>
+        <div class="info-card"><div class="info-icon">📋</div><h4>All ROC Filings</h4><p>All MCA forms filed accurately and on time — zero risk of penalty or strike-off.</p></div>
+        <div class="info-card"><div class="info-icon">🤝</div><h4>Secretarial Support</h4><p>Drafting of board minutes, resolutions, and notices for all types of corporate actions.</p></div>
+        <div class="info-card"><div class="info-icon">🔄</div><h4>Changes &amp; Amendments</h4><p>Quick handling of director changes, share transfers, address changes, and capital alterations.</p></div>
+      </div>
+      <div style="margin-top:18px"><div class="quick-contact"><h4>Incorporate in 5–7 Days</h4><p>Complete Pvt Ltd at ₹12,000 all-inclusive.</p><button class="btn btn-dark btn-sm" onclick="nav('contact')">Start Now</button></div></div>
+    </div>
+  </div></div></div></div>
+  <div id="corp-services" class="tab-content"><div class="info-section"><div class="wrap">
+    <div class="section-head"><div class="overline">What We Offer</div><h2 class="h2">Corporate <em>Services</em></h2></div>
+    <div class="info-grid-3">
+      <div class="info-card"><div class="info-icon">🏢</div><h4>Company Incorporation</h4><p>Private Limited, OPC, Section 8 company registration through MCA SPICe+ form. Includes MOA, AOA, PAN, TAN, and bank account opening support.</p></div>
+      <div class="info-card"><div class="info-icon">🤝</div><h4>LLP Formation</h4><p>Limited Liability Partnership registration, LLP agreement drafting and filing, designated partner DIN application, and LLPIN certificate.</p></div>
+      <div class="info-card"><div class="info-icon">📅</div><h4>Annual Compliance</h4><p>AOC-4 (financial statements), MGT-7/7A (annual return), ADT-1 (auditor appointment), and all other annual ROC filings.</p></div>
+      <div class="info-card"><div class="info-icon">👥</div><h4>Director Services</h4><p>DIN application, DIR-3 KYC, DIR-12 (appointment/resignation), and disqualification removal assistance for directors.</p></div>
+      <div class="info-card"><div class="info-icon">📜</div><h4>Secretarial Services</h4><p>Notice and agenda drafting for board and general meetings, minutes preparation, statutory registers maintenance, and secretarial audit.</p></div>
+      <div class="info-card"><div class="info-icon">🔀</div><h4>Structural Changes</h4><p>Name change, registered office change, increase in authorized capital, alteration of MOA/AOA, share transfer, and charge filings.</p></div>
+    </div>
+  </div></div></div>
+  <div id="corp-pricing" class="tab-content"><div class="info-section"><div class="wrap">
+    <div class="section-head"><div class="overline">Pricing</div><h2 class="h2">Transparent <em>Pricing</em></h2></div>
+    <div class="pricing-grid">
+      <div class="pricing-card"><div class="pc-tier">LLP</div><div class="pc-price"><span class="curr">₹</span>8,000</div><div class="pc-period">all-inclusive</div><div class="pc-name">Complete LLP registration including government fees</div><ul class="pc-feats"><li class="pc-feat"><span class="pc-feat-check">✓</span>LLP registration</li><li class="pc-feat"><span class="pc-feat-check">✓</span>LLP agreement drafting</li><li class="pc-feat"><span class="pc-feat-check">✓</span>2 DIN applications</li></ul><button class="btn-pc btn-pc-outline" onclick="nav('contact')">Get Started</button></div>
+      <div class="pricing-card featured"><div class="pricing-pill">Most Popular</div><div class="pc-tier">Private Limited</div><div class="pc-price"><span class="curr">₹</span>12,000</div><div class="pc-period">all-inclusive</div><div class="pc-name">Complete Pvt Ltd incorporation with all documents</div><ul class="pc-feats"><li class="pc-feat"><span class="pc-feat-check">✓</span>SPICe+ incorporation</li><li class="pc-feat"><span class="pc-feat-check">✓</span>MOA &amp; AOA drafting</li><li class="pc-feat"><span class="pc-feat-check">✓</span>PAN &amp; TAN allotment</li><li class="pc-feat"><span class="pc-feat-check">✓</span>2 DSC + bank account support</li></ul><button class="btn-pc btn-pc-gold" onclick="nav('contact')">Get Started</button></div>
+      <div class="pricing-card"><div class="pc-tier">Annual Compliance</div><div class="pc-price"><span class="curr">₹</span>10,000</div><div class="pc-period">per year</div><div class="pc-name">Complete annual ROC compliance for active companies</div><ul class="pc-feats"><li class="pc-feat"><span class="pc-feat-check">✓</span>AOC-4 &amp; MGT-7 filing</li><li class="pc-feat"><span class="pc-feat-check">✓</span>Director KYC</li><li class="pc-feat"><span class="pc-feat-check">✓</span>Board meeting support</li></ul><button class="btn-pc btn-pc-dark" onclick="nav('contact')">Get Started</button></div>
+    </div>
+  </div></div></div>
+  <div id="corp-faq" class="tab-content"><div class="info-section"><div class="wrap" style="max-width:800px">
+    <div class="section-head"><div class="overline">FAQ</div><h2 class="h2">Corporate <em>Questions</em></h2></div>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What is the minimum requirement to form a Private Limited Company? <span class="faq-icon">+</span></button><div class="faq-a">A minimum of 2 directors (at least one Indian resident) and 2 shareholders are required. No minimum paid-up capital is mandated. You also need a registered office address in India.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What are the annual compliance requirements for a Pvt Ltd company? <span class="faq-icon">+</span></button><div class="faq-a">Every Pvt Ltd company must hold at least 4 board meetings per year, prepare audited financial statements, file AOC-4 and MGT-7 with the ROC each year, and complete Director KYC annually. Non-compliance can lead to penalties up to ₹1 lakh+ and director disqualification.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Can I convert my proprietorship into a Pvt Ltd company? <span class="faq-icon">+</span></button><div class="faq-a">Yes. Proprietorships can be converted to Pvt Ltd or OPC. Partnerships and LLPs can also be converted through specific routes under the Companies Act. We handle all such conversions including business transfer, asset valuation, and regulatory filings.</div></div>
+    </div>
+  </div></div></div>
+  <div class="cta-strip"><div class="wrap"><h2>Ready to Incorporate?</h2><p>Get your company registered in 5–7 days with full support.</p><button class="btn btn-white btn-lg" onclick="nav('contact')">Start Incorporation</button></div></div>
+  <footer><div class="wrap"><div class="footer-bottom"><span class="footer-copy">© 2025 Priyadarshi &amp; Associates.</span></div></div></footer>
+</div>
+
+<!-- ADVISORY -->
+<div id="pg-advisory" class="page">
+  <div class="svc-hero"><div class="svc-hero-inner">
+    <div class="breadcrumb"><span class="bc-item" onclick="nav('home')">Home</span><span class="bc-sep">›</span><span class="bc-item" onclick="nav('home')">Services</span><span class="bc-sep">›</span><span class="bc-cur">Financial Advisory</span></div>
+    <h1>Strategy-Driven<br><em>Financial Counsel.</em></h1>
+    <p class="svc-hero-desc">Beyond compliance — we serve as your strategic financial partner, offering business advisory, valuations, and CFO-level guidance to drive growth.</p>
+    <div style="margin-top:24px"><button class="btn btn-primary" onclick="nav('contact')">Speak to an Advisor</button></div>
+  </div></div>
+  <div class="tabs-nav"><div class="tabs-nav-inner">
+    <button class="tab-btn active" onclick="switchTab('advisory','overview',this)">Overview</button>
+    <button class="tab-btn" onclick="switchTab('advisory','services',this)">Services</button>
+    <button class="tab-btn" onclick="switchTab('advisory','faq',this)">FAQ</button>
+  </div></div>
+  <div id="advisory-overview" class="tab-content active"><div class="info-section"><div class="wrap"><div class="info-grid-2">
+    <div class="overview-text">
+      <h2 class="h2">Your Strategic <em>Financial Partner</em></h2>
+      <p>We go beyond tax and audit to provide real strategic value — helping you make informed financial decisions, secure funding, plan for succession, and grow profitably.</p>
+      <ul class="check-list"><li>Business valuation (DCF, asset-based, market approaches)</li><li>Project report and CMA data preparation for bank loans</li><li>Outsourced CFO / Virtual CFO services</li><li>Financial due diligence for M&amp;A and investments</li><li>Business restructuring and turnaround advisory</li><li>Budgeting, forecasting, and MIS reporting</li></ul>
+    </div>
+    <div>
+      <div class="info-grid-2x2">
+        <div class="info-card"><div class="info-icon">📈</div><h4>Business Valuation</h4><p>Certified valuations for fundraising, ESOPs, M&amp;A, and regulatory purposes.</p></div>
+        <div class="info-card"><div class="info-icon">🏦</div><h4>Loan Advisory</h4><p>Detailed project reports and CMA data to help you secure the best bank financing.</p></div>
+        <div class="info-card"><div class="info-icon">👔</div><h4>Virtual CFO</h4><p>Part-time CFO services including MIS, cash flow management, and investor reporting.</p></div>
+        <div class="info-card"><div class="info-icon">🔍</div><h4>Due Diligence</h4><p>Financial and tax due diligence for business acquisitions and investment decisions.</p></div>
+      </div>
+    </div>
+  </div></div></div></div>
+  <div id="advisory-services" class="tab-content"><div class="info-section"><div class="wrap">
+    <div class="section-head"><div class="overline">Advisory Services</div><h2 class="h2">How We <em>Add Value</em></h2></div>
+    <div class="info-grid-3">
+      <div class="info-card"><div class="info-icon">💰</div><h4>Business Valuation</h4><p>Valuations using DCF, book value, and market multiples. Required for ESOP grants, buybacks, M&amp;A, and FDI compliance.</p></div>
+      <div class="info-card"><div class="info-icon">📄</div><h4>Project Reports</h4><p>Bankable project reports and CMA data for term loans and working capital facilities. Designed for maximum bank approval rates.</p></div>
+      <div class="info-card"><div class="info-icon">📊</div><h4>Virtual CFO</h4><p>Monthly financial reporting, cash flow management, board-level presentations, and strategic advisory at a fraction of full-time CFO cost.</p></div>
+      <div class="info-card"><div class="info-icon">🔎</div><h4>Due Diligence</h4><p>Comprehensive financial and tax due diligence for investors, acquirers, and PE funds evaluating target companies in India.</p></div>
+      <div class="info-card"><div class="info-icon">🔧</div><h4>Restructuring Advisory</h4><p>Financial restructuring plans for businesses facing stress — working capital optimization, debt restructuring, and turnaround strategy.</p></div>
+      <div class="info-card"><div class="info-icon">📉</div><h4>Cost Optimization</h4><p>Detailed cost audit, variance analysis, and actionable recommendations to improve margins and EBITDA for manufacturing and service businesses.</p></div>
+    </div>
+  </div></div></div>
+  <div id="advisory-faq" class="tab-content"><div class="info-section"><div class="wrap" style="max-width:800px">
+    <div class="section-head"><div class="overline">FAQ</div><h2 class="h2">Advisory <em>Questions</em></h2></div>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">When do I need a business valuation? <span class="faq-icon">+</span></button><div class="faq-a">You need a business valuation when issuing new shares (including ESOPs), transferring shares, raising equity funding, making acquisitions, complying with FDI regulations, or for estate and succession planning purposes.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What is a Virtual CFO? <span class="faq-icon">+</span></button><div class="faq-a">A Virtual CFO provides strategic financial leadership — monthly P&amp;L analysis, cash flow forecasting, investor presentations, and business performance advisory — on a retainer basis. Ideal for companies that need CFO-level thinking but cannot justify a full-time hire.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What does a project report include for bank loans? <span class="faq-icon">+</span></button><div class="faq-a">A project report for bank financing includes executive summary, promoter profile, industry analysis, technical feasibility, projected financials (P&amp;L, balance sheet, cash flow) for 5–7 years, break-even analysis, and sensitivity analysis.</div></div>
+    </div>
+  </div></div></div>
+  <div class="cta-strip"><div class="wrap"><h2>Elevate Your Financial Strategy</h2><p>Schedule a confidential advisory conversation with our senior team.</p><button class="btn btn-white btn-lg" onclick="nav('contact')">Book Advisory Call</button></div></div>
+  <footer><div class="wrap"><div class="footer-bottom"><span class="footer-copy">© 2025 Priyadarshi &amp; Associates.</span></div></div></footer>
+</div>
+
+<!-- STARTUP -->
+<div id="pg-startup" class="page">
+  <div class="svc-hero"><div class="svc-hero-inner">
+    <div class="breadcrumb"><span class="bc-item" onclick="nav('home')">Home</span><span class="bc-sep">›</span><span class="bc-item" onclick="nav('home')">Services</span><span class="bc-sep">›</span><span class="bc-cur">Startup Services</span></div>
+    <h1>Launch Right.<br><em>Grow Faster.</em></h1>
+    <p class="svc-hero-desc">End-to-end startup support — from day-one incorporation and DPIIT recognition to seed funding compliance and investor-ready financial reporting.</p>
+    <div style="margin-top:24px"><button class="btn btn-primary" onclick="nav('contact')">Start Your Journey</button></div>
+  </div></div>
+  <div class="tabs-nav"><div class="tabs-nav-inner">
+    <button class="tab-btn active" onclick="switchTab('startup','overview',this)">Overview</button>
+    <button class="tab-btn" onclick="switchTab('startup','services',this)">Services</button>
+    <button class="tab-btn" onclick="switchTab('startup','pricing',this)">Pricing</button>
+    <button class="tab-btn" onclick="switchTab('startup','faq',this)">FAQ</button>
+  </div></div>
+  <div id="startup-overview" class="tab-content active"><div class="info-section"><div class="wrap"><div class="info-grid-2">
+    <div class="overview-text">
+      <h2 class="h2">Your <em>Startup's</em> Finance Team</h2>
+      <p>We understand the startup journey. From zero to Series A, we handle every financial and regulatory milestone so you can focus on building your product and team.</p>
+      <ul class="check-list"><li>Company incorporation (Pvt Ltd preferred for startups)</li><li>DPIIT startup recognition under Startup India</li><li>Seed round compliance (SAFE notes, convertible debt)</li><li>ESOP scheme design and valuation</li><li>Angel tax exemption (Section 56(2)(viib))</li><li>Startup India tax benefits (Sec 80-IAC)</li><li>Investor-ready financial reporting and MIS</li></ul>
+    </div>
+    <div>
+      <div class="info-grid-2x2">
+        <div class="info-card"><div class="info-icon">🚀</div><h4>DPIIT Recognition</h4><p>Get your Startup India recognition in 2–3 weeks with our expert assistance.</p></div>
+        <div class="info-card"><div class="info-icon">💸</div><h4>Angel Tax Help</h4><p>Navigate Section 56(2)(viib) angel tax and exemption filing with confidence.</p></div>
+        <div class="info-card"><div class="info-icon">📊</div><h4>Cap Table Mgmt</h4><p>Accurate cap table maintenance through every funding round and ESOP exercise.</p></div>
+        <div class="info-card"><div class="info-icon">🤝</div><h4>Investor Reporting</h4><p>Monthly and quarterly financial packs prepared to investor standards.</p></div>
+      </div>
+    </div>
+  </div></div></div></div>
+  <div id="startup-services" class="tab-content"><div class="info-section"><div class="wrap">
+    <div class="section-head"><div class="overline">Startup Services</div><h2 class="h2">Full Startup <em>Support</em></h2></div>
+    <div class="info-grid-3">
+      <div class="info-card"><div class="info-icon">🏗️</div><h4>Incorporation</h4><p>Fast-track Private Limited company incorporation — founder share allocation, vesting schedules, and investor-friendly articles of association.</p></div>
+      <div class="info-card"><div class="info-icon">🏅</div><h4>DPIIT Recognition</h4><p>Complete DPIIT application and follow-up to secure Startup India recognition — unlocking tax benefits and government scheme access.</p></div>
+      <div class="info-card"><div class="info-icon">💰</div><h4>Funding Compliance</h4><p>FC-GPR filing for FDI, SAFE note accounting, convertible note compliance, and all RBI/FEMA filings required when raising funds.</p></div>
+      <div class="info-card"><div class="info-icon">⚙️</div><h4>ESOP Management</h4><p>ESOP scheme design, board and shareholder approval, valuation certificates, exercise accounting, and perquisite tax computation.</p></div>
+      <div class="info-card"><div class="info-icon">🧾</div><h4>Sec 80-IAC Benefits</h4><p>Application for Section 80-IAC income tax exemption (3 consecutive years out of 10) for DPIIT-recognized startups.</p></div>
+      <div class="info-card"><div class="info-icon">📋</div><h4>Due Diligence Prep</h4><p>Clean-up of books and preparing a complete data room package to accelerate due diligence for seed and Series A rounds.</p></div>
+    </div>
+  </div></div></div>
+  <div id="startup-pricing" class="tab-content"><div class="info-section"><div class="wrap">
+    <div class="section-head"><div class="overline">Pricing</div><h2 class="h2">Startup <em>Plans</em></h2></div>
+    <div class="pricing-grid">
+      <div class="pricing-card"><div class="pc-tier">Launch</div><div class="pc-price"><span class="curr">₹</span>20,000</div><div class="pc-period">one-time</div><div class="pc-name">Everything you need to legally launch your startup</div><ul class="pc-feats"><li class="pc-feat"><span class="pc-feat-check">✓</span>Pvt Ltd incorporation</li><li class="pc-feat"><span class="pc-feat-check">✓</span>DPIIT recognition</li><li class="pc-feat"><span class="pc-feat-check">✓</span>GST registration</li></ul><button class="btn-pc btn-pc-outline" onclick="nav('contact')">Get Started</button></div>
+      <div class="pricing-card featured"><div class="pricing-pill">Best for Growth</div><div class="pc-tier">Grow</div><div class="pc-price"><span class="curr">₹</span>8,000</div><div class="pc-period">per month</div><div class="pc-name">Ongoing compliance + advisory for funded startups</div><ul class="pc-feats"><li class="pc-feat"><span class="pc-feat-check">✓</span>All annual filings</li><li class="pc-feat"><span class="pc-feat-check">✓</span>Monthly MIS reports</li><li class="pc-feat"><span class="pc-feat-check">✓</span>GST compliance</li><li class="pc-feat"><span class="pc-feat-check">✓</span>Investor reporting support</li></ul><button class="btn-pc btn-pc-gold" onclick="nav('contact')">Get Started</button></div>
+      <div class="pricing-card"><div class="pc-tier">Fund-Ready</div><div class="pc-price">Custom</div><div class="pc-period">project-based</div><div class="pc-name">Comprehensive funding round preparation</div><ul class="pc-feats"><li class="pc-feat"><span class="pc-feat-check">✓</span>Full due diligence prep</li><li class="pc-feat"><span class="pc-feat-check">✓</span>FC-GPR &amp; FEMA filings</li><li class="pc-feat"><span class="pc-feat-check">✓</span>ESOP scheme setup + valuation</li></ul><button class="btn-pc btn-pc-dark" onclick="nav('contact')">Contact Us</button></div>
+    </div>
+  </div></div></div>
+  <div id="startup-faq" class="tab-content"><div class="info-section"><div class="wrap" style="max-width:800px">
+    <div class="section-head"><div class="overline">FAQ</div><h2 class="h2">Startup <em>Questions</em></h2></div>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Should my startup be a Pvt Ltd or an LLP? <span class="faq-icon">+</span></button><div class="faq-a">For startups planning to raise equity funding, a Private Limited Company is strongly recommended. Investors — angels, VCs, and PE funds — typically invest only in companies, not LLPs. ESOPs and cap table management are also far cleaner in a Pvt Ltd structure.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What is DPIIT recognition and what are its benefits? <span class="faq-icon">+</span></button><div class="faq-a">DPIIT recognition is an official government certification for eligible startups. Benefits include Section 80-IAC income tax exemption for 3 years, angel tax exemption, easier compliance norms, fast-track IP examination, and access to government startup schemes.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What is angel tax and how can my startup avoid it? <span class="faq-icon">+</span></button><div class="faq-a">Angel tax (Section 56(2)(viib)) is levied when a company raises capital from resident investors at a valuation higher than fair market value. DPIIT-recognized startups can apply for an exemption. We help startups obtain this exemption before raising funds.</div></div>
+    </div>
+  </div></div></div>
+  <div class="cta-strip"><div class="wrap"><h2>Ready to Launch Your Startup?</h2><p>Let's get you incorporated, recognized, and investor-ready.</p><button class="btn btn-white btn-lg" onclick="nav('contact')">Start for Free</button></div></div>
+  <footer><div class="wrap"><div class="footer-bottom"><span class="footer-copy">© 2025 Priyadarshi &amp; Associates.</span></div></div></footer>
+</div>
+
+<!-- ABOUT -->
+<div id="pg-about" class="page">
+  <div class="svc-hero"><div class="svc-hero-inner">
+    <div class="breadcrumb"><span class="bc-item" onclick="nav('home')">Home</span><span class="bc-sep">›</span><span class="bc-cur">About Us</span></div>
+    <h1>20 Years of <em>Trust,</em><br>Integrity &amp; Excellence</h1>
+    <p class="svc-hero-desc">Priyadarshi &amp; Associates was founded on the belief that every business deserves world-class financial counsel — from first-generation entrepreneurs to established groups.</p>
+  </div></div>
+  <div class="section-sm"><div class="wrap">
+    <div class="info-grid-2" style="align-items:start">
+      <div class="overview-text">
+        <div class="overline">Our Story</div>
+        <h2 class="h2">A Firm Built on <em>Principles</em></h2>
+        <p>Founded in 2005 by CA Ravi Priyadarshi in Patna, the firm began as a sole proprietorship focused on income tax and audit. Over the next 20 years, it grew into a full-service CA practice with a team of qualified chartered accountants and semi-qualified assistants.</p>
+        <p>Today, Priyadarshi &amp; Associates serves over 500 clients across Bihar and Jharkhand — from individual taxpayers and proprietorships to mid-size manufacturing companies and funded startups.</p>
+        <p>Our growth has always been driven by client referrals — a testament to the trust we have earned through consistent, quality work over two decades.</p>
+      </div>
+      <div>
+        <div class="info-grid-2x2">
+          <div class="info-card" style="text-align:center"><div style="font-family:var(--serif);font-size:2.3rem;font-weight:500;color:var(--gold);margin-bottom:5px">2005</div><div style="font-size:.78rem;color:var(--ink-lt)">Year Founded</div></div>
+          <div class="info-card" style="text-align:center"><div style="font-family:var(--serif);font-size:2.3rem;font-weight:500;color:var(--gold);margin-bottom:5px">500+</div><div style="font-size:.78rem;color:var(--ink-lt)">Active Clients</div></div>
+          <div class="info-card" style="text-align:center"><div style="font-family:var(--serif);font-size:2.3rem;font-weight:500;color:var(--gold);margin-bottom:5px">8</div><div style="font-size:.78rem;color:var(--ink-lt)">Team Members</div></div>
+          <div class="info-card" style="text-align:center"><div style="font-family:var(--serif);font-size:2.3rem;font-weight:500;color:var(--gold);margin-bottom:5px">6</div><div style="font-size:.78rem;color:var(--ink-lt)">Service Areas</div></div>
+        </div>
+      </div>
+    </div>
+  </div></div>
+  <div class="section-sm" style="background:var(--cream)"><div class="wrap">
+    <div class="section-head center"><div class="overline">Our People</div><h2 class="h1">Meet the <em>Team</em></h2></div>
+    <div class="team-grid">
+      <div class="team-card"><div class="team-photo">RP</div><div class="team-info"><div class="team-name">CA Ravi Priyadarshi</div><div class="team-role">Founder &amp; Managing Partner</div><p class="team-bio">20+ years in practice. Fellow member of ICAI with specialization in direct taxation, statutory audit, and business advisory. Served as concurrent auditor for multiple nationalised banks.</p><div class="team-quals"><span class="team-qual">FCA</span><span class="team-qual">ICAI</span></div></div></div>
+      <div class="team-card"><div class="team-photo">AP</div><div class="team-info"><div class="team-name">CA Anjali Priyadarshi</div><div class="team-role">Partner — Indirect Tax &amp; GST</div><p class="team-bio">Associate member of ICAI specializing in GST, FEMA, and corporate compliance. Leads the firm's GST practice and handles complex indirect tax advisory and litigation.</p><div class="team-quals"><span class="team-qual">ACA</span><span class="team-qual">GST Expert</span></div></div></div>
+      <div class="team-card"><div class="team-photo">SK</div><div class="team-info"><div class="team-name">CA Suresh Kumar</div><div class="team-role">Senior Manager — Audit</div><p class="team-bio">8 years of experience in statutory audit, bank audit, and internal audit. Manages the audit team and maintains quality control across all audit engagements.</p><div class="team-quals"><span class="team-qual">ACA</span><span class="team-qual">Audit</span></div></div></div>
+    </div>
+  </div></div>
+  <div class="cta-strip"><div class="wrap"><h2>Ready to Work With Us?</h2><p>Schedule a consultation with our team today.</p><button class="btn btn-white btn-lg" onclick="nav('contact')">Get in Touch</button></div></div>
+  <footer><div class="wrap"><div class="footer-bottom"><span class="footer-copy">© 2025 Priyadarshi &amp; Associates.</span></div></div></footer>
+</div>
+
+<!-- CONTACT -->
+<div id="pg-contact" class="page">
+  <div class="svc-hero"><div class="svc-hero-inner">
+    <div class="breadcrumb"><span class="bc-item" onclick="nav('home')">Home</span><span class="bc-sep">›</span><span class="bc-cur">Contact</span></div>
+    <h1>Let's Start a <em>Conversation.</em></h1>
+    <p class="svc-hero-desc">Reach out for a free, no-obligation consultation. We typically respond within 4 business hours.</p>
+  </div></div>
+  <div class="wrap">
+    <div class="contact-layout">
+      <div>
+        <div class="overline">Send a Message</div>
+        <h2 class="h2" style="margin-bottom:28px">How Can We <em>Help?</em></h2>
+        <div class="cf-row">
+          <div class="cf-group"><label class="cf-label">First Name</label><input class="cf-input" type="text" id="cf-fname" placeholder="Rahul"></div>
+          <div class="cf-group"><label class="cf-label">Last Name</label><input class="cf-input" type="text" id="cf-lname" placeholder="Sharma"></div>
+        </div>
+        <div class="cf-group"><label class="cf-label">Email Address</label><input class="cf-input" type="email" id="cf-email" placeholder="rahul@example.com"></div>
+        <div class="cf-group"><label class="cf-label">Phone Number</label><input class="cf-input" type="tel" id="cf-phone" placeholder="+91 98765 43210"></div>
+        <div class="cf-group"><label class="cf-label">Service Required</label>
+          <select class="cf-input cf-select" id="cf-service">
+            <option value="">Select a service...</option>
+            <option>Audit &amp; Assurance</option>
+            <option>Taxation (Income Tax)</option>
+            <option>GST Services</option>
+            <option>Corporate Affairs / Incorporation</option>
+            <option>Financial Advisory</option>
+            <option>Startup Services</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="cf-group"><label class="cf-label">Your Message</label><textarea class="cf-input cf-textarea" id="cf-message" placeholder="Tell us briefly about your requirements..."></textarea></div>
+        <button class="btn btn-primary btn-lg" style="width:100%;justify-content:center" onclick="submitContact(this)">Send Message →</button>
+        <p style="font-size:.74rem;color:var(--ink-lt);margin-top:12px;text-align:center">✓ 100% Confidential &nbsp;·&nbsp; ✓ No spam &nbsp;·&nbsp; ✓ Response within 4 hrs</p>
+      </div>
+      <div>
+        <div class="overline">Contact Details</div>
+        <h2 class="h2" style="margin-bottom:28px">Our <em>Office</em></h2>
+        <div class="ci-item"><div class="ci-icon">📍</div><div><div class="ci-label">Address</div><div class="ci-text">Fraser Road, Patna – 800001<br>Bihar, India</div></div></div>
+        <div class="ci-item"><div class="ci-icon">📞</div><div><div class="ci-label">Phone</div><div class="ci-text"><a href="tel:+916123456789" style="color:inherit">+91 612 345 6789</a><br>+91 98765 00001</div></div></div>
+        <div class="ci-item"><div class="ci-icon">📱</div><div><div class="ci-label">WhatsApp</div><div class="ci-text"><a href="https://wa.me/916123456789" target="_blank" style="color:var(--gold)">+91 612 345 6789</a></div></div></div>
+        <div class="ci-item"><div class="ci-icon">✉️</div><div><div class="ci-label">Email</div><div class="ci-text"><a href="mailto:info@priyadarshiassociates.in" style="color:inherit">info@priyadarshiassociates.in</a></div></div></div>
+        <div class="ci-item"><div class="ci-icon">🕐</div><div><div class="ci-label">Office Hours</div><div class="ci-text">Mon – Sat: 10:00 AM – 7:00 PM<br>Sunday: Closed</div></div></div>
+        <div class="consult-box">
+          <h4>Free 30-Min Consultation</h4>
+          <p>Every new client engagement begins with a complimentary 30-minute consultation with a senior CA partner. No commitment required.</p>
+          <a href="https://wa.me/916123456789?text=Hi%2C%20I%27d%20like%20to%20schedule%20a%20free%20consultation." target="_blank" class="btn-wa">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a3.178 3.178 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.526 5.847L.057 23.882l6.19-1.444A11.938 11.938 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.852 0-3.586-.5-5.083-1.374l-.364-.216-3.764.877.924-3.668-.237-.376A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer><div class="wrap"><div class="footer-grid">
+    <div><div class="footer-brand-name">Priyadarshi &amp; Associates</div><div class="footer-brand-sub">Chartered Accountants</div><p class="footer-brand-desc">Trusted CA firm serving Bihar &amp; Jharkhand since 2005.</p></div>
+    <div><div class="footer-col-title">Services</div><div class="footer-links"><span class="footer-link" onclick="nav('audit')">Audit &amp; Assurance</span><span class="footer-link" onclick="nav('tax')">Taxation</span><span class="footer-link" onclick="nav('gst')">GST</span><span class="footer-link" onclick="nav('corp')">Corporate Affairs</span></div></div>
+    <div><div class="footer-col-title">Contact</div><div class="footer-links"><span class="footer-link">Fraser Road, Patna 800001</span><a class="footer-link" href="tel:+916123456789">+91 612 345 6789</a></div></div>
+  </div><div class="footer-bottom"><span class="footer-copy">© 2025 Priyadarshi &amp; Associates. All rights reserved.</span><span class="footer-reg">ICAI Firm Reg. No. 000000C</span></div></div></footer>
+</div>
+
+<!-- BLOG -->
+<div id="pg-blog" class="page">
+  <div class="svc-hero"><div class="svc-hero-inner">
+    <div class="breadcrumb"><span class="bc-item" onclick="nav('home')">Home</span><span class="bc-sep">›</span><span class="bc-cur">Resources</span></div>
+    <h1>Tax &amp; Finance <em>Knowledge Hub</em></h1>
+    <p class="svc-hero-desc">Practical guides, deadline alerts, and expert insights from our team of chartered accountants — keeping you informed and compliant.</p>
+  </div></div>
+  <div class="wrap">
+    <div class="blog-full-grid">
+      <div>
+        <div class="blog-article">
+          <div class="blog-article-img" style="background:linear-gradient(135deg,var(--navy),var(--navy-lite))"><span class="blog-cat">Income Tax</span>📊</div>
+          <div class="blog-article-content">
+            <div class="blog-article-meta"><span class="blog-article-cat">Income Tax</span><span class="blog-article-date">June 15, 2025</span><span class="blog-article-read">8 min read</span></div>
+            <div class="blog-article-title">New Tax Regime vs Old Regime: Which Saves You More in FY 2025-26?</div>
+            <p class="blog-article-excerpt">With the new tax regime now the default for FY 2025-26, many taxpayers are wondering whether to stick with it or opt back into the old regime. The answer depends on your income level, deductions, and investment behaviour. In this comprehensive guide, we break down both regimes with real-life examples to help you make an informed decision before filing your ITR.</p>
+            <p class="blog-article-excerpt">Under the new regime, taxpayers enjoy a standard deduction of ₹75,000 and lower slab rates, but lose out on exemptions like HRA, LTA, and deductions under 80C, 80D. For someone with significant investments in ELSS, NPS, and a home loan, the old regime often works out better above a certain income threshold...</p>
+            <a href="#" onclick="showToast('Full article coming soon!')" class="blog-read-more">Continue Reading →</a>
+          </div>
+        </div>
+        <div class="blog-article">
+          <div class="blog-article-img" style="background:linear-gradient(135deg,#1a4a2e,#2d6a4f)"><span class="blog-cat">GST</span>🧾</div>
+          <div class="blog-article-content">
+            <div class="blog-article-meta"><span class="blog-article-cat" style="background:#22c55e">GST</span><span class="blog-article-date">June 8, 2025</span><span class="blog-article-read">6 min read</span></div>
+            <div class="blog-article-title">GS
