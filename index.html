@@ -882,6 +882,50 @@ footer{background:#070F1C;padding:76px 0 0}
 .apply-body{padding:24px 28px}
 @media(max-width:768px){.job-grid{grid-template-columns:1fr}.perks-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:480px){.perks-grid{grid-template-columns:1fr 1fr}}
+
+/* ── Scroll Progress Bar ── */
+#scrollBar{position:fixed;top:0;left:0;height:2.5px;background:linear-gradient(90deg,var(--gold),var(--gold-lt));width:0%;z-index:9999;pointer-events:none;border-radius:0 2px 2px 0;box-shadow:0 0 8px rgba(201,168,76,.5)}
+
+/* ── Button Ripple ── */
+.btn,.btn-nav,.btn-pc,.btn-wa,.btn-calc{position:relative;overflow:hidden}
+.ripple{position:absolute;border-radius:50%;transform:scale(0);animation:rippleAnim .5s linear;pointer-events:none;background:rgba(255,255,255,.28)}
+@keyframes rippleAnim{to{transform:scale(4);opacity:0}}
+
+/* ── Magnetic CTA subtle glow on hover ── */
+.btn-primary,.btn-nav{transition:all .25s var(--ease),box-shadow .25s}
+
+/* ═══════════════════════════════════════════
+   PREMIUM ANIMATIONS — CS & FINANCE THEME
+   GPU-only · 60fps · Subtle & Elegant
+   ═══════════════════════════════════════════ */
+
+/* ── Finance Canvas ── */
+#financeCanvas{position:absolute;inset:0;z-index:1;pointer-events:none}
+
+/* ── Hero entrance — text slides up on load ── */
+.hero-kicker{animation:hIn .7s .10s var(--ease) both}
+.hero-title  {animation:hIn .7s .22s var(--ease) both}
+.hero-desc   {animation:hIn .7s .35s var(--ease) both}
+.hero-actions{animation:hIn .7s .45s var(--ease) both}
+.hero-trust  {animation:hIn .7s .55s var(--ease) both}
+@keyframes hIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── Scroll Reveal ── */
+.sr{opacity:0;transform:translateY(28px);transition:opacity .62s cubic-bezier(.4,0,.2,1),transform .62s cubic-bezier(.4,0,.2,1)}
+.sr.in{opacity:1;transform:translateY(0)}
+.sr.d1{transition-delay:.06s}.sr.d2{transition-delay:.12s}.sr.d3{transition-delay:.18s}
+.sr.d4{transition-delay:.24s}.sr.d5{transition-delay:.30s}.sr.d6{transition-delay:.36s}
+
+/* ── Hero card & orb parallax ── */
+.hero-card{transition:transform .14s linear;will-change:transform}
+.hero-orb {transition:transform .18s linear}
+
+/* ── Reduced-motion safety ── */
+@media(prefers-reduced-motion:reduce){
+  .sr{opacity:1;transform:none;transition:none}
+  .hero-kicker,.hero-title,.hero-desc,.hero-actions,.hero-trust{animation:none}
+  #financeCanvas{display:none}
+}
 </style>
 </head>
 <body>
@@ -1199,6 +1243,7 @@ footer{background:#070F1C;padding:76px 0 0}
 
 <section class="hero">
   <div class="hero-bg"></div><div class="hero-grid-bg"></div><div class="hero-orb"></div>
+  <canvas id="financeCanvas" aria-hidden="true"></canvas>
   <div class="hero-inner">
     <div>
       <div class="hero-kicker"><span class="hero-kicker-dot"></span><span class="hero-kicker-text">Patna's Most Trusted CA Firm · Est. 2005</span></div>
@@ -3286,24 +3331,30 @@ window.addEventListener('scroll', function(){
 function animateCounters() {
   document.querySelectorAll('.counter').forEach(function(el){
     var target = parseInt(el.getAttribute('data-target'));
-    var start = 0;
-    var duration = 1500;
-    var step = Math.ceil(target / (duration / 16));
-    var timer = setInterval(function(){
-      start += step;
-      if (start >= target) { start = target; clearInterval(timer); }
-      el.textContent = start.toLocaleString('en-IN');
-    }, 16);
+    if(el._counted) return; el._counted = true;
+    var start = 0, duration = 1800, startTime = null;
+    function easeOut(t){ return 1 - Math.pow(1 - t, 3); }
+    function step(ts){
+      if(!startTime) startTime = ts;
+      var progress = Math.min((ts - startTime) / duration, 1);
+      var val = Math.round(easeOut(progress) * target);
+      el.textContent = val.toLocaleString('en-IN');
+      if(progress < 1) requestAnimationFrame(step);
+      else el.textContent = target.toLocaleString('en-IN');
+    }
+    requestAnimationFrame(step);
   });
 }
-// Trigger counters when stats section is visible
+// Trigger counters when stats section or hero trust is visible
 var statsObserver = new IntersectionObserver(function(entries){
   entries.forEach(function(e){
-    if (e.isIntersecting) { animateCounters(); statsObserver.disconnect(); }
+    if(e.isIntersecting){ animateCounters(); }
   });
 }, {threshold: 0.3});
-var statsEl = document.querySelector('.stats-section');
-if (statsEl) statsObserver.observe(statsEl);
+['stats-section','pg-home'].forEach(function(id){
+  var el = document.querySelector('.' + id) || document.getElementById(id);
+  if(el) statsObserver.observe(el);
+});
 
 /* ═══════════════════════════
    DEADLINE TICKER (home page gold bar)
@@ -4085,6 +4136,346 @@ document.addEventListener('keydown', function(e) {
     if(chatOpen) toggleChat();
   }
 });
+
+/* ═══════════════════════════════════════════════════
+   PREMIUM ANIMATIONS — CS & FINANCE THEME
+   Principles: GPU-only (opacity/transform), 60fps, subtle
+   ═══════════════════════════════════════════════════ */
+
+/* ─── 1. FINANCE CANVAS — 3D Rotating Globe ─── */
+!function(){
+  var cv = document.getElementById('financeCanvas');
+  if(!cv || window.innerWidth < 600) return;
+  var cx = cv.getContext('2d');
+  var W, H, raf = 0, t = 0;
+  var PI2 = Math.PI * 2, PI = Math.PI;
+
+  // Globe config
+  var R = 0;        // radius, set on resize
+  var CX, CY;       // center of globe
+  var spherePts = [];
+  var ringPts = [];
+  var floaters = [];
+  var rays = [];
+  var syms = ['\u20b9','%','\u00a7','\u2211','\u20b9','\u2295','%','\u0394'];
+
+  function resize() {
+    var hero = cv.parentElement;
+    W = cv.width = hero ? hero.offsetWidth : window.innerWidth;
+    H = cv.height = hero ? hero.offsetHeight : window.innerHeight;
+    R = Math.min(W, H) * 0.28;
+    CX = W * 0.62;
+    CY = H * 0.48;
+  }
+
+  function buildGlobe() {
+    spherePts = [];
+    // Latitude lines
+    for (var lat = 0; lat < 14; lat++) {
+      var phi = (lat / 13) * PI;
+      for (var lon = 0; lon < 28; lon++) {
+        var theta = (lon / 28) * PI2;
+        spherePts.push({
+          phi: phi, theta: theta,
+          r: R * (0.96 + Math.random() * 0.08),
+          size: Math.random() * 1.2 + 0.5,
+          op: Math.random() * 0.5 + 0.3
+        });
+      }
+    }
+    // Orbital ring points
+    ringPts = [];
+    for (var i = 0; i < 80; i++) {
+      ringPts.push({
+        angle: (i / 80) * PI2,
+        r: R * 1.35,
+        size: Math.random() * 1.0 + 0.4,
+        speed: 0.3 + Math.random() * 0.2
+      });
+    }
+    // Second ring (tilted)
+    for (var j = 0; j < 50; j++) {
+      ringPts.push({
+        angle: (j / 50) * PI2,
+        r: R * 1.6,
+        size: Math.random() * 0.8 + 0.3,
+        speed: -0.18 + Math.random() * 0.08,
+        tilt: true
+      });
+    }
+    // Floating symbols
+    floaters = [];
+    for (var k = 0; k < 12; k++) {
+      floaters.push({
+        angle: Math.random() * PI2,
+        dist: R * (1.1 + Math.random() * 0.8),
+        speed: (Math.random() - 0.5) * 0.15,
+        yoff: (Math.random() - 0.5) * R * 0.8,
+        sym: syms[k % syms.length],
+        op: 0.2 + Math.random() * 0.35,
+        size: 10 + Math.random() * 6
+      });
+    }
+    // Light rays
+    rays = [];
+    for (var m = 0; m < 6; m++) {
+      rays.push({
+        angle: (m / 6) * PI2,
+        len: R * (0.6 + Math.random() * 0.5),
+        width: 1 + Math.random() * 1.5,
+        op: 0.03 + Math.random() * 0.04
+      });
+    }
+  }
+
+  function project3D(phi, theta, radius, rotY) {
+    var x = radius * Math.sin(phi) * Math.cos(theta + rotY);
+    var y = radius * Math.cos(phi);
+    var z = radius * Math.sin(phi) * Math.sin(theta + rotY);
+    var scale = 600 / (600 + z);
+    return { x: CX + x * scale, y: CY + y * scale, z: z, scale: scale };
+  }
+
+  function tick() {
+    t += 0.004;
+    cx.clearRect(0, 0, W, H);
+
+    // Core glow
+    var grd = cx.createRadialGradient(CX, CY, 0, CX, CY, R * 1.8);
+    grd.addColorStop(0, 'rgba(201,168,76,0.08)');
+    grd.addColorStop(0.3, 'rgba(201,168,76,0.03)');
+    grd.addColorStop(1, 'rgba(201,168,76,0)');
+    cx.fillStyle = grd;
+    cx.fillRect(0, 0, W, H);
+
+    // Inner core pulse
+    var pulse = 0.6 + Math.sin(t * 2.5) * 0.15;
+    var core = cx.createRadialGradient(CX, CY, 0, CX, CY, R * 0.5);
+    core.addColorStop(0, 'rgba(201,168,76,' + (0.12 * pulse) + ')');
+    core.addColorStop(1, 'rgba(201,168,76,0)');
+    cx.fillStyle = core;
+    cx.beginPath();
+    cx.arc(CX, CY, R * 0.5, 0, PI2);
+    cx.fill();
+
+    // Light rays from center
+    for (var ri = 0; ri < rays.length; ri++) {
+      var ray = rays[ri];
+      var ra = ray.angle + t * 0.3;
+      var ex = CX + Math.cos(ra) * ray.len * (1 + Math.sin(t * 1.5 + ri) * 0.2);
+      var ey = CY + Math.sin(ra) * ray.len * (1 + Math.sin(t * 1.5 + ri) * 0.2);
+      cx.beginPath();
+      cx.strokeStyle = 'rgba(201,168,76,' + ray.op + ')';
+      cx.lineWidth = ray.width;
+      cx.moveTo(CX, CY);
+      cx.lineTo(ex, ey);
+      cx.stroke();
+    }
+
+    // Sphere wireframe connections
+    var projected = [];
+    for (var i = 0; i < spherePts.length; i++) {
+      var p = spherePts[i];
+      projected.push(project3D(p.phi, p.theta, p.r, t));
+    }
+    // Draw connections along latitude
+    cx.lineWidth = 0.3;
+    for (var li = 0; li < 14; li++) {
+      for (var lj = 0; lj < 28; lj++) {
+        var idx1 = li * 28 + lj;
+        var idx2 = li * 28 + ((lj + 1) % 28);
+        var a = projected[idx1], b = projected[idx2];
+        if (a.z > -R * 0.5 && b.z > -R * 0.5) {
+          var lineOp = Math.max(0, Math.min(0.12, (a.z + R) / (R * 2) * 0.12));
+          cx.beginPath();
+          cx.strokeStyle = 'rgba(201,168,76,' + lineOp + ')';
+          cx.moveTo(a.x, a.y);
+          cx.lineTo(b.x, b.y);
+          cx.stroke();
+        }
+      }
+    }
+    // Longitude connections
+    for (var mi = 0; mi < 28; mi++) {
+      for (var mj = 0; mj < 13; mj++) {
+        var ia = mj * 28 + mi, ib = (mj + 1) * 28 + mi;
+        var pa = projected[ia], pb = projected[ib];
+        if (pa.z > -R * 0.3 && pb.z > -R * 0.3) {
+          var lo = Math.max(0, Math.min(0.08, (pa.z + R) / (R * 2) * 0.08));
+          cx.beginPath();
+          cx.strokeStyle = 'rgba(201,168,76,' + lo + ')';
+          cx.moveTo(pa.x, pa.y);
+          cx.lineTo(pb.x, pb.y);
+          cx.stroke();
+        }
+      }
+    }
+
+    // Sphere particles
+    for (var si = 0; si < spherePts.length; si++) {
+      var sp = spherePts[si];
+      var pp = projected[si];
+      var depthOp = Math.max(0, (pp.z + sp.r) / (sp.r * 2));
+      var finalOp = sp.op * depthOp * (0.7 + Math.sin(t * 2 + si * 0.3) * 0.3);
+      if (finalOp < 0.04) continue;
+      cx.beginPath();
+      cx.arc(pp.x, pp.y, sp.size * pp.scale, 0, PI2);
+      cx.fillStyle = 'rgba(201,168,76,' + finalOp.toFixed(3) + ')';
+      cx.fill();
+      // Glow on brighter points
+      if (finalOp > 0.35) {
+        cx.beginPath();
+        cx.arc(pp.x, pp.y, sp.size * pp.scale * 3, 0, PI2);
+        cx.fillStyle = 'rgba(201,168,76,' + (finalOp * 0.12).toFixed(3) + ')';
+        cx.fill();
+      }
+    }
+
+    // Orbital ring 1 (equatorial)
+    for (var oi = 0; oi < 80; oi++) {
+      var op = ringPts[oi];
+      var oa = op.angle + t * op.speed;
+      var ox = CX + Math.cos(oa) * op.r;
+      var oy = CY + Math.sin(oa) * op.r * 0.28; // elliptical
+      var oz = Math.sin(oa);
+      var ro = (0.15 + oz * 0.15) * (0.7 + Math.sin(t * 3 + oi) * 0.3);
+      cx.beginPath();
+      cx.arc(ox, oy, op.size, 0, PI2);
+      cx.fillStyle = 'rgba(255,255,255,' + ro.toFixed(3) + ')';
+      cx.fill();
+    }
+
+    // Orbital ring 2 (tilted)
+    for (var ti = 80; ti < ringPts.length; ti++) {
+      var tp = ringPts[ti];
+      var ta = tp.angle + t * tp.speed;
+      var tx = CX + Math.cos(ta) * tp.r;
+      var tyy = CY + Math.sin(ta) * tp.r * 0.55;
+      var to2 = 0.08 + Math.sin(ta) * 0.06;
+      cx.beginPath();
+      cx.arc(tx, tyy, tp.size, 0, PI2);
+      cx.fillStyle = 'rgba(201,168,76,' + to2.toFixed(3) + ')';
+      cx.fill();
+    }
+
+    // Floating financial symbols
+    cx.textAlign = 'center';
+    cx.textBaseline = 'middle';
+    for (var fi = 0; fi < floaters.length; fi++) {
+      var f = floaters[fi];
+      f.angle += f.speed * 0.016;
+      var fx = CX + Math.cos(f.angle) * f.dist;
+      var fy = CY + f.yoff + Math.sin(t * 0.8 + fi) * 15;
+      var fo = f.op * (0.5 + Math.sin(t * 1.5 + fi * 0.7) * 0.5);
+      cx.font = f.size + 'px "DM Mono", monospace';
+      cx.fillStyle = 'rgba(201,168,76,' + fo.toFixed(3) + ')';
+      cx.fillText(f.sym, fx, fy);
+    }
+
+    // Equator glow ring
+    cx.beginPath();
+    cx.ellipse(CX, CY, R * 1.35, R * 0.38, 0, 0, PI2);
+    cx.strokeStyle = 'rgba(201,168,76,' + (0.06 + Math.sin(t * 2) * 0.02) + ')';
+    cx.lineWidth = 1;
+    cx.stroke();
+
+    raf = requestAnimationFrame(tick);
+  }
+
+  function startStop() {
+    var home = document.getElementById('pg-home');
+    var on = home && home.classList.contains('active');
+    if (on && !raf) { resize(); buildGlobe(); tick(); }
+    else if (!on && raf) { cancelAnimationFrame(raf); raf = 0; }
+  }
+
+  var pg = document.getElementById('pg-home');
+  if (pg) new MutationObserver(startStop).observe(pg, { attributes: true, attributeFilter: ['class'] });
+  window.addEventListener('resize', function() {
+    cancelAnimationFrame(raf); raf = 0; startStop();
+  });
+  startStop();
+}();
+
+/* ─── 2. SCROLL REVEAL — IntersectionObserver ─── */
+!function(){
+  if(!window.IntersectionObserver) return;
+  var sel='.svc-card,.stap-card,.stat-card,.testi-card,.team-card,.blog-card,.why-feat,.process-step,.ind-card,.local-card,.info-card,.pricing-card,.perk-card,.job-card,.dl-card';
+  document.querySelectorAll(sel).forEach(function(el,i){
+    el.classList.add('sr','d'+(i%6+1));
+  });
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
+    });
+  },{threshold:.1,rootMargin:'0px 0px -30px 0px'});
+  document.querySelectorAll('.sr').forEach(function(el){io.observe(el);});
+}();
+
+/* ─── 3. HERO MOUSE PARALLAX ─── */
+!function(){
+  if(window.innerWidth<900) return;
+  var hero=document.querySelector('.hero');
+  var card=document.querySelector('.hero-card');
+  var orb =document.querySelector('.hero-orb');
+  if(!hero||!card) return;
+  hero.addEventListener('mousemove',function(e){
+    var r=hero.getBoundingClientRect();
+    var nx=(e.clientX-r.left-r.width/2)/(r.width/2);
+    var ny=(e.clientY-r.top-r.height/2)/(r.height/2);
+    card.style.transform='translate('+(nx*7)+'px,'+(ny*5)+'px)';
+    if(orb) orb.style.transform='translate('+(-nx*20)+'px,'+(-ny*13)+'px)';
+  });
+  hero.addEventListener('mouseleave',function(){
+    card.style.transform='';
+    if(orb) orb.style.transform='';
+  });
+}();
+
+/* ─── 4. SCROLL PROGRESS BAR ─── */
+!function(){
+  var bar = document.getElementById('scrollBar');
+  if(!bar) return;
+  window.addEventListener('scroll', function(){
+    var doc = document.documentElement;
+    var scrolled = doc.scrollTop || document.body.scrollTop;
+    var total = doc.scrollHeight - doc.clientHeight;
+    bar.style.width = (total > 0 ? (scrolled / total * 100) : 0) + '%';
+  }, { passive: true });
+}();
+
+/* ─── 5. BUTTON RIPPLE EFFECT ─── */
+!function(){
+  document.addEventListener('click', function(e){
+    var btn = e.target.closest('.btn,.btn-nav,.btn-pc,.btn-wa,.btn-calc');
+    if(!btn) return;
+    var r = btn.getBoundingClientRect();
+    var size = Math.max(r.width, r.height);
+    var el = document.createElement('span');
+    el.className = 'ripple';
+    el.style.cssText = 'width:'+size+'px;height:'+size+'px;left:'+(e.clientX-r.left-size/2)+'px;top:'+(e.clientY-r.top-size/2)+'px';
+    btn.appendChild(el);
+    setTimeout(function(){ el.remove(); }, 520);
+  });
+}();
+
+/* ─── 6. MAGNETIC CTA HOVER ─── */
+!function(){
+  if(window.innerWidth < 900) return;
+  document.querySelectorAll('.btn-primary, .btn-nav').forEach(function(btn){
+    btn.addEventListener('mousemove', function(e){
+      var r = btn.getBoundingClientRect();
+      var nx = (e.clientX - r.left - r.width/2)  / (r.width/2);
+      var ny = (e.clientY - r.top  - r.height/2) / (r.height/2);
+      btn.style.transform = 'translate('+(nx*4)+'px,'+(ny*3)+'px) translateY(-2px)';
+    });
+    btn.addEventListener('mouseleave', function(){
+      btn.style.transform = '';
+    });
+  });
+}();
+
 </script>
+<div id="scrollBar"></div>
 </body>
 </html>
