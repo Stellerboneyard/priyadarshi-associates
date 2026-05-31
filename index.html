@@ -637,6 +637,43 @@ footer{background:#070F1C;padding:76px 0 0}
 .cookie-accept{background:var(--gold);color:var(--navy);padding:9px 18px;border:none;border-radius:5px;font-size:.77rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;cursor:pointer}
 .cookie-decline{background:transparent;color:rgba(255,255,255,.42);padding:9px 14px;border:1px solid rgba(255,255,255,.12);border-radius:5px;font-size:.77rem;cursor:pointer}
 
+/* ─────────────── CLIENT LOGOS ─────────────── */
+.logos-section{background:var(--white);padding:44px 0;border-bottom:1px solid var(--border)}
+.logos-inner{max-width:1280px;margin:0 auto;padding:0 28px}
+.logos-label{text-align:center;font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-lt);margin-bottom:28px;font-family:var(--mono)}
+.logos-track-wrap{overflow:hidden;position:relative}
+.logos-track-wrap::before,.logos-track-wrap::after{content:'';position:absolute;top:0;bottom:0;width:80px;z-index:2}
+.logos-track-wrap::before{left:0;background:linear-gradient(to right,var(--white),transparent)}
+.logos-track-wrap::after{right:0;background:linear-gradient(to left,var(--white),transparent)}
+.logos-track{display:flex;gap:56px;animation:ticker 28s linear infinite;width:max-content;align-items:center}
+.logos-track:hover{animation-play-state:paused}
+.logo-pill{display:flex;align-items:center;gap:8px;padding:8px 20px;border:1px solid var(--border);border-radius:8px;white-space:nowrap;transition:all .2s;background:var(--white)}
+.logo-pill:hover{border-color:var(--gold);box-shadow:var(--sh-sm)}
+.logo-pill-icon{font-size:1.2rem}
+.logo-pill-name{font-size:.8rem;font-weight:600;color:var(--ink-mid);letter-spacing:.02em}
+
+/* ─────────────── NEWSLETTER ─────────────── */
+.newsletter-bar{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-lite) 100%);padding:52px 0}
+.newsletter-inner{max-width:680px;margin:0 auto;padding:0 28px;text-align:center}
+.newsletter-inner h3{font-family:var(--serif);font-size:1.6rem;font-weight:400;color:var(--white);margin-bottom:8px}
+.newsletter-inner p{font-size:.88rem;color:rgba(255,255,255,.55);margin-bottom:26px}
+.newsletter-form{display:flex;gap:10px;max-width:440px;margin:0 auto}
+.newsletter-input{flex:1;padding:13px 16px;border:1.5px solid rgba(255,255,255,.15);border-radius:7px;background:rgba(255,255,255,.07);color:var(--white);font-family:var(--sans);font-size:.88rem;outline:none;transition:border-color .2s}
+.newsletter-input:focus{border-color:var(--gold)}
+.newsletter-input::placeholder{color:rgba(255,255,255,.3)}
+.newsletter-btn{background:var(--gold);color:var(--navy);padding:13px 22px;border:none;border-radius:7px;font-family:var(--sans);font-size:.82rem;font-weight:700;cursor:pointer;white-space:nowrap;transition:all .2s}
+.newsletter-btn:hover{background:var(--gold-lt);transform:translateY(-1px)}
+.newsletter-disclaimer{font-size:.7rem;color:rgba(255,255,255,.28);margin-top:12px}
+
+/* ─────────────── SOCIAL LINKS ─────────────── */
+.footer-social{display:flex;gap:10px;margin-top:16px}
+.social-btn{width:34px;height:34px;border-radius:8px;border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:.9rem;color:rgba(255,255,255,.4);transition:all .2s;text-decoration:none}
+.social-btn:hover{border-color:var(--gold);color:var(--gold);background:rgba(201,168,76,.08)}
+
+/* ─────────────── MAP ─────────────── */
+.map-wrap{border-radius:14px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--sh-md);margin-top:28px}
+.map-wrap iframe{width:100%;height:320px;border:none;display:block}
+
 /* ─────────────── TOAST ─────────────── */
 .toast{position:fixed;bottom:100px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--navy);color:var(--white);padding:14px 26px;border-radius:8px;font-size:.88rem;font-weight:500;box-shadow:var(--sh-lg);opacity:0;pointer-events:none;transition:all .3s var(--ease);z-index:99999;display:flex;align-items:center;gap:10px;border-left:3px solid var(--gold)}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
@@ -707,6 +744,144 @@ footer{background:#070F1C;padding:76px 0 0}
   .page{display:block!important}
   body{background:#fff;color:#000}
 }
+
+/* ─────────────── LIVE CHAT WIDGET ─────────────── */
+.chat-widget{position:fixed;bottom:28px;left:28px;z-index:850;display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.chat-bubble-btn{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--navy-lite));border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(11,26,47,.35);transition:all .25s;position:relative}
+.chat-bubble-btn:hover{transform:scale(1.08);box-shadow:0 6px 28px rgba(11,26,47,.45)}
+.chat-bubble-btn svg{width:26px;height:26px;color:#fff}
+.chat-notif{position:absolute;top:-3px;right:-3px;width:16px;height:16px;border-radius:50%;background:#e53e3e;border:2px solid #fff;font-size:.6rem;font-weight:700;color:#fff;display:flex;align-items:center;justify-content:center}
+.chat-panel{background:#fff;border-radius:16px;box-shadow:0 12px 48px rgba(11,26,47,.18),0 2px 8px rgba(11,26,47,.08);width:320px;overflow:hidden;display:none;flex-direction:column;max-height:460px;border:1px solid var(--border);animation:pgIn .25s var(--ease)}
+.chat-panel.open{display:flex}
+.chat-panel-head{background:linear-gradient(135deg,var(--navy),var(--navy-lite));padding:16px 18px;display:flex;align-items:center;gap:12px}
+.chat-panel-av{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#A87B20);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:.95rem;font-weight:600;color:var(--navy);flex-shrink:0}
+.chat-panel-info{flex:1}
+.chat-panel-name{font-size:.88rem;font-weight:600;color:#fff}
+.chat-panel-status{font-size:.72rem;color:rgba(255,255,255,.6);display:flex;align-items:center;gap:5px}
+.chat-online-dot{width:6px;height:6px;border-radius:50%;background:#22c55e;animation:pulse 2s infinite}
+.chat-close{background:none;border:none;cursor:pointer;color:rgba(255,255,255,.6);font-size:1.1rem;padding:4px;line-height:1;transition:color .2s}
+.chat-close:hover{color:#fff}
+.chat-messages{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;background:var(--cream);scrollbar-width:thin}
+.chat-msg{max-width:82%;padding:10px 13px;border-radius:12px;font-size:.83rem;line-height:1.5}
+.chat-msg.agent{background:#fff;border:1px solid var(--border);color:var(--ink);border-bottom-left-radius:4px;align-self:flex-start}
+.chat-msg.user{background:var(--navy);color:#fff;border-bottom-right-radius:4px;align-self:flex-end}
+.chat-msg-time{font-size:.65rem;color:var(--ink-lt);margin-top:4px;text-align:right}
+.chat-typing{display:flex;align-items:center;gap:4px;padding:10px 13px;background:#fff;border:1px solid var(--border);border-radius:12px;border-bottom-left-radius:4px;align-self:flex-start;width:60px}
+.chat-typing span{width:6px;height:6px;border-radius:50%;background:var(--ink-lt);animation:chatDot 1.4s infinite both}
+.chat-typing span:nth-child(2){animation-delay:.2s}
+.chat-typing span:nth-child(3){animation-delay:.4s}
+@keyframes chatDot{0%,80%,100%{transform:scale(0);opacity:.4}40%{transform:scale(1);opacity:1}}
+.chat-quick-replies{display:flex;flex-wrap:wrap;gap:6px;padding:0 16px 10px}
+.chat-quick-btn{padding:6px 12px;border:1.5px solid var(--gold);border-radius:100px;font-size:.74rem;font-weight:600;color:var(--gold);background:transparent;cursor:pointer;transition:all .18s}
+.chat-quick-btn:hover{background:var(--gold);color:var(--navy)}
+.chat-input-wrap{display:flex;align-items:center;gap:8px;padding:12px 14px;border-top:1px solid var(--border);background:#fff}
+.chat-input{flex:1;border:1.5px solid var(--border);border-radius:20px;padding:9px 14px;font-family:var(--sans);font-size:.83rem;color:var(--ink);outline:none;transition:border-color .2s;background:var(--cream)}
+.chat-input:focus{border-color:var(--gold)}
+.chat-send-btn{width:34px;height:34px;border-radius:50%;background:var(--gold);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .2s}
+.chat-send-btn:hover{background:var(--gold-lt)}
+.chat-send-btn svg{width:15px;height:15px;color:var(--navy)}
+@media(max-width:768px){.chat-widget{bottom:100px;left:16px}.chat-panel{width:290px}}
+
+/* ─────────────── APPOINTMENT MODAL ─────────────── */
+.appt-modal{position:fixed;inset:0;z-index:1100;display:none;align-items:center;justify-content:center;padding:20px}
+.appt-modal.open{display:flex}
+.appt-modal-overlay{position:absolute;inset:0;background:rgba(7,15,28,.72);backdrop-filter:blur(6px)}
+.appt-box{position:relative;z-index:1;background:var(--white);border-radius:20px;width:100%;max-width:620px;max-height:90vh;overflow-y:auto;box-shadow:var(--sh-xl)}
+.appt-head{background:linear-gradient(135deg,var(--navy),var(--navy-lite));padding:28px 32px;border-radius:20px 20px 0 0;display:flex;align-items:flex-start;justify-content:space-between}
+.appt-head-title{font-family:var(--serif);font-size:1.5rem;font-weight:400;color:#fff}
+.appt-head-sub{font-size:.8rem;color:rgba(255,255,255,.55);margin-top:4px}
+.appt-close{background:rgba(255,255,255,.12);border:none;color:#fff;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:background .2s;flex-shrink:0}
+.appt-close:hover{background:rgba(255,255,255,.22)}
+.appt-body{padding:28px 32px}
+.appt-step{display:none}
+.appt-step.active{display:block;animation:pgIn .3s var(--ease)}
+.appt-step-label{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-family:var(--mono);margin-bottom:18px}
+.appt-progress{display:flex;gap:6px;margin-bottom:28px}
+.appt-prog-dot{flex:1;height:3px;border-radius:2px;background:var(--border);transition:background .3s}
+.appt-prog-dot.done{background:var(--gold)}
+.service-select-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.svc-select-card{border:1.5px solid var(--border);border-radius:10px;padding:14px;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:10px}
+.svc-select-card:hover{border-color:var(--gold);background:var(--gold-pale)}
+.svc-select-card.selected{border-color:var(--gold);background:var(--gold-pale)}
+.svc-select-icon{font-size:1.2rem;flex-shrink:0}
+.svc-select-name{font-size:.84rem;font-weight:600;color:var(--ink)}
+.slot-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}
+.slot-btn{padding:10px 6px;border:1.5px solid var(--border);border-radius:8px;font-size:.8rem;font-weight:600;color:var(--ink-mid);cursor:pointer;transition:all .18s;text-align:center;background:transparent}
+.slot-btn:hover:not(.taken){border-color:var(--gold);color:var(--gold);background:var(--gold-pale)}
+.slot-btn.selected{border-color:var(--gold);background:var(--gold);color:var(--navy)}
+.slot-btn.taken{opacity:.35;cursor:not-allowed;text-decoration:line-through}
+.appt-date-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.date-btn{padding:10px 16px;border:1.5px solid var(--border);border-radius:8px;font-size:.8rem;font-weight:600;color:var(--ink-mid);cursor:pointer;transition:all .18s;background:transparent}
+.date-btn:hover{border-color:var(--gold);color:var(--gold)}
+.date-btn.selected{background:var(--gold);color:var(--navy);border-color:var(--gold)}
+.appt-nav{display:flex;justify-content:space-between;margin-top:24px;gap:10px}
+.appt-confirm-card{background:var(--gold-pale);border:1px solid var(--border-g);border-radius:12px;padding:20px}
+.appt-confirm-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(201,168,76,.2);font-size:.87rem}
+.appt-confirm-row:last-child{border-bottom:none}
+.appt-confirm-label{color:var(--ink-mid)}
+.appt-confirm-val{font-weight:600;color:var(--navy)}
+.appt-success{text-align:center;padding:20px 0}
+.appt-success-icon{font-size:3.5rem;margin-bottom:16px}
+.appt-success-title{font-family:var(--serif);font-size:1.6rem;color:var(--navy);margin-bottom:8px}
+.appt-success-sub{font-size:.9rem;color:var(--ink-mid);line-height:1.65;max-width:380px;margin:0 auto}
+@media(max-width:600px){.appt-body,.appt-head{padding:20px}.service-select-grid{grid-template-columns:1fr}.slot-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* ─────────────── DOWNLOADS SECTION ─────────────── */
+.downloads-section{background:var(--cream);padding:88px 0}
+.dl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+.dl-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:28px 24px;transition:all .25s;position:relative;overflow:hidden}
+.dl-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold);transform:scaleX(0);transition:transform .25s;transform-origin:left}
+.dl-card:hover{box-shadow:var(--sh-md);transform:translateY(-3px)}
+.dl-card:hover::before{transform:scaleX(1)}
+.dl-icon{width:48px;height:48px;background:var(--gold-pale);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:16px}
+.dl-title{font-family:var(--serif);font-size:1.08rem;font-weight:600;color:var(--ink);margin-bottom:6px}
+.dl-desc{font-size:.83rem;color:var(--ink-mid);line-height:1.6;margin-bottom:16px}
+.dl-meta{display:flex;align-items:center;gap:8px;margin-bottom:18px}
+.dl-badge{padding:3px 9px;border-radius:100px;font-size:.67rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--gold-pale);color:var(--gold);border:1px solid rgba(201,168,76,.3)}
+.dl-pages{font-size:.74rem;color:var(--ink-lt);font-family:var(--mono)}
+.dl-btn{display:flex;align-items:center;gap:7px;padding:10px 18px;border-radius:7px;font-size:.8rem;font-weight:600;border:1.5px solid var(--border);color:var(--navy);cursor:pointer;transition:all .2s;background:transparent;width:100%;justify-content:center}
+.dl-btn:hover{background:var(--gold);color:var(--navy);border-color:var(--gold);box-shadow:0 4px 14px rgba(201,168,76,.3)}
+@media(max-width:900px){.dl-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:580px){.dl-grid{grid-template-columns:1fr}}
+
+/* ─────────────── CAREERS PAGE ─────────────── */
+.careers-hero{background:var(--navy);padding-top:var(--nav-h);min-height:46vh;display:flex;align-items:center;position:relative;overflow:hidden}
+.careers-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 70%,rgba(26,58,107,.8),transparent 60%),linear-gradient(135deg,#0B1A2F,#0D2244)}
+.careers-hero::after{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.025) 1px,transparent 1px);background-size:28px 28px}
+.job-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:48px}
+.job-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:28px;transition:all .25s;cursor:pointer}
+.job-card:hover{box-shadow:var(--sh-md);transform:translateY(-3px);border-color:rgba(201,168,76,.35)}
+.job-tag{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:100px;font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px}
+.job-tag.full-time{background:#e0f2fe;color:#0369a1}
+.job-tag.part-time{background:#f0fdf4;color:#15803d}
+.job-tag.intern{background:#fdf4ff;color:#9333ea}
+.job-title{font-family:var(--serif);font-size:1.22rem;font-weight:600;color:var(--ink);margin-bottom:8px}
+.job-dept{font-size:.8rem;color:var(--gold);font-weight:600;font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px}
+.job-desc{font-size:.86rem;color:var(--ink-mid);line-height:1.65;margin-bottom:16px}
+.job-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:20px}
+.job-skill{padding:4px 10px;border-radius:100px;font-size:.7rem;font-weight:600;background:var(--cream);color:var(--ink-mid);border:1px solid var(--border)}
+.job-footer{display:flex;align-items:center;justify-content:space-between;padding-top:16px;border-top:1px solid var(--border)}
+.job-location{font-size:.78rem;color:var(--ink-lt);display:flex;align-items:center;gap:5px}
+.job-apply{padding:9px 20px;background:var(--gold);color:var(--navy);border:none;border-radius:7px;font-size:.78rem;font-weight:700;cursor:pointer;transition:all .2s}
+.job-apply:hover{background:var(--gold-lt)}
+.perks-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+.perk-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:22px;text-align:center}
+.perk-icon{font-size:1.8rem;margin-bottom:10px}
+.perk-title{font-size:.86rem;font-weight:700;color:var(--navy);margin-bottom:4px}
+.perk-desc{font-size:.78rem;color:var(--ink-mid);line-height:1.55}
+.culture-strip{background:var(--navy);padding:64px 0;text-align:center}
+.culture-quote{font-family:var(--serif);font-size:clamp(1.4rem,3vw,2.2rem);font-weight:300;font-style:italic;color:rgba(255,255,255,.88);max-width:620px;margin:0 auto 20px;line-height:1.5}
+.culture-attrib{font-size:.8rem;color:var(--gold);font-family:var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.apply-modal{position:fixed;inset:0;z-index:1200;display:none;align-items:center;justify-content:center;padding:20px}
+.apply-modal.open{display:flex}
+.apply-overlay{position:absolute;inset:0;background:rgba(7,15,28,.72);backdrop-filter:blur(6px)}
+.apply-box{position:relative;z-index:1;background:var(--white);border-radius:20px;width:100%;max-width:540px;max-height:88vh;overflow-y:auto;box-shadow:var(--sh-xl)}
+.apply-head{background:linear-gradient(135deg,var(--navy),var(--navy-lite));padding:24px 28px;border-radius:20px 20px 0 0;display:flex;justify-content:space-between;align-items:flex-start}
+.apply-head h3{font-family:var(--serif);font-size:1.3rem;color:#fff}
+.apply-head p{font-size:.78rem;color:rgba(255,255,255,.55);margin-top:3px}
+.apply-body{padding:24px 28px}
+@media(max-width:768px){.job-grid{grid-template-columns:1fr}.perks-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.perks-grid{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
@@ -770,6 +945,173 @@ footer{background:#070F1C;padding:76px 0 0}
   </div>
 </div>
 
+<!-- LIVE CHAT WIDGET -->
+<div class="chat-widget" id="chatWidget">
+  <div class="chat-panel" id="chatPanel">
+    <div class="chat-panel-head">
+      <div class="chat-panel-av">P&amp;</div>
+      <div class="chat-panel-info">
+        <div class="chat-panel-name">Priyadarshi &amp; Associates</div>
+        <div class="chat-panel-status"><span class="chat-online-dot"></span>Online · Typically replies in minutes</div>
+      </div>
+      <button class="chat-close" onclick="toggleChat()" aria-label="Close chat">✕</button>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+      <div class="chat-msg agent">👋 Hi! Welcome to Priyadarshi &amp; Associates.<div class="chat-msg-time">Just now</div></div>
+      <div class="chat-msg agent">How can we help you today? Choose a topic below or type your question.<div class="chat-msg-time">Just now</div></div>
+    </div>
+    <div class="chat-quick-replies" id="chatQuickReplies">
+      <button class="chat-quick-btn" onclick="chatQuickReply('Income Tax Filing')">📊 Income Tax</button>
+      <button class="chat-quick-btn" onclick="chatQuickReply('GST Services')">🧾 GST</button>
+      <button class="chat-quick-btn" onclick="chatQuickReply('Company Registration')">🏢 Company Reg</button>
+      <button class="chat-quick-btn" onclick="chatQuickReply('Book Appointment')">📅 Book Appt</button>
+    </div>
+    <div class="chat-input-wrap">
+      <input class="chat-input" id="chatInput" type="text" placeholder="Type a message..." onkeydown="if(event.key==='Enter')sendChatMsg()" autocomplete="off">
+      <button class="chat-send-btn" onclick="sendChatMsg()" aria-label="Send">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+    </div>
+  </div>
+  <button class="chat-bubble-btn" id="chatBubbleBtn" onclick="toggleChat()" aria-label="Chat with us">
+    <span class="chat-notif" id="chatNotif">1</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+  </button>
+</div>
+
+<!-- APPOINTMENT BOOKING MODAL -->
+<div class="appt-modal" id="apptModal">
+  <div class="appt-modal-overlay" onclick="closeApptModal()"></div>
+  <div class="appt-box">
+    <div class="appt-head">
+      <div>
+        <div class="appt-head-title">Book a Consultation</div>
+        <div class="appt-head-sub">Free 30-minute session with a CA Partner · No obligation</div>
+      </div>
+      <button class="appt-close" onclick="closeApptModal()">✕</button>
+    </div>
+    <div class="appt-body">
+      <div class="appt-progress">
+        <div class="appt-prog-dot done" id="apptProg1"></div>
+        <div class="appt-prog-dot" id="apptProg2"></div>
+        <div class="appt-prog-dot" id="apptProg3"></div>
+        <div class="appt-prog-dot" id="apptProg4"></div>
+      </div>
+      <!-- Step 1: Service -->
+      <div class="appt-step active" id="apptStep1">
+        <div class="appt-step-label">Step 1 of 4 — Choose Service</div>
+        <h3 style="font-family:var(--serif);font-size:1.2rem;color:var(--ink);margin-bottom:18px">What do you need help with?</h3>
+        <div class="service-select-grid">
+          <div class="svc-select-card" onclick="selectApptSvc(this,'Income Tax / ITR Filing')">
+            <span class="svc-select-icon">📊</span><span class="svc-select-name">Income Tax / ITR</span></div>
+          <div class="svc-select-card" onclick="selectApptSvc(this,'GST Registration / Returns')">
+            <span class="svc-select-icon">🧾</span><span class="svc-select-name">GST Services</span></div>
+          <div class="svc-select-card" onclick="selectApptSvc(this,'Company Registration')">
+            <span class="svc-select-icon">🏢</span><span class="svc-select-name">Company Registration</span></div>
+          <div class="svc-select-card" onclick="selectApptSvc(this,'Audit &amp; Assurance')">
+            <span class="svc-select-icon">📋</span><span class="svc-select-name">Audit &amp; Assurance</span></div>
+          <div class="svc-select-card" onclick="selectApptSvc(this,'Financial Advisory')">
+            <span class="svc-select-icon">💡</span><span class="svc-select-name">Financial Advisory</span></div>
+          <div class="svc-select-card" onclick="selectApptSvc(this,'Startup Services')">
+            <span class="svc-select-icon">🚀</span><span class="svc-select-name">Startup Services</span></div>
+        </div>
+        <div class="appt-nav"><span></span><button class="btn btn-primary btn-sm" onclick="apptNext(2)" id="apptBtn1" disabled style="opacity:.4">Next →</button></div>
+      </div>
+      <!-- Step 2: Date & Time -->
+      <div class="appt-step" id="apptStep2">
+        <div class="appt-step-label">Step 2 of 4 — Pick a Date</div>
+        <h3 style="font-family:var(--serif);font-size:1.2rem;color:var(--ink);margin-bottom:14px">Select a convenient date</h3>
+        <div class="appt-date-row" id="apptDateRow"></div>
+        <div style="margin-top:22px">
+          <div style="font-size:.78rem;font-weight:600;color:var(--ink-mid);margin-bottom:10px">Available Time Slots</div>
+          <div class="slot-grid" id="apptSlotGrid"></div>
+        </div>
+        <div class="appt-nav">
+          <button class="btn btn-outline btn-sm" onclick="apptBack(1)">← Back</button>
+          <button class="btn btn-primary btn-sm" onclick="apptNext(3)" id="apptBtn2" disabled style="opacity:.4">Next →</button>
+        </div>
+      </div>
+      <!-- Step 3: Details -->
+      <div class="appt-step" id="apptStep3">
+        <div class="appt-step-label">Step 3 of 4 — Your Details</div>
+        <h3 style="font-family:var(--serif);font-size:1.2rem;color:var(--ink);margin-bottom:18px">Tell us about yourself</h3>
+        <div class="cf-group"><label class="cf-label">Full Name *</label><input class="cf-input" id="apptName" type="text" placeholder="Your name"></div>
+        <div class="cf-group"><label class="cf-label">Phone / WhatsApp *</label><input class="cf-input" id="apptPhone" type="tel" placeholder="+91 98765 43210"></div>
+        <div class="cf-group"><label class="cf-label">Email</label><input class="cf-input" id="apptEmail" type="email" placeholder="your@email.com"></div>
+        <div class="cf-group"><label class="cf-label">Brief note (optional)</label><textarea class="cf-input cf-textarea" id="apptNote" placeholder="Any specific questions or documents to prepare?"></textarea></div>
+        <div class="appt-nav">
+          <button class="btn btn-outline btn-sm" onclick="apptBack(2)">← Back</button>
+          <button class="btn btn-primary btn-sm" onclick="apptNext(4)">Review →</button>
+        </div>
+      </div>
+      <!-- Step 4: Confirm -->
+      <div class="appt-step" id="apptStep4">
+        <div class="appt-step-label">Step 4 of 4 — Confirm Booking</div>
+        <h3 style="font-family:var(--serif);font-size:1.2rem;color:var(--ink);margin-bottom:18px">Review your appointment</h3>
+        <div class="appt-confirm-card">
+          <div class="appt-confirm-row"><span class="appt-confirm-label">Service</span><span class="appt-confirm-val" id="confSvc"></span></div>
+          <div class="appt-confirm-row"><span class="appt-confirm-label">Date</span><span class="appt-confirm-val" id="confDate"></span></div>
+          <div class="appt-confirm-row"><span class="appt-confirm-label">Time</span><span class="appt-confirm-val" id="confTime"></span></div>
+          <div class="appt-confirm-row"><span class="appt-confirm-label">Name</span><span class="appt-confirm-val" id="confName"></span></div>
+          <div class="appt-confirm-row"><span class="appt-confirm-label">Phone</span><span class="appt-confirm-val" id="confPhone"></span></div>
+        </div>
+        <p style="font-size:.8rem;color:var(--ink-lt);margin-top:12px;line-height:1.5">✅ We'll send a WhatsApp confirmation and call you 30 minutes before your appointment.</p>
+        <div class="appt-nav">
+          <button class="btn btn-outline btn-sm" onclick="apptBack(3)">← Edit</button>
+          <button class="btn btn-primary btn-sm" onclick="confirmAppt(this)">Confirm Booking ✓</button>
+        </div>
+      </div>
+      <!-- Success -->
+      <div class="appt-step" id="apptSuccess">
+        <div class="appt-success">
+          <div class="appt-success-icon">🎉</div>
+          <div class="appt-success-title">Appointment Confirmed!</div>
+          <p class="appt-success-sub">Thank you! Your free consultation has been booked. You'll receive a WhatsApp message with the details shortly. Our CA will be with you on time.</p>
+          <button class="btn btn-primary" style="margin-top:24px" onclick="closeApptModal()">Back to Website</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JOB APPLY MODAL -->
+<div class="apply-modal" id="applyModal">
+  <div class="apply-overlay" onclick="closeApplyModal()"></div>
+  <div class="apply-box">
+    <div class="apply-head">
+      <div>
+        <h3 id="applyJobTitle">Apply for Position</h3>
+        <p id="applyJobDept">Priyadarshi &amp; Associates</p>
+      </div>
+      <button class="appt-close" onclick="closeApplyModal()">✕</button>
+    </div>
+    <div class="apply-body">
+      <div class="cf-group"><label class="cf-label">Full Name *</label><input class="cf-input" id="apply-name" type="text" placeholder="Your full name"></div>
+      <div class="cf-row">
+        <div class="cf-group"><label class="cf-label">Email *</label><input class="cf-input" id="apply-email" type="email" placeholder="you@email.com"></div>
+        <div class="cf-group"><label class="cf-label">Phone *</label><input class="cf-input" id="apply-phone" type="tel" placeholder="+91 98765 43210"></div>
+      </div>
+      <div class="cf-group"><label class="cf-label">Qualification / Degree</label><input class="cf-input" id="apply-qual" type="text" placeholder="e.g. CA Final, B.Com, MBA Finance"></div>
+      <div class="cf-group"><label class="cf-label">Years of Experience</label>
+        <select class="cf-input cf-select" id="apply-exp">
+          <option value="">Select...</option>
+          <option>Fresher (0 years)</option>
+          <option>1–2 years</option>
+          <option>3–5 years</option>
+          <option>5–10 years</option>
+          <option>10+ years</option>
+        </select>
+      </div>
+      <div class="cf-group"><label class="cf-label">Cover Letter / Why you want to join</label><textarea class="cf-input cf-textarea" id="apply-cover" placeholder="Tell us about yourself and why you'd like to join our team..."></textarea></div>
+      <div style="margin-top:8px;display:flex;gap:10px;flex-wrap:wrap">
+        <button class="btn btn-primary" style="flex:1;justify-content:center" onclick="submitApply(this)">Submit Application →</button>
+        <button class="btn btn-outline" onclick="closeApplyModal()">Cancel</button>
+      </div>
+      <p style="font-size:.75rem;color:var(--ink-lt);margin-top:12px;text-align:center">We review all applications within 5 business days.</p>
+    </div>
+  </div>
+</div>
+
 <!-- NAV -->
 <div id="nav">
   <div class="nav-topbar-wrap">
@@ -803,12 +1145,16 @@ footer{background:#070F1C;padding:76px 0 0}
               <div class="mega-link" onclick="nav('corp')"><div class="mega-icon">🏢</div><div><div class="mega-title">Corporate Affairs</div><div class="mega-desc">Incorporation &amp; ROC compliance</div></div></div>
               <div class="mega-link" onclick="nav('advisory')"><div class="mega-icon">💡</div><div><div class="mega-title">Financial Advisory</div><div class="mega-desc">Valuation, CFO &amp; due diligence</div></div></div>
               <div class="mega-link" onclick="nav('startup')"><div class="mega-icon">🚀</div><div><div class="mega-title">Startup Services</div><div class="mega-desc">DPIIT, ESOP &amp; funding support</div></div></div>
+              <div class="mega-link" onclick="nav('itr')" style="border-top:1px solid var(--border);margin-top:4px;padding-top:12px"><div class="mega-icon" style="background:#f0fff4">📊</div><div><div class="mega-title" style="color:var(--gold)">ITR Filing</div><div class="mega-desc">From ₹799 · 48-hr turnaround</div></div></div>
+              <div class="mega-link" onclick="nav('gst-reg')"><div class="mega-icon" style="background:#f0fff4">🧾</div><div><div class="mega-title" style="color:var(--gold)">GST Registration</div><div class="mega-desc">From ₹1,499 · 3–5 days</div></div></div>
+              <div class="mega-link" onclick="nav('company-reg')"><div class="mega-icon" style="background:#f0fff4">🏢</div><div><div class="mega-title" style="color:var(--gold)">Company Registration</div><div class="mega-desc">From ₹6,999 · 7-day incorporation</div></div></div>
             </div>
           </div>
         </div>
         <div class="nav-item"><button class="nav-btn" id="nb-tools" onclick="nav('tools')">Tax Tools</button></div>
         <div class="nav-item"><button class="nav-btn" id="nb-blog" onclick="nav('blog')">Resources</button></div>
         <div class="nav-item"><button class="nav-btn" id="nb-contact" onclick="nav('contact')">Contact</button></div>
+        <div class="nav-item"><button class="nav-btn" id="nb-careers" onclick="nav('careers')">Careers</button></div>
       </div>
       <div class="nav-search-wrap">
         <svg class="nav-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
@@ -844,6 +1190,7 @@ footer{background:#070F1C;padding:76px 0 0}
   <button class="mob-link" onclick="nav('tools');closeMenu()">🧮 Tax Calculators</button>
   <button class="mob-link" onclick="nav('blog');closeMenu()">📰 Resources</button>
   <button class="mob-link" onclick="nav('contact');closeMenu()">✉️ Contact Us</button>
+  <button class="mob-link" onclick="nav('careers');closeMenu()">💼 Careers</button>
 </div>
 
 
@@ -859,6 +1206,7 @@ footer{background:#070F1C;padding:76px 0 0}
       <p class="hero-desc">From startup registration to complex tax planning — Priyadarshi &amp; Associates delivers precision-driven CA services trusted by 500+ clients across Bihar.</p>
       <div class="hero-actions">
         <button class="btn btn-primary btn-lg" onclick="nav('contact')">Book Free Consultation</button>
+        <button class="btn btn-white" onclick="openApptModal()">📅 Book Appointment</button>
         <a class="btn-wa" href="https://wa.me/916123456789?text=Hello%2C%20I%20need%20CA%20services." target="_blank">💬 Chat on WhatsApp</a>
       </div>
       <div class="hero-trust">
@@ -1040,6 +1388,75 @@ footer{background:#070F1C;padding:76px 0 0}
   </div>
 </section>
 
+<!-- TEAM SECTION -->
+<section class="section" style="background:var(--cream)">
+  <div class="wrap">
+    <div class="section-head center">
+      <div class="overline">Meet The Experts</div>
+      <h2 class="h2">Our <em>CA Team</em></h2>
+      <p class="sub">ICAI-certified professionals with decades of combined expertise in taxation, audit, and corporate law.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-photo" style="background:linear-gradient(135deg,#0B1A2F,#1A3A6B);position:relative;overflow:hidden">
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px">
+            <div style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#A87B20);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:1.8rem;font-weight:600;color:var(--navy)">CA</div>
+          </div>
+          <div style="position:absolute;bottom:0;left:0;right:0;height:50%;background:linear-gradient(to top,rgba(11,26,47,.8),transparent)"></div>
+        </div>
+        <div class="team-info">
+          <div class="team-name">CA Rajan Priyadarshi</div>
+          <div class="team-role">Founder & Managing Partner</div>
+          <p class="team-bio">20+ years of expertise in direct taxation, corporate audits, and financial advisory. Former senior officer at a Big-4 firm before founding P&A in 2005.</p>
+          <div class="team-quals">
+            <span class="team-qual">FCA</span>
+            <span class="team-qual">DISA</span>
+            <span class="team-qual">CISA</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-photo" style="background:linear-gradient(135deg,#0F2347,#1A3A6B);position:relative;overflow:hidden">
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px">
+            <div style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#A87B20);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:1.8rem;font-weight:600;color:var(--navy)">CA</div>
+          </div>
+          <div style="position:absolute;bottom:0;left:0;right:0;height:50%;background:linear-gradient(to top,rgba(11,26,47,.8),transparent)"></div>
+        </div>
+        <div class="team-info">
+          <div class="team-name">CA Sunita Kumari</div>
+          <div class="team-role">Partner – GST & Indirect Tax</div>
+          <p class="team-bio">Specialist in GST advisory, ITC reconciliation, and indirect tax litigation. Represented 100+ clients before GST Appellate Authority.</p>
+          <div class="team-quals">
+            <span class="team-qual">ACA</span>
+            <span class="team-qual">GST Expert</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-photo" style="background:linear-gradient(135deg,#0B1A2F,#0F2347);position:relative;overflow:hidden">
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px">
+            <div style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#A87B20);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:1.8rem;font-weight:600;color:var(--navy)">CA</div>
+          </div>
+          <div style="position:absolute;bottom:0;left:0;right:0;height:50%;background:linear-gradient(to top,rgba(11,26,47,.8),transparent)"></div>
+        </div>
+        <div class="team-info">
+          <div class="team-name">CA Amit Srivastava</div>
+          <div class="team-role">Partner – Corporate & Startup</div>
+          <p class="team-bio">Expert in company incorporation, MCA compliance, DPIIT recognition, and startup fundraising documentation. Mentored 50+ Bihar startups.</p>
+          <div class="team-quals">
+            <span class="team-qual">ACA</span>
+            <span class="team-qual">LLB</span>
+            <span class="team-qual">Startup Advisor</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:36px">
+      <button class="btn btn-outline" onclick="nav('about')">Meet Full Team & Our Story →</button>
+    </div>
+  </div>
+</section>
+
 <!-- INDUSTRIES -->
 <section class="section industries-section">
   <div class="wrap">
@@ -1105,6 +1522,34 @@ footer{background:#070F1C;padding:76px 0 0}
   </div>
 </section>
 
+<!-- CLIENT LOGOS -->
+<section class="logos-section">
+  <div class="logos-inner">
+    <div class="logos-label">Trusted by businesses across Bihar & beyond</div>
+    <div class="logos-track-wrap">
+      <div class="logos-track">
+        <div class="logo-pill"><span class="logo-pill-icon">🏭</span><span class="logo-pill-name">Bihar Agro Pvt Ltd</span></div>
+        <div class="logo-pill"><span class="logo-pill-icon">💻</span><span class="logo-pill-name">TechStart Innovations</span></div>
+        <div class="logo-pill"><span class="logo-pill-icon">🏗️</span><span class="logo-pill-name">Sinha Infrastructure</span></div>
+        <div class="logo-pill"><span class="logo-pill-icon">🛒</span><span class="logo-pill-name">Rajesh Traders</span></div>
+        <div class="logo-pill"><span class="logo-pill-icon">🏥</span><span class="logo-pill-name">Patna Medical Centre</span></div>
+        <div class="logo-pill"><span class="logo-pill-icon">🎓</span><span class="logo-pill-name">Gyan Jyoti Academy</span></div>
+        <div class="logo-pill"><span class="logo-pill-icon">🌾</span><span class="logo-pill-name">Kisan Agri Corp</span></div>
+        <div class="logo-pill"><span class="logo-pill-icon">🚚</span><span class="logo-pill-name">SpeedFreight Logistics</span></div>
+        <!-- duplicate for seamless loop -->
+        <div class="logo-pill"><span class="logo-pill-icon">🏭</span><span class="logo-pill-name">Bihar Agro Pvt Ltd</span></div>
+        <div class="logo-pill"><span class="logo-pill-icon">💻</span><span class="logo-pill-name">TechStart Innovations</span></div>
+        <div class="logo-pill"><span class="logo-pill-icon">🏗️</span><span class="logo-pill-name">Sinha Infrastructure</span></div>
+        <div class="logo-pill"><span class="logo-pill-icon">🛒</span><span class="logo-pill-name">Rajesh Traders</span></div>
+        <div class="logo-pill"><span class="logo-pill-icon">🏥</span><span class="logo-pill-name">Patna Medical Centre</span></div>
+        <div class="logo-pill"><span class="logo-pill-icon">🎓</span><span class="logo-pill-name">Gyan Jyoti Academy</span></div>
+        <div class="logo-pill"><span class="logo-pill-icon">🌾</span><span class="logo-pill-name">Kisan Agri Corp</span></div>
+        <div class="logo-pill"><span class="logo-pill-icon">🚚</span><span class="logo-pill-name">SpeedFreight Logistics</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- BLOG CARDS -->
 <section class="blog-section">
   <div class="wrap">
@@ -1115,6 +1560,19 @@ footer{background:#070F1C;padding:76px 0 0}
       <div class="blog-card" onclick="nav('blog')"><div class="blog-card-img"><span class="blog-cat">Startup</span>🚀</div><div class="blog-card-body"><div class="blog-date">May 2025</div><div class="blog-title">DPIIT Recognition in 2025: Step-by-Step Process for Startups</div><p class="blog-desc">Everything you need to know about getting DPIIT recognition and Section 80-IAC tax benefits.</p><div class="blog-read">Read Article <span class="blog-arr">→</span></div></div></div>
     </div>
     <div style="text-align:center;margin-top:36px"><button class="btn btn-outline" onclick="nav('blog')">View All Articles →</button></div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter-bar">
+  <div class="newsletter-inner">
+    <h3>Get Free Tax <em style="font-style:italic;color:var(--gold-lt)">Updates</em> & Deadline Alerts</h3>
+    <p>Join 2,000+ professionals receiving monthly tax tips, GST updates, and compliance reminders from our CA team.</p>
+    <div class="newsletter-form">
+      <input class="newsletter-input" type="email" placeholder="your@email.com" id="nlEmail">
+      <button class="newsletter-btn" onclick="subscribeNewsletter()">Subscribe →</button>
+    </div>
+    <p class="newsletter-disclaimer">No spam. Unsubscribe anytime. Your data is 100% secure.</p>
   </div>
 </section>
 
@@ -1131,9 +1589,21 @@ footer{background:#070F1C;padding:76px 0 0}
 
 <footer><div class="wrap">
   <div class="footer-grid">
-    <div><div class="footer-brand-name">Priyadarshi &amp; Associates</div><div class="footer-brand-sub">Chartered Accountants</div><p class="footer-brand-desc">ICAI-registered CA firm in Patna, Bihar. Delivering precision-driven financial services since 2005.</p></div>
+    <div>
+      <div class="footer-brand-name">Priyadarshi &amp; Associates</div>
+      <div class="footer-brand-sub">Chartered Accountants</div>
+      <p class="footer-brand-desc">ICAI-registered CA firm in Patna, Bihar. Delivering precision-driven financial services since 2005.</p>
+      <div class="footer-social">
+        <a class="social-btn" href="https://linkedin.com" target="_blank" rel="noopener" title="LinkedIn">in</a>
+        <a class="social-btn" href="https://facebook.com" target="_blank" rel="noopener" title="Facebook">f</a>
+        <a class="social-btn" href="https://instagram.com" target="_blank" rel="noopener" title="Instagram">📸</a>
+        <a class="social-btn" href="https://twitter.com" target="_blank" rel="noopener" title="Twitter / X">𝕏</a>
+        <a class="social-btn" href="https://wa.me/916123456789" target="_blank" rel="noopener" title="WhatsApp">💬</a>
+      </div>
+    </div>
     <div><div class="footer-col-title">Services</div><div class="footer-links"><span class="footer-link" onclick="nav('audit')">Audit &amp; Assurance</span><span class="footer-link" onclick="nav('tax')">Income Tax</span><span class="footer-link" onclick="nav('gst')">GST Services</span><span class="footer-link" onclick="nav('corp')">Corporate Affairs</span><span class="footer-link" onclick="nav('advisory')">Financial Advisory</span><span class="footer-link" onclick="nav('startup')">Startup Services</span></div></div>
-    <div><div class="footer-col-title">Company</div><div class="footer-links"><span class="footer-link" onclick="nav('about')">About Us</span><span class="footer-link" onclick="nav('tools')">Tax Calculators</span><span class="footer-link" onclick="nav('blog')">Resources</span><span class="footer-link" onclick="nav('contact')">Contact</span><span class="footer-link" onclick="nav('privacy')">Privacy Policy</span><span class="footer-link" onclick="nav('disclaimer')">Disclaimer</span></div></div>
+    <div><div class="footer-col-title">Company</div><div class="footer-links"><span class="footer-link" onclick="nav('about')">About Us</span><span class="footer-link" onclick="nav('tools')">Tax Calculators</span><span class="footer-link" onclick="nav('blog')">Resources</span><span class="footer-link" onclick="nav('contact')">Contact</span>  <span class="footer-link" onclick="nav('careers')">Careers</span>
+      <span class="footer-link" onclick="nav('privacy')">Privacy Policy</span><span class="footer-link" onclick="nav('disclaimer')">Disclaimer</span></div></div>
     <div><div class="footer-col-title">Contact</div><div class="footer-links"><span class="footer-link">📍 Fraser Road, Patna – 800001</span><a class="footer-link" href="tel:+916123456789">📞 +91 612 345 6789</a><a class="footer-link" href="mailto:info@priyadarshiassociates.in">✉️ info@priyadarshiassociates.in</a><span class="footer-link">🕐 Mon–Sat: 10AM–7PM</span></div></div>
   </div>
   <div class="footer-bottom"><span class="footer-copy">© 2025 Priyadarshi &amp; Associates. All rights reserved.</span><span class="footer-reg">ICAI Firm Reg. No. 000000C | GSTIN: 10XXXXX1234Z1</span></div>
@@ -1608,40 +2078,222 @@ footer{background:#070F1C;padding:76px 0 0}
 </div>
 <!-- ══════════ ABOUT PAGE ══════════ -->
 <div id="pg-about" class="page">
+
+  <!-- HERO -->
   <div class="svc-hero"><div class="svc-hero-inner">
     <div class="breadcrumb"><span class="bc-item" onclick="nav('home')">Home</span><span class="bc-sep">›</span><span class="bc-cur">About Us</span></div>
     <h1>20 Years of <em>Trust,</em><br>Integrity &amp; Excellence</h1>
-    <p class="svc-hero-desc">Priyadarshi &amp; Associates was founded on the belief that every business deserves world-class financial counsel — from first-generation entrepreneurs to established groups.</p>
+    <p class="svc-hero-desc">Founded in 2005, Priyadarshi &amp; Associates has grown from a one-man practice in Patna to Bihar's most-trusted full-service Chartered Accountancy firm — powered by expertise, integrity, and genuine care for every client.</p>
+    <div class="svc-hero-badges">
+      <span class="svc-hero-badge">✅ ICAI Registered Firm</span>
+      <span class="svc-hero-badge">🏆 Top CA Firm Patna 2024</span>
+      <span class="svc-hero-badge">🔒 ISO 9001:2015 Certified</span>
+      <span class="svc-hero-badge">⭐ 4.9 Google Rating</span>
+    </div>
   </div></div>
-  <div class="section-sm"><div class="wrap">
-    <div class="info-grid-2" style="align-items:start">
+
+  <!-- STORY + STATS -->
+  <section class="section-sm"><div class="wrap">
+    <div class="info-grid-2" style="align-items:center;gap:72px">
       <div class="overview-text">
         <div class="overline">Our Story</div>
         <h2 class="h2">A Firm Built on <em>Principles</em></h2>
-        <p>Founded in 2005 by CA Ravi Priyadarshi in Patna, the firm began as a sole proprietorship focused on income tax and audit. Over the next 20 years, it grew into a full-service CA practice with a team of qualified chartered accountants and semi-qualified assistants.</p>
-        <p>Today, Priyadarshi &amp; Associates serves over 500 clients across Bihar and Jharkhand — from individual taxpayers and proprietorships to mid-size manufacturing companies and funded startups.</p>
-        <p>Our growth has always been driven by client referrals — a testament to the trust we have earned through consistent, quality work over two decades.</p>
+        <p>Founded in 2005 by CA Ravi Priyadarshi in Patna, the firm began as a sole proprietorship focused on income tax compliance and statutory audit. Over two decades of consistent, quality-driven work, it grew into Bihar's leading full-service CA practice.</p>
+        <p>Today, Priyadarshi &amp; Associates serves 500+ clients across Bihar and Jharkhand — individual salaried taxpayers, proprietorships, MSME manufacturers, funded startups, and listed companies alike.</p>
+        <p>Every engagement is led by a qualified CA partner — not delegated to clerks. This commitment to senior-level attention has made client referrals our single largest source of new business.</p>
+        <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap">
+          <button class="btn btn-primary" onclick="nav('contact')">Schedule a Consultation</button>
+          <a class="btn-wa" href="https://wa.me/916123456789" target="_blank">💬 WhatsApp Us</a>
+        </div>
       </div>
       <div>
-        <div class="info-grid-2x2">
-          <div class="info-card" style="text-align:center"><div style="font-family:var(--serif);font-size:2.3rem;font-weight:500;color:var(--gold);margin-bottom:5px">2005</div><div style="font-size:.78rem;color:var(--ink-lt)">Year Founded</div></div>
-          <div class="info-card" style="text-align:center"><div style="font-family:var(--serif);font-size:2.3rem;font-weight:500;color:var(--gold);margin-bottom:5px">500+</div><div style="font-size:.78rem;color:var(--ink-lt)">Active Clients</div></div>
-          <div class="info-card" style="text-align:center"><div style="font-family:var(--serif);font-size:2.3rem;font-weight:500;color:var(--gold);margin-bottom:5px">8</div><div style="font-size:.78rem;color:var(--ink-lt)">Team Members</div></div>
-          <div class="info-card" style="text-align:center"><div style="font-family:var(--serif);font-size:2.3rem;font-weight:500;color:var(--gold);margin-bottom:5px">6</div><div style="font-size:.78rem;color:var(--ink-lt)">Service Areas</div></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <div class="info-card" style="text-align:center;padding:28px 20px">
+            <div style="font-family:var(--serif);font-size:2.6rem;font-weight:400;color:var(--gold);line-height:1">2005</div>
+            <div style="font-size:.75rem;color:var(--ink-lt);margin-top:6px;letter-spacing:.06em;text-transform:uppercase">Year Founded</div>
+          </div>
+          <div class="info-card" style="text-align:center;padding:28px 20px">
+            <div style="font-family:var(--serif);font-size:2.6rem;font-weight:400;color:var(--gold);line-height:1">500+</div>
+            <div style="font-size:.75rem;color:var(--ink-lt);margin-top:6px;letter-spacing:.06em;text-transform:uppercase">Happy Clients</div>
+          </div>
+          <div class="info-card" style="text-align:center;padding:28px 20px">
+            <div style="font-family:var(--serif);font-size:2.6rem;font-weight:400;color:var(--gold);line-height:1">₹50Cr+</div>
+            <div style="font-size:.75rem;color:var(--ink-lt);margin-top:6px;letter-spacing:.06em;text-transform:uppercase">Tax Savings Delivered</div>
+          </div>
+          <div class="info-card" style="text-align:center;padding:28px 20px">
+            <div style="font-family:var(--serif);font-size:2.6rem;font-weight:400;color:var(--gold);line-height:1">Zero</div>
+            <div style="font-size:.75rem;color:var(--ink-lt);margin-top:6px;letter-spacing:.06em;text-transform:uppercase">Penalty Record</div>
+          </div>
         </div>
       </div>
     </div>
-  </div></div>
-  <div class="section-sm" style="background:var(--cream)"><div class="wrap">
-    <div class="section-head center"><div class="overline">Our People</div><h2 class="h1">Meet the <em>Team</em></h2></div>
+  </div></section>
+
+  <!-- MILESTONES TIMELINE -->
+  <section class="section-sm" style="background:var(--navy)"><div class="wrap">
+    <div class="section-head center">
+      <div class="overline" style="justify-content:center;color:var(--gold)">Our Journey</div>
+      <h2 class="h2" style="color:var(--white)">Two Decades of <em style="color:var(--gold-lt)">Growth</em></h2>
+    </div>
+    <div class="process-steps" style="margin-top:48px">
+      <div class="process-step">
+        <div class="process-dot">2005</div>
+        <div class="process-step-title">Founded</div>
+        <p class="process-step-desc">CA Ravi Priyadarshi starts practice on Fraser Road, Patna with a focus on income tax and audit.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-dot">2010</div>
+        <div class="process-step-title">GST Wing</div>
+        <p class="process-step-desc">Expanded into indirect tax and service tax. First corporate client onboarded.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-dot">2017</div>
+        <div class="process-step-title">GST Era</div>
+        <p class="process-step-desc">Became one of the first Patna firms to offer end-to-end GST transition and compliance services.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-dot">2025</div>
+        <div class="process-step-title">500+ Clients</div>
+        <p class="process-step-desc">Crossed 500 active clients. Launched startup advisory division and digital-first service model.</p>
+      </div>
+    </div>
+  </div></section>
+
+  <!-- MISSION & VALUES -->
+  <section class="section-sm"><div class="wrap">
+    <div class="info-grid-2" style="gap:64px;align-items:start">
+      <div>
+        <div class="overline">What Drives Us</div>
+        <h2 class="h2">Our Mission &amp; <em>Values</em></h2>
+        <p style="font-size:.95rem;color:var(--ink-mid);line-height:1.78;margin-top:14px">Our mission is simple: to be the most trusted financial partner for businesses across Bihar — not just a tax filing vendor, but a proactive advisor who helps clients grow, protect their wealth, and stay compliant without stress.</p>
+        <div class="why-features" style="margin-top:28px">
+          <div class="why-feat">
+            <div class="why-feat-icon">🎯</div>
+            <div><div class="why-feat-title">Integrity Above All</div><p class="why-feat-desc">We never recommend aggressive tax positions that could invite scrutiny. Every advice is compliant, defensible, and in the client's long-term interest.</p></div>
+          </div>
+          <div class="why-feat">
+            <div class="why-feat-icon">🤝</div>
+            <div><div class="why-feat-title">Client-First Always</div><p class="why-feat-desc">Your CA partner's phone number is always accessible. No IVR, no ticketing system — just direct human support when you need it.</p></div>
+          </div>
+          <div class="why-feat">
+            <div class="why-feat-icon">📈</div>
+            <div><div class="why-feat-title">Continuous Learning</div><p class="why-feat-desc">Every team member completes mandatory CPE hours. We track every CBDT, MCA, and GST Council circular so you don't have to.</p></div>
+          </div>
+          <div class="why-feat">
+            <div class="why-feat-icon">🔒</div>
+            <div><div class="why-feat-title">100% Confidentiality</div><p class="why-feat-desc">All client data is stored securely. We follow strict data privacy protocols and never share client information under any circumstances.</p></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="overline">Recognitions</div>
+        <h2 class="h2">Awards &amp; <em>Certifications</em></h2>
+        <div style="display:flex;flex-direction:column;gap:14px;margin-top:24px">
+          <div class="info-card" style="display:flex;align-items:center;gap:16px;padding:18px 20px">
+            <div style="font-size:1.8rem;flex-shrink:0">🏆</div>
+            <div><div style="font-weight:700;font-size:.9rem;color:var(--navy)">Top CA Firm — Patna 2024</div><div style="font-size:.8rem;color:var(--ink-lt)">Awarded by Bihar Business Excellence Forum</div></div>
+          </div>
+          <div class="info-card" style="display:flex;align-items:center;gap:16px;padding:18px 20px">
+            <div style="font-size:1.8rem;flex-shrink:0">📜</div>
+            <div><div style="font-weight:700;font-size:.9rem;color:var(--navy)">ICAI Registered Firm</div><div style="font-size:.8rem;color:var(--ink-lt)">Firm Reg. No. 000000C — ICAI, New Delhi</div></div>
+          </div>
+          <div class="info-card" style="display:flex;align-items:center;gap:16px;padding:18px 20px">
+            <div style="font-size:1.8rem;flex-shrink:0">🔒</div>
+            <div><div style="font-weight:700;font-size:.9rem;color:var(--navy)">ISO 9001:2015 Certified</div><div style="font-size:.8rem;color:var(--ink-lt)">Quality Management System — Bureau Veritas</div></div>
+          </div>
+          <div class="info-card" style="display:flex;align-items:center;gap:16px;padding:18px 20px">
+            <div style="font-size:1.8rem;flex-shrink:0">⭐</div>
+            <div><div style="font-weight:700;font-size:.9rem;color:var(--navy)">4.9 / 5 Google Rating</div><div style="font-size:.8rem;color:var(--ink-lt)">127+ verified reviews from clients across Bihar</div></div>
+          </div>
+          <div class="info-card" style="display:flex;align-items:center;gap:16px;padding:18px 20px">
+            <div style="font-size:1.8rem;flex-shrink:0">🚀</div>
+            <div><div style="font-weight:700;font-size:.9rem;color:var(--navy)">DPIIT Startup Panel Advisor</div><div style="font-size:.8rem;color:var(--ink-lt)">Empanelled to assist Bihar startups with DPIIT recognition</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div></section>
+
+  <!-- FULL TEAM -->
+  <section class="section-sm" style="background:var(--cream)"><div class="wrap">
+    <div class="section-head center">
+      <div class="overline">Our People</div>
+      <h2 class="h1">Meet the <em>Team</em></h2>
+      <p class="sub">Every client engagement is led by a qualified CA — not delegated to junior staff.</p>
+    </div>
     <div class="team-grid">
-      <div class="team-card"><div class="team-photo">RP</div><div class="team-info"><div class="team-name">CA Ravi Priyadarshi</div><div class="team-role">Founder &amp; Managing Partner</div><p class="team-bio">20+ years in practice. Fellow member of ICAI with specialization in direct taxation, statutory audit, and business advisory. Served as concurrent auditor for multiple nationalised banks.</p><div class="team-quals"><span class="team-qual">FCA</span><span class="team-qual">ICAI</span></div></div></div>
-      <div class="team-card"><div class="team-photo">AP</div><div class="team-info"><div class="team-name">CA Anjali Priyadarshi</div><div class="team-role">Partner — Indirect Tax &amp; GST</div><p class="team-bio">Associate member of ICAI specializing in GST, FEMA, and corporate compliance. Leads the firm's GST practice and handles complex indirect tax advisory and litigation.</p><div class="team-quals"><span class="team-qual">ACA</span><span class="team-qual">GST Expert</span></div></div></div>
-      <div class="team-card"><div class="team-photo">SK</div><div class="team-info"><div class="team-name">CA Suresh Kumar</div><div class="team-role">Senior Manager — Audit</div><p class="team-bio">8 years of experience in statutory audit, bank audit, and internal audit. Manages the audit team and maintains quality control across all audit engagements.</p><div class="team-quals"><span class="team-qual">ACA</span><span class="team-qual">Audit</span></div></div></div>
+      <div class="team-card">
+        <div class="team-photo" style="background:linear-gradient(135deg,#0B1A2F,#1A3A6B);position:relative;overflow:hidden">
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center">
+            <div style="width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#A87B20);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:2rem;font-weight:600;color:var(--navy)">RP</div>
+          </div>
+          <div style="position:absolute;bottom:0;left:0;right:0;height:50%;background:linear-gradient(to top,rgba(11,26,47,.8),transparent)"></div>
+        </div>
+        <div class="team-info">
+          <div class="team-name">CA Ravi Priyadarshi</div>
+          <div class="team-role">Founder &amp; Managing Partner</div>
+          <p class="team-bio">20+ years in practice. Fellow member of ICAI specializing in direct taxation, statutory audit, and business advisory. Former concurrent auditor for Punjab National Bank and UCO Bank. Founder of the firm in 2005.</p>
+          <div class="team-quals"><span class="team-qual">FCA</span><span class="team-qual">DISA</span><span class="team-qual">20+ yrs</span></div>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-photo" style="background:linear-gradient(135deg,#0F2347,#1A3A6B);position:relative;overflow:hidden">
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center">
+            <div style="width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#A87B20);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:2rem;font-weight:600;color:var(--navy)">AP</div>
+          </div>
+          <div style="position:absolute;bottom:0;left:0;right:0;height:50%;background:linear-gradient(to top,rgba(11,26,47,.8),transparent)"></div>
+        </div>
+        <div class="team-info">
+          <div class="team-name">CA Anjali Priyadarshi</div>
+          <div class="team-role">Partner — GST &amp; Indirect Tax</div>
+          <p class="team-bio">Associate member of ICAI specializing in GST, FEMA, and corporate compliance. Leads the firm's GST practice. Has successfully defended 50+ GST notices at department level. Also handles NRI taxation and FEMA advisory.</p>
+          <div class="team-quals"><span class="team-qual">ACA</span><span class="team-qual">GST Expert</span><span class="team-qual">FEMA</span></div>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-photo" style="background:linear-gradient(135deg,#0B1A2F,#0F2347);position:relative;overflow:hidden">
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center">
+            <div style="width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#A87B20);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:2rem;font-weight:600;color:var(--navy)">SK</div>
+          </div>
+          <div style="position:absolute;bottom:0;left:0;right:0;height:50%;background:linear-gradient(to top,rgba(11,26,47,.8),transparent)"></div>
+        </div>
+        <div class="team-info">
+          <div class="team-name">CA Suresh Kumar</div>
+          <div class="team-role">Senior Manager — Audit</div>
+          <p class="team-bio">8 years of experience in statutory audit, bank audit, and internal audit. Manages the entire audit vertical — planning, execution, and reporting. Oversees quality control for all 80+ annual audit engagements.</p>
+          <div class="team-quals"><span class="team-qual">ACA</span><span class="team-qual">Bank Audit</span><span class="team-qual">8 yrs</span></div>
+        </div>
+      </div>
+    </div>
+  </div></section>
+
+  <!-- TESTIMONIAL INSIDE ABOUT -->
+  <section class="section-sm"><div class="wrap" style="max-width:800px;margin:0 auto;text-align:center">
+    <div class="overline" style="justify-content:center">Client Voice</div>
+    <h2 class="h2">Why Clients <em>Stay</em> with Us</h2>
+    <div style="background:var(--navy);border-radius:16px;padding:44px;margin-top:36px;position:relative">
+      <div style="font-family:var(--serif);font-size:4rem;color:rgba(201,168,76,.2);line-height:.5;margin-bottom:16px">"</div>
+      <p style="font-family:var(--serif);font-size:1.35rem;font-weight:300;font-style:italic;color:rgba(255,255,255,.88);line-height:1.65">We have been with Priyadarshi &amp; Associates for 11 years. In that time, they have saved us over ₹40 lakhs in taxes through proactive planning, handled 3 tax notices seamlessly, and helped us register our Pvt Ltd company. They are not just our CAs — they are our financial backbone.</p>
+      <div style="margin-top:24px;display:flex;align-items:center;justify-content:center;gap:14px">
+        <div style="width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-lt));display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:1.2rem;font-weight:600;color:var(--navy)">V</div>
+        <div style="text-align:left">
+          <div style="font-weight:600;font-size:.9rem;color:var(--gold)">Vikram Sinha</div>
+          <div style="font-size:.75rem;color:rgba(255,255,255,.4)">MD, Sinha Infrastructure Pvt Ltd · Client since 2014</div>
+        </div>
+      </div>
+    </div>
+  </div></section>
+
+  <!-- CTA -->
+  <div class="cta-strip"><div class="wrap">
+    <h2>Ready to Work With <em>Our Team?</em></h2>
+    <p>Schedule a free 30-minute consultation with a senior CA partner. No obligation, no sales pitch.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <button class="btn btn-white btn-lg" onclick="nav('contact')">Book Free Consultation</button>
+      <a class="btn-wa" href="https://wa.me/916123456789" target="_blank" style="padding:16px 28px;font-size:1rem">💬 WhatsApp Us</a>
     </div>
   </div></div>
-  <div class="cta-strip"><div class="wrap"><h2>Ready to Work With Us?</h2><p>Schedule a consultation with our team today.</p><button class="btn btn-white btn-lg" onclick="nav('contact')">Get in Touch</button></div></div>
-  <footer><div class="wrap"><div class="footer-bottom"><span class="footer-copy">© 2025 Priyadarshi &amp; Associates.</span></div></div></footer>
+  <footer><div class="wrap"><div class="footer-bottom"><span class="footer-copy">© 2025 Priyadarshi &amp; Associates. All rights reserved.</span></div></div></footer>
 </div>
 
 <!-- ══════════ CONTACT PAGE ══════════ -->
@@ -1687,6 +2339,14 @@ footer{background:#070F1C;padding:76px 0 0}
           <p>Every new client engagement begins with a complimentary 30-minute consultation with a senior CA partner. No commitment required.</p>
           <a href="https://wa.me/916123456789?text=Hi%2C%20I%27d%20like%20to%20schedule%20a%20free%20consultation." target="_blank" class="btn-wa">💬 Chat on WhatsApp</a>
         </div>
+        <!-- Google Maps -->
+        <div class="map-wrap">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.7835393596256!2d85.13244947537!3d25.61238007740!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed5844716e6aab%3A0x67a9f20a8dec0a6!2sFraser%20Road%2C%20Patna%2C%20Bihar%20800001!5e0!3m2!1sen!2sin!4v1717000000000!5m2!1sen!2sin"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Priyadarshi & Associates Office Location - Fraser Road, Patna">
+          </iframe>
+        </div>
       </div>
     </div>
   </div>
@@ -1695,6 +2355,390 @@ footer{background:#070F1C;padding:76px 0 0}
     <div><div class="footer-col-title">Services</div><div class="footer-links"><span class="footer-link" onclick="nav('audit')">Audit &amp; Assurance</span><span class="footer-link" onclick="nav('tax')">Taxation</span><span class="footer-link" onclick="nav('gst')">GST</span><span class="footer-link" onclick="nav('corp')">Corporate Affairs</span></div></div>
     <div><div class="footer-col-title">Contact</div><div class="footer-links"><span class="footer-link">Fraser Road, Patna 800001</span><a class="footer-link" href="tel:+916123456789">+91 612 345 6789</a></div></div>
   </div><div class="footer-bottom"><span class="footer-copy">© 2025 Priyadarshi &amp; Associates. All rights reserved.</span><span class="footer-reg">ICAI Firm Reg. No. 000000C</span></div></div></footer>
+</div>
+
+<!-- ══════════ INCOME TAX PAGE ══════════ -->
+<div id="pg-itr" class="page">
+  <div class="svc-hero"><div class="svc-hero-inner">
+    <div class="breadcrumb"><span class="bc-item" onclick="nav('home')">Home</span><span class="bc-sep">›</span><span class="bc-item" onclick="nav('home')">Services</span><span class="bc-sep">›</span><span class="bc-cur">Income Tax Filing</span></div>
+    <h1>Income Tax Filing,<br><em>Simplified.</em></h1>
+    <p class="svc-hero-desc">Expert ITR filing for salaried individuals, business owners, NRIs, and companies. Accurate, on-time, and optimised to legally minimise your tax outgo every year.</p>
+    <div class="svc-hero-badges">
+      <span class="svc-hero-badge">📊 1,200+ ITRs Filed Annually</span>
+      <span class="svc-hero-badge">⚡ 48-Hour Turnaround</span>
+      <span class="svc-hero-badge">✅ Zero Penalty Record — 20 Years</span>
+      <span class="svc-hero-badge">💰 Starting ₹799 Only</span>
+    </div>
+    <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap">
+      <button class="btn btn-primary btn-lg" onclick="nav('contact')">File My ITR Now</button>
+      <a class="btn-wa" href="https://wa.me/916123456789?text=Hi%2C%20I%20need%20help%20with%20ITR%20filing." target="_blank" style="padding:16px 24px;font-size:.95rem">💬 WhatsApp for ITR</a>
+    </div>
+  </div></div>
+
+  <div class="tabs-nav"><div class="tabs-nav-inner">
+    <button class="tab-btn active" onclick="switchTab('itr','overview',this)">Overview</button>
+    <button class="tab-btn" onclick="switchTab('itr','who',this)">Who Should File</button>
+    <button class="tab-btn" onclick="switchTab('itr','docs',this)">Documents Needed</button>
+    <button class="tab-btn" onclick="switchTab('itr','pricing',this)">Pricing</button>
+    <button class="tab-btn" onclick="switchTab('itr','faq',this)">FAQ</button>
+  </div></div>
+
+  <!-- OVERVIEW TAB -->
+  <div id="itr-overview" class="tab-content active"><div class="info-section"><div class="wrap"><div class="info-grid-2">
+    <div class="overview-text">
+      <h2 class="h2">Expert <em>ITR Filing</em> Services</h2>
+      <p>Income Tax Return filing is mandatory for everyone above the basic exemption limit — and beneficial for many others (for loans, visas, and refund claims). Getting it right matters more than most people realise.</p>
+      <p>Our team of ICAI-qualified CAs analyses your full income picture — salary, business profits, capital gains, rental income, and investments — to file the correct ITR form with maximum deductions.</p>
+      <ul class="check-list">
+        <li>ITR-1 (Sahaj) for salaried individuals — Form 16 based</li>
+        <li>ITR-2 for capital gains, house property income, and NRI</li>
+        <li>ITR-3 &amp; ITR-4 for business / professional income</li>
+        <li>ITR-6 for companies; ITR-7 for trusts</li>
+        <li>Revised and belated ITR filing</li>
+        <li>Income Tax Notice response and scrutiny handling</li>
+      </ul>
+    </div>
+    <div>
+      <div class="info-grid-2x2">
+        <div class="info-card"><div class="info-icon">⚡</div><h4>48-Hr Filing</h4><p>Once documents are shared, we file your ITR within 48 working hours — guaranteed.</p></div>
+        <div class="info-card"><div class="info-icon">💰</div><h4>Max Deductions</h4><p>We identify every legal deduction — 80C, 80D, HRA, LTA, NPS — to minimise your tax.</p></div>
+        <div class="info-card"><div class="info-icon">🔔</div><h4>Deadline Alerts</h4><p>We remind you well before due dates so you never pay late filing penalties.</p></div>
+        <div class="info-card"><div class="info-icon">📱</div><h4>WhatsApp Filing</h4><p>Send documents via WhatsApp. No office visit needed. 100% digital process.</p></div>
+      </div>
+      <div style="margin-top:18px"><div class="quick-contact"><h4>ITR Filing from ₹799</h4><p>Free 15-min call to assess your ITR type and pricing.</p><button class="btn btn-dark btn-sm" onclick="nav('contact')">Get Free Quote</button></div></div>
+    </div>
+  </div></div></div></div>
+
+  <!-- WHO SHOULD FILE TAB -->
+  <div id="itr-who" class="tab-content"><div class="info-section"><div class="wrap">
+    <div class="section-head"><div class="overline">Eligibility</div><h2 class="h2">Who Must <em>File ITR?</em></h2></div>
+    <div class="info-grid-3" style="margin-top:32px">
+      <div class="info-card"><div class="info-icon">👔</div><h4>Salaried Employees</h4><p>If your gross salary exceeds ₹3 lakh (new regime) or ₹2.5 lakh (old regime). Also if you want to claim refund of TDS deducted by employer.</p></div>
+      <div class="info-card"><div class="info-icon">🏢</div><h4>Business Owners</h4><p>All proprietors, partners, and directors must file ITR, regardless of profit or loss. Tax audit mandatory above ₹1 crore turnover.</p></div>
+      <div class="info-card"><div class="info-icon">✈️</div><h4>NRIs</h4><p>NRIs with Indian income (rent, dividends, capital gains, FD interest) must file ITR. Special rules for DTAA benefits apply.</p></div>
+      <div class="info-card"><div class="info-icon">🏠</div><h4>Property Owners</h4><p>Anyone with rental income or who sold property during the year must report capital gains. LTCG exemptions available under Sec 54.</p></div>
+      <div class="info-card"><div class="info-icon">📈</div><h4>Investors</h4><p>Mutual fund redemptions, stock sales, and FD maturity proceeds must be reported. STCG at 15%, LTCG at 10% above ₹1 lakh.</p></div>
+      <div class="info-card"><div class="info-icon">🎓</div><h4>Students &amp; Freelancers</h4><p>Any person with income above the threshold — including freelancers, consultants, and tuition teachers — must file ITR-3 or ITR-4.</p></div>
+    </div>
+    <!-- Why even below threshold -->
+    <div style="background:var(--gold-pale);border:1px solid var(--border-g);border-radius:12px;padding:28px;margin-top:32px">
+      <h3 style="font-family:var(--serif);font-size:1.2rem;color:var(--navy);margin-bottom:10px">💡 Why file even if income is below the threshold?</h3>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px">
+        <div style="font-size:.85rem;color:var(--ink-mid)"><strong style="color:var(--navy)">🏦 Loan Applications</strong><br>Banks require 2–3 years of ITR for home loans, business loans, and credit cards.</div>
+        <div style="font-size:.85rem;color:var(--ink-mid)"><strong style="color:var(--navy)">🛂 Visa Applications</strong><br>US, UK, Schengen visas all ask for 3 years of ITR as financial proof of ties to India.</div>
+        <div style="font-size:.85rem;color:var(--ink-mid)"><strong style="color:var(--navy)">💸 TDS Refund</strong><br>Banks and employers deduct TDS. Filing ITR is the only way to claim it back if not liable.</div>
+      </div>
+    </div>
+  </div></div></div>
+
+  <!-- DOCUMENTS TAB -->
+  <div id="itr-docs" class="tab-content"><div class="info-section"><div class="wrap">
+    <div class="section-head"><div class="overline">Checklist</div><h2 class="h2">Documents <em>Required</em></h2></div>
+    <div class="info-grid-2" style="margin-top:32px;align-items:start">
+      <div>
+        <h3 style="font-family:var(--serif);font-size:1.15rem;color:var(--navy);margin-bottom:16px">For Salaried Individuals</h3>
+        <ul class="check-list">
+          <li>Form 16 / Form 16A from employer</li>
+          <li>PAN Card &amp; Aadhaar Card</li>
+          <li>Bank statements (all accounts, full year)</li>
+          <li>Interest certificates from banks/NBFCs</li>
+          <li>80C investment proofs (ELSS, LIC, PPF, EPF)</li>
+          <li>80D health insurance premium receipts</li>
+          <li>HRA proof (rent receipts + landlord PAN)</li>
+          <li>Home loan certificate (for deduction u/s 24b)</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="font-family:var(--serif);font-size:1.15rem;color:var(--navy);margin-bottom:16px">For Business / Professional</h3>
+        <ul class="check-list">
+          <li>Books of accounts / profit &amp; loss statement</li>
+          <li>Balance sheet (if applicable)</li>
+          <li>GST returns filed during the year</li>
+          <li>TDS certificates (26AS / Form 16A)</li>
+          <li>Bank statements for business account</li>
+          <li>Purchase / sales invoices (for audit cases)</li>
+          <li>Capital asset purchase invoices (for depreciation)</li>
+          <li>Previous year's ITR copy</li>
+        </ul>
+      </div>
+    </div>
+    <div style="background:var(--navy);border-radius:12px;padding:24px;margin-top:28px;display:flex;align-items:center;gap:20px">
+      <div style="font-size:2rem;flex-shrink:0">📋</div>
+      <div>
+        <div style="font-weight:700;color:var(--gold);margin-bottom:5px">Not sure what you need? We'll tell you.</div>
+        <div style="font-size:.86rem;color:rgba(255,255,255,.62)">Book a free 15-minute call and our CA will tell you exactly which documents are needed for your specific situation — salaried, business, NRI, or capital gains.</div>
+      </div>
+      <button class="btn btn-primary btn-sm" onclick="nav('contact')" style="flex-shrink:0;white-space:nowrap">Book Free Call</button>
+    </div>
+  </div></div></div>
+
+  <!-- PRICING TAB -->
+  <div id="itr-pricing" class="tab-content"><div class="info-section"><div class="wrap">
+    <div class="section-head"><div class="overline">Pricing</div><h2 class="h2">ITR Filing <em>Packages</em></h2></div>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="pc-tier">Basic</div>
+        <div class="pc-price"><span class="curr">₹</span>799</div>
+        <div class="pc-period">one-time</div>
+        <div class="pc-name">Salaried individual with Form 16, no investments or capital gains</div>
+        <ul class="pc-feats">
+          <li class="pc-feat"><span class="pc-feat-check">✓</span>ITR-1 (Sahaj) filing</li>
+          <li class="pc-feat"><span class="pc-feat-check">✓</span>Form 16 computation</li>
+          <li class="pc-feat"><span class="pc-feat-check">✓</span>Tax calculation &amp; review</li>
+          <li class="pc-feat"><span class="pc-feat-check">✓</span>Acknowledgement (ITR-V)</li>
+        </ul>
+        <button class="btn-pc btn-pc-outline" onclick="nav('contact')">Get Started</button>
+      </div>
+      <div class="pricing-card featured">
+        <div class="pricing-pill">Most Popular</div>
+        <div class="pc-tier">Standard</div>
+        <div class="pc-price"><span class="curr">₹</span>2,499</div>
+        <div class="pc-period">one-time</div>
+        <div class="pc-name">Salaried + investments, multiple Form 16s, HRA, home loan, capital gains</div>
+        <ul class="pc-feats">
+          <li class="pc-feat"><span class="pc-feat-check">✓</span>ITR-1 or ITR-2 filing</li>
+          <li class="pc-feat"><span class="pc-feat-check">✓</span>All deduction optimization</li>
+          <li class="pc-feat"><span class="pc-feat-check">✓</span>Capital gains computation</li>
+          <li class="pc-feat"><span class="pc-feat-check">✓</span>Old vs New regime comparison</li>
+          <li class="pc-feat"><span class="pc-feat-check">✓</span>Notice handling (if any)</li>
+        </ul>
+        <button class="btn-pc btn-pc-gold" onclick="nav('contact')">Get Started</button>
+      </div>
+      <div class="pricing-card">
+        <div class="pc-tier">Business</div>
+        <div class="pc-price">Custom</div>
+        <div class="pc-period">based on complexity</div>
+        <div class="pc-name">Proprietors, companies, LLPs, NRIs — all complex return types</div>
+        <ul class="pc-feats">
+          <li class="pc-feat"><span class="pc-feat-check">✓</span>ITR-3, ITR-4, ITR-5, ITR-6</li>
+          <li class="pc-feat"><span class="pc-feat-check">✓</span>Tax audit (3CD/3CEB)</li>
+          <li class="pc-feat"><span class="pc-feat-check">✓</span>NRI / DTAA benefits</li>
+          <li class="pc-feat"><span class="pc-feat-check">✓</span>Dedicated CA assigned</li>
+        </ul>
+        <button class="btn-pc btn-pc-dark" onclick="nav('contact')">Get Quote</button>
+      </div>
+    </div>
+  </div></div></div>
+
+  <!-- FAQ TAB -->
+  <div id="itr-faq" class="tab-content"><div class="info-section"><div class="wrap" style="max-width:800px">
+    <div class="section-head"><div class="overline">FAQ</div><h2 class="h2">ITR <em>Questions</em></h2></div>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What is the deadline to file ITR for FY 2024-25? <span class="faq-icon">+</span></button><div class="faq-a">The due date for filing ITR for FY 2024-25 (AY 2025-26) for individuals and salaried employees is 31st July 2025. For businesses requiring audit, it is 31st October 2025. Belated ITRs can be filed up to 31st December 2025 with a late fee.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What happens if I don't file ITR? <span class="faq-icon">+</span></button><div class="faq-a">Non-filing attracts a late fee of ₹5,000 (₹1,000 for income below ₹5 lakh). Additionally, you may receive a notice under Section 142(1) or 148. You also lose the ability to carry forward capital losses and miss out on refunds.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Should I choose the New Tax Regime or Old Tax Regime? <span class="faq-icon">+</span></button><div class="faq-a">It depends on your deductions. If you have significant investments under 80C, health insurance (80D), HRA, and home loan interest, the Old Regime usually saves more tax. If you have minimal deductions, the New Regime with its lower slab rates is better. Our team does this comparison for every client.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Can I file ITR myself? Why do I need a CA? <span class="faq-icon">+</span></button><div class="faq-a">Technically yes — but wrong ITR form selection, missed deductions, or incorrect disclosures can lead to notices, penalties, and demands. A CA ensures the right form, maximum legitimate deductions, correct disclosure, and handling of any future notices. The fee pays for itself many times over.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How long does the refund take after filing? <span class="faq-icon">+</span></button><div class="faq-a">Tax refunds are typically processed within 15–45 days of e-verification if the return is filed correctly and bank details are pre-validated on the Income Tax portal. We track your refund status and alert you as soon as it is credited.</div></div>
+    </div>
+  </div></div></div>
+
+  <div class="related-section"><div class="wrap">
+    <div style="font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-lt);margin-bottom:16px">Related Services</div>
+    <div class="related-grid">
+      <div class="related-card" onclick="nav('gst')"><span class="related-icon">🧾</span><span class="related-name">GST Services</span><span class="related-arr">→</span></div>
+      <div class="related-card" onclick="nav('audit')"><span class="related-icon">📋</span><span class="related-name">Audit &amp; Assurance</span><span class="related-arr">→</span></div>
+      <div class="related-card" onclick="nav('corp')"><span class="related-icon">🏢</span><span class="related-name">Company Registration</span><span class="related-arr">→</span></div>
+      <div class="related-card" onclick="nav('tools')"><span class="related-icon">🧮</span><span class="related-name">Tax Calculators</span><span class="related-arr">→</span></div>
+    </div>
+  </div></div>
+  <div class="cta-strip"><div class="wrap"><h2>File Your ITR <em>Stress-Free</em></h2><p>Let our experts handle your income tax return — accurately, on time, and with maximum savings.</p><button class="btn btn-white btn-lg" onclick="nav('contact')">File My ITR Now</button></div></div>
+  <footer><div class="wrap"><div class="footer-bottom"><span class="footer-copy">© 2025 Priyadarshi &amp; Associates. All rights reserved.</span></div></div></footer>
+</div>
+
+<!-- ══════════ GST REGISTRATION PAGE ══════════ -->
+<div id="pg-gst-reg" class="page">
+  <div class="svc-hero"><div class="svc-hero-inner">
+    <div class="breadcrumb"><span class="bc-item" onclick="nav('home')">Home</span><span class="bc-sep">›</span><span class="bc-item" onclick="nav('gst')">GST Services</span><span class="bc-sep">›</span><span class="bc-cur">GST Registration</span></div>
+    <h1>GST Registration<br><em>in 3–5 Days.</em></h1>
+    <p class="svc-hero-desc">Get your GSTIN hassle-free. We handle the entire registration process — document preparation, portal submission, ARN tracking, and certificate delivery — so you can focus on your business.</p>
+    <div class="svc-hero-badges">
+      <span class="svc-hero-badge">⚡ 3–5 Day Processing</span>
+      <span class="svc-hero-badge">📋 Document Guided</span>
+      <span class="svc-hero-badge">✅ 500+ Registrations Done</span>
+      <span class="svc-hero-badge">💰 Starting ₹1,499 Only</span>
+    </div>
+    <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap">
+      <button class="btn btn-primary btn-lg" onclick="nav('contact')">Register for GST Now</button>
+      <a class="btn-wa" href="https://wa.me/916123456789?text=Hi%2C%20I%20need%20GST%20registration." target="_blank" style="padding:16px 24px;font-size:.95rem">💬 WhatsApp Us</a>
+    </div>
+  </div></div>
+
+  <!-- WHO NEEDS GST + PROCESS -->
+  <section class="info-section"><div class="wrap">
+    <div class="info-grid-2" style="align-items:start;gap:64px">
+      <div>
+        <div class="overline">Eligibility</div>
+        <h2 class="h2">Who Must <em>Register?</em></h2>
+        <ul class="check-list" style="margin-top:20px">
+          <li>Businesses with turnover exceeding ₹40 lakhs (goods) or ₹20 lakhs (services)</li>
+          <li>E-commerce sellers on Amazon, Flipkart, Meesho — regardless of turnover</li>
+          <li>Inter-state suppliers of goods or services</li>
+          <li>Anyone liable to pay tax under Reverse Charge Mechanism (RCM)</li>
+          <li>Importers and exporters of goods/services</li>
+          <li>Casual taxable persons and non-resident taxable persons</li>
+        </ul>
+        <div style="background:var(--gold-pale);border:1px solid var(--border-g);border-radius:10px;padding:20px;margin-top:24px">
+          <div style="font-weight:700;color:var(--navy);margin-bottom:5px">💡 Voluntary Registration</div>
+          <p style="font-size:.85rem;color:var(--ink-mid);line-height:1.6">Even if your turnover is below the threshold, voluntary GST registration allows you to claim Input Tax Credit (ITC) on purchases, making you more competitive with larger suppliers who are GST-registered.</p>
+        </div>
+      </div>
+      <div>
+        <div class="overline">How It Works</div>
+        <h2 class="h2">Our <em>Process</em></h2>
+        <div class="steps-list">
+          <div class="step-item"><div class="step-num">01</div><div><h4>Free Consultation</h4><p>We understand your business type, turnover, and state to determine the right registration category.</p></div></div>
+          <div class="step-item"><div class="step-num">02</div><div><h4>Document Collection</h4><p>We send you a WhatsApp checklist. Share documents — we handle the rest digitally.</p></div></div>
+          <div class="step-item"><div class="step-num">03</div><div><h4>Portal Filing</h4><p>We file the GST REG-01 application on the GST portal and share the ARN (Application Reference Number) with you.</p></div></div>
+          <div class="step-item"><div class="step-num">04</div><div><h4>GSTIN Delivered</h4><p>Once approved (3–5 days for normal, 7–10 days if inspection is called), we share your GST Certificate and GSTIN.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div></section>
+
+  <!-- DOCUMENTS + PRICING -->
+  <section class="info-section" style="background:var(--cream)"><div class="wrap">
+    <div class="info-grid-2" style="align-items:start;gap:64px">
+      <div>
+        <div class="overline">Checklist</div>
+        <h2 class="h2">Documents <em>Required</em></h2>
+        <ul class="check-list" style="margin-top:20px">
+          <li>PAN Card of the applicant / business</li>
+          <li>Aadhaar Card of proprietor / partners / directors</li>
+          <li>Proof of business address (electricity bill / rent agreement)</li>
+          <li>Bank account details (cancelled cheque / passbook)</li>
+          <li>Photographs of proprietor / authorised signatory</li>
+          <li>Partnership deed / MOA-AOA (for companies / LLPs)</li>
+          <li>Digital Signature Certificate (DSC) — for companies</li>
+        </ul>
+      </div>
+      <div>
+        <div class="overline">Pricing</div>
+        <h2 class="h2">GST Registration <em>Plans</em></h2>
+        <div style="display:flex;flex-direction:column;gap:14px;margin-top:20px">
+          <div class="info-card" style="display:flex;justify-content:space-between;align-items:center">
+            <div><h4 style="margin-bottom:3px">Proprietorship / Individual</h4><p style="font-size:.8rem">Single GSTIN, 1 state, no HSN/SAC guidance</p></div>
+            <div style="font-family:var(--serif);font-size:1.5rem;color:var(--gold);font-weight:400;white-space:nowrap">₹1,499</div>
+          </div>
+          <div class="info-card" style="display:flex;justify-content:space-between;align-items:center;border-color:var(--gold)">
+            <div><h4 style="margin-bottom:3px">Partnership / LLP / Pvt Ltd</h4><p style="font-size:.8rem">Complete registration + HSN advice + ITC guidance</p></div>
+            <div style="font-family:var(--serif);font-size:1.5rem;color:var(--gold);font-weight:400;white-space:nowrap">₹2,999</div>
+          </div>
+          <div class="info-card" style="display:flex;justify-content:space-between;align-items:center">
+            <div><h4 style="margin-bottom:3px">Multi-state / E-commerce / Special</h4><p style="font-size:.8rem">Complex registrations — composition, NRTP, ISD</p></div>
+            <div style="font-family:var(--serif);font-size:1.5rem;color:var(--gold);font-weight:400;white-space:nowrap">Custom</div>
+          </div>
+        </div>
+        <div style="margin-top:20px"><button class="btn btn-primary" style="width:100%;justify-content:center" onclick="nav('contact')">Get Started — Free Consultation</button></div>
+      </div>
+    </div>
+  </div></section>
+
+  <div class="cta-strip"><div class="wrap"><h2>Get Your GSTIN <em>in 5 Days</em></h2><p>Our GST team handles the complete registration so you don't have to navigate the portal.</p><button class="btn btn-white btn-lg" onclick="nav('contact')">Register for GST</button></div></div>
+  <footer><div class="wrap"><div class="footer-bottom"><span class="footer-copy">© 2025 Priyadarshi &amp; Associates. All rights reserved.</span></div></div></footer>
+</div>
+
+<!-- ══════════ COMPANY REGISTRATION PAGE ══════════ -->
+<div id="pg-company-reg" class="page">
+  <div class="svc-hero"><div class="svc-hero-inner">
+    <div class="breadcrumb"><span class="bc-item" onclick="nav('home')">Home</span><span class="bc-sep">›</span><span class="bc-item" onclick="nav('corp')">Corporate Affairs</span><span class="bc-sep">›</span><span class="bc-cur">Company Registration</span></div>
+    <h1>Register Your<br><em>Company in 7 Days.</em></h1>
+    <p class="svc-hero-desc">Private Limited Company, LLP, or OPC — we handle the complete MCA incorporation process from DSC to PAN. Trusted by 100+ entrepreneurs across Bihar to launch their businesses right.</p>
+    <div class="svc-hero-badges">
+      <span class="svc-hero-badge">⚡ 5–7 Day Incorporation</span>
+      <span class="svc-hero-badge">🏢 100+ Companies Incorporated</span>
+      <span class="svc-hero-badge">📋 End-to-End Support</span>
+      <span class="svc-hero-badge">💰 All-In Pricing, No Hidden Fees</span>
+    </div>
+    <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap">
+      <button class="btn btn-primary btn-lg" onclick="nav('contact')">Start Registration Now</button>
+      <a class="btn-wa" href="https://wa.me/916123456789?text=Hi%2C%20I%20want%20to%20register%20a%20company." target="_blank" style="padding:16px 24px;font-size:.95rem">💬 WhatsApp Us</a>
+    </div>
+  </div></div>
+
+  <!-- STRUCTURE COMPARISON -->
+  <section class="info-section"><div class="wrap">
+    <div class="section-head center"><div class="overline">Which Structure?</div><h2 class="h2">Choose the Right <em>Business Form</em></h2><p class="sub">Not sure which structure is right for you? Here's a quick comparison to guide your decision.</p></div>
+    <div class="compare-table-wrap" style="margin-top:36px">
+      <table class="compare-table">
+        <thead><tr>
+          <th>Feature</th>
+          <th class="col-us">Private Limited Co. <span class="col-rec">✓ Most Popular</span></th>
+          <th class="col-big">LLP</th>
+          <th class="col-diy">OPC / Proprietorship</th>
+        </tr></thead>
+        <tbody>
+          <tr><td>Limited Liability</td><td class="col-us"><span class="ck-yes">✓</span></td><td><span class="ck-yes">✓</span></td><td><span class="ck-no">✗</span></td></tr>
+          <tr><td>Can Raise VC Funding</td><td class="col-us"><span class="ck-yes">✓</span></td><td><span class="ck-no">✗</span></td><td><span class="ck-no">✗</span></td></tr>
+          <tr><td>ESOP / Share Issuance</td><td class="col-us"><span class="ck-yes">✓</span></td><td><span class="ck-no">✗</span></td><td><span class="ck-no">✗</span></td></tr>
+          <tr><td>Regulatory Compliance</td><td class="col-us"><span class="ck-part">Medium</span></td><td><span class="ck-part">Low</span></td><td><span class="ck-yes">Minimal</span></td></tr>
+          <tr><td>Tax on Profits</td><td class="col-us">22% (New Regime)</td><td>Slab Rate</td><td>Slab Rate</td></tr>
+          <tr><td>Ideal For</td><td class="col-us">Startups, growth businesses</td><td>Professionals, agencies</td><td>Solo founders, consultants</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div></section>
+
+  <!-- PROCESS STEPS -->
+  <section class="process-section"><div class="wrap">
+    <div class="section-head center"><div class="overline" style="justify-content:center">Step by Step</div><h2 class="h2" style="color:white">How We <em style="color:var(--gold-lt)">Incorporate</em> Your Company</h2></div>
+    <div class="process-steps" style="margin-top:56px">
+      <div class="process-step"><div class="process-dot">01</div><div class="process-step-title">Name Approval</div><p class="process-step-desc">We file RUN (Reserve Unique Name) on MCA portal. Approved names are reserved for 20 days.</p></div>
+      <div class="process-step"><div class="process-dot">02</div><div class="process-step-title">DSC &amp; DIN</div><p class="process-step-desc">Digital Signature Certificates for all directors. Director Identification Numbers filed via SPICe+.</p></div>
+      <div class="process-step"><div class="process-dot">03</div><div class="process-step-title">SPICe+ Filing</div><p class="process-step-desc">Single window form covering incorporation, PAN, TAN, ESIC, EPFO, and bank account opening.</p></div>
+      <div class="process-step"><div class="process-dot">04</div><div class="process-step-title">Certificate &amp; PAN</div><p class="process-step-desc">Certificate of Incorporation issued. PAN, TAN, and CIN received. Company is live in 5–7 days.</p></div>
+    </div>
+  </div></section>
+
+  <!-- PRICING -->
+  <section class="info-section"><div class="wrap">
+    <div class="section-head center"><div class="overline">Pricing</div><h2 class="h2">Transparent <em>All-Inclusive</em> Pricing</h2><p class="sub">No hidden charges. Government fees + professional fees — all included.</p></div>
+    <div class="pricing-grid" style="margin-top:40px">
+      <div class="pricing-card">
+        <div class="pc-tier">LLP</div>
+        <div class="pc-price"><span class="curr">₹</span>6,999</div>
+        <div class="pc-period">all-inclusive</div>
+        <div class="pc-name">Best for professional services, agencies, and small businesses with 2+ partners</div>
+        <ul class="pc-feats">
+          <li class="pc-feat"><span class="pc-feat-check">✓</span>LLP registration on MCA</li>
+          <li class="pc-feat"><span class="pc-feat-check">✓</span>LLP Agreement drafting</li>
+          <li class="pc-feat"><span class="pc-feat-check">✓</span>PAN &amp; TAN</li>
+          <li class="pc-feat"><span class="pc-feat-check">✓</span>GST registration guidance</li>
+        </ul>
+        <button class="btn-pc btn-pc-outline" onclick="nav('contact')">Get Started</button>
+      </div>
+      <div class="pricing-card featured">
+        <div class="pricing-pill">Most Popular</div>
+        <div class="pc-tier">Private Limited</div>
+        <div class="pc-price"><span class="curr">₹</span>9,999</div>
+        <div class="pc-period">all-inclusive</div>
+        <div class="pc-name">Best for startups, investor-backed businesses, and growth-stage companies</div>
+        <ul class="pc-feats">
+          <li class="pc-feat"><span class="pc-feat-check">✓</span>Pvt Ltd incorporation via SPICe+</li>
+          <li class="pc-feat"><span class="pc-feat-check">✓</span>MOA &amp; AOA drafting</li>
+          <li class="pc-feat"><span class="pc-feat-check">✓</span>DSC for 2 directors</li>
+          <li class="pc-feat"><span class="pc-feat-check">✓</span>PAN, TAN, GSTIN</li>
+          <li class="pc-feat"><span class="pc-feat-check">✓</span>Free 1st year ROC compliance</li>
+        </ul>
+        <button class="btn-pc btn-pc-gold" onclick="nav('contact')">Get Started</button>
+      </div>
+      <div class="pricing-card">
+        <div class="pc-tier">OPC / Section 8</div>
+        <div class="pc-price"><span class="curr">₹</span>7,999</div>
+        <div class="pc-period">all-inclusive</div>
+        <div class="pc-name">Solo founder or NGO / non-profit company needing legal structure</div>
+        <ul class="pc-feats">
+          <li class="pc-feat"><span class="pc-feat-check">✓</span>One-Person Company or NGO</li>
+          <li class="pc-feat"><span class="pc-feat-check">✓</span>MOA / AOA preparation</li>
+          <li class="pc-feat"><span class="pc-feat-check">✓</span>PAN &amp; TAN</li>
+          <li class="pc-feat"><span class="pc-feat-check">✓</span>12A / 80G guidance (for NGO)</li>
+        </ul>
+        <button class="btn-pc btn-pc-dark" onclick="nav('contact')">Get Started</button>
+      </div>
+    </div>
+  </div></section>
+
+  <div class="cta-strip"><div class="wrap"><h2>Launch Your Business <em>Legally</em></h2><p>Over 100 businesses in Bihar registered with our help. Start yours today — free consultation included.</p><button class="btn btn-white btn-lg" onclick="nav('contact')">Register My Company Now</button></div></div>
+  <footer><div class="wrap"><div class="footer-bottom"><span class="footer-copy">© 2025 Priyadarshi &amp; Associates. All rights reserved.</span></div></div></footer>
 </div>
 
 <!-- ══════════ BLOG PAGE ══════════ -->
@@ -1829,6 +2873,167 @@ footer{background:#070F1C;padding:76px 0 0}
   </div></div>
   <footer><div class="wrap"><div class="footer-bottom"><span class="footer-copy">© 2025 Priyadarshi &amp; Associates. All rights reserved.</span></div></div></footer>
 </div>
+
+<!-- ══════════ CAREERS PAGE ══════════ -->
+<div id="pg-careers" class="page">
+  <div class="careers-hero">
+    <div class="svc-hero-inner" style="position:relative;z-index:1">
+      <div class="breadcrumb"><span class="bc-item" onclick="nav('home')">Home</span><span class="bc-sep">›</span><span class="bc-cur">Careers</span></div>
+      <h1 style="font-family:var(--serif);font-size:clamp(2.2rem,5vw,4rem);font-weight:300;color:var(--white);line-height:1.1;margin-bottom:18px">Join Our <em style="font-style:italic;color:var(--gold-lt)">CA Team</em></h1>
+      <p class="svc-hero-desc">Be part of Patna's most trusted CA firm. We're looking for talented professionals who are passionate about finance, compliance, and making a real difference for businesses across Bihar.</p>
+      <div class="svc-hero-badges" style="margin-top:24px">
+        <div class="svc-hero-badge">🏛️ ICAI Registered</div>
+        <div class="svc-hero-badge">📍 Fraser Road, Patna</div>
+        <div class="svc-hero-badge">⚡ Fast-Growing Team</div>
+        <div class="svc-hero-badge">🎓 CA Articleship Available</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CULTURE STRIP -->
+  <div class="culture-strip">
+    <div class="wrap">
+      <p class="culture-quote">"We don't just hire employees — we build careers and create partners in our clients' financial success."</p>
+      <div class="culture-attrib">— CA Rajan Priyadarshi, Founder</div>
+    </div>
+  </div>
+
+  <!-- PERKS -->
+  <section class="section-sm" style="background:var(--cream)">
+    <div class="wrap">
+      <div class="section-head center"><div class="overline">Why Join Us</div><h2 class="h2">Perks &amp; <em>Benefits</em></h2></div>
+      <div class="perks-grid">
+        <div class="perk-card"><div class="perk-icon">📚</div><div class="perk-title">Continuous Learning</div><p class="perk-desc">Sponsored ICAI CPE hours, workshops, and study material for CA Finals</p></div>
+        <div class="perk-card"><div class="perk-icon">⏰</div><div class="perk-title">Flexible Hours</div><p class="perk-desc">Mon–Sat 10AM–7PM core hours with WFH options during non-peak months</p></div>
+        <div class="perk-card"><div class="perk-icon">📈</div><div class="perk-title">Clear Growth Path</div><p class="perk-desc">Article → Senior → Manager → Partner — we promote from within</p></div>
+        <div class="perk-card"><div class="perk-icon">💰</div><div class="perk-title">Competitive Pay</div><p class="perk-desc">Market-aligned salaries with performance bonuses tied to client satisfaction</p></div>
+        <div class="perk-card"><div class="perk-icon">🌐</div><div class="perk-title">Diverse Clientele</div><p class="perk-desc">Work across manufacturing, startups, healthcare, NGOs, and more</p></div>
+        <div class="perk-card"><div class="perk-icon">🤝</div><div class="perk-title">Mentorship</div><p class="perk-desc">Direct mentoring from FCA-qualified partners with Big-4 experience</p></div>
+        <div class="perk-card"><div class="perk-icon">🏥</div><div class="perk-title">Health Benefits</div><p class="perk-desc">Group health insurance coverage for employees and dependants</p></div>
+        <div class="perk-card"><div class="perk-icon">🎉</div><div class="perk-title">Great Culture</div><p class="perk-desc">Team outings, Diwali bonuses, celebration of CA exam passes</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOB LISTINGS -->
+  <section class="section" style="background:var(--white)">
+    <div class="wrap">
+      <div class="section-head center"><div class="overline">Open Positions</div><h2 class="h2">Current <em>Openings</em></h2><p class="sub">We're a growing team. Even if you don't see your perfect role, drop us your CV — we'd love to hear from you.</p></div>
+      <div class="job-grid">
+        <div class="job-card">
+          <div class="job-tag full-time">● Full-Time</div>
+          <div class="job-title">Senior Tax Manager</div>
+          <div class="job-dept">Direct Taxation</div>
+          <p class="job-desc">Lead income tax advisory and compliance for 50+ corporate clients. Responsible for tax planning, return review, notice handling, and client liaison. Would be the primary tax expert for our largest accounts.</p>
+          <div class="job-tags">
+            <span class="job-skill">Direct Tax</span><span class="job-skill">ITR Filing</span><span class="job-skill">Tax Audit</span><span class="job-skill">Transfer Pricing</span><span class="job-skill">MS Excel</span>
+          </div>
+          <div class="job-footer">
+            <div class="job-location">📍 Patna (On-site)</div>
+            <button class="job-apply" onclick="openApplyModal('Senior Tax Manager','Direct Taxation')">Apply Now</button>
+          </div>
+        </div>
+        <div class="job-card">
+          <div class="job-tag full-time">● Full-Time</div>
+          <div class="job-title">GST Compliance Executive</div>
+          <div class="job-dept">Indirect Taxation</div>
+          <p class="job-desc">Handle monthly GST returns (GSTR-1, 3B), ITC reconciliation, and GST portal activities for 80+ clients. Draft responses to GST notices and departmental inquiries. 2+ years GST experience preferred.</p>
+          <div class="job-tags">
+            <span class="job-skill">GST Portal</span><span class="job-skill">GSTR-3B</span><span class="job-skill">ITC Recon</span><span class="job-skill">Tally</span><span class="job-skill">GST Notices</span>
+          </div>
+          <div class="job-footer">
+            <div class="job-location">📍 Patna (On-site)</div>
+            <button class="job-apply" onclick="openApplyModal('GST Compliance Executive','Indirect Taxation')">Apply Now</button>
+          </div>
+        </div>
+        <div class="job-card">
+          <div class="job-tag full-time">● Full-Time</div>
+          <div class="job-title">Audit &amp; Assurance Associate</div>
+          <div class="job-dept">Audit &amp; Assurance</div>
+          <p class="job-desc">Execute statutory, tax, and internal audits under the supervision of a CA Partner. Prepare audit working papers, draft audit reports, and handle MCA/ROC compliance tasks. CA Inter / CA Final preferred.</p>
+          <div class="job-tags">
+            <span class="job-skill">Statutory Audit</span><span class="job-skill">Tax Audit</span><span class="job-skill">Internal Audit</span><span class="job-skill">Companies Act</span>
+          </div>
+          <div class="job-footer">
+            <div class="job-location">📍 Patna (On-site)</div>
+            <button class="job-apply" onclick="openApplyModal('Audit & Assurance Associate','Audit & Assurance')">Apply Now</button>
+          </div>
+        </div>
+        <div class="job-card">
+          <div class="job-tag intern">★ Articleship</div>
+          <div class="job-title">CA Articleship (ICAI)</div>
+          <div class="job-dept">Training &amp; Development</div>
+          <p class="job-desc">3-year ICAI articleship offering rich exposure to direct/indirect taxation, statutory audits, corporate compliance, and financial advisory. Mentored by FCA-qualified partners. Bihar's best articleship for all-round development.</p>
+          <div class="job-tags">
+            <span class="job-skill">ICAI Registered</span><span class="job-skill">All Departments</span><span class="job-skill">3-Year Program</span><span class="job-skill">Stipend Provided</span>
+          </div>
+          <div class="job-footer">
+            <div class="job-location">📍 Patna (On-site)</div>
+            <button class="job-apply" onclick="openApplyModal('CA Articleship (ICAI)','Training & Development')">Apply Now</button>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:36px;padding:28px;background:var(--cream);border-radius:14px;border:1px solid var(--border)">
+        <p style="font-size:.95rem;color:var(--ink-mid);margin-bottom:16px">Don't see your role listed? We're always open to great talent.</p>
+        <button class="btn btn-outline" onclick="openApplyModal('General Application','Open Position')">Send Open Application →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOADS: Checklists -->
+  <div class="downloads-section">
+    <div class="wrap">
+      <div class="section-head center"><div class="overline">Free Resources</div><h2 class="h2">Document Checklist <em>Downloads</em></h2><p class="sub">Free checklists and guides to help you prepare your documents before your CA consultation.</p></div>
+      <div class="dl-grid">
+        <div class="dl-card">
+          <div class="dl-icon">📊</div>
+          <div class="dl-title">ITR Filing Checklist</div>
+          <p class="dl-desc">Complete document checklist for salaried individuals, freelancers, and business owners filing income tax returns.</p>
+          <div class="dl-meta"><span class="dl-badge">PDF</span><span class="dl-pages">2 pages · Free</span></div>
+          <button class="dl-btn" onclick="downloadChecklist('itr')">⬇ Download Free Checklist</button>
+        </div>
+        <div class="dl-card">
+          <div class="dl-icon">🧾</div>
+          <div class="dl-title">GST Registration Checklist</div>
+          <p class="dl-desc">All documents needed for GST registration — proprietorship, partnership, Pvt Ltd, LLP, and more.</p>
+          <div class="dl-meta"><span class="dl-badge">PDF</span><span class="dl-pages">1 page · Free</span></div>
+          <button class="dl-btn" onclick="downloadChecklist('gst')">⬇ Download Free Checklist</button>
+        </div>
+        <div class="dl-card">
+          <div class="dl-icon">🏢</div>
+          <div class="dl-title">Company Registration Checklist</div>
+          <p class="dl-desc">Documents required to incorporate a Private Limited Company, OPC, or LLP through the MCA portal.</p>
+          <div class="dl-meta"><span class="dl-badge">PDF</span><span class="dl-pages">2 pages · Free</span></div>
+          <button class="dl-btn" onclick="downloadChecklist('company')">⬇ Download Free Checklist</button>
+        </div>
+        <div class="dl-card">
+          <div class="dl-icon">📋</div>
+          <div class="dl-title">Audit Preparation Guide</div>
+          <p class="dl-desc">What to prepare before a statutory or tax audit — books of accounts, vouchers, reconciliations, and more.</p>
+          <div class="dl-meta"><span class="dl-badge">PDF</span><span class="dl-pages">3 pages · Free</span></div>
+          <button class="dl-btn" onclick="downloadChecklist('audit')">⬇ Download Free Guide</button>
+        </div>
+        <div class="dl-card">
+          <div class="dl-icon">🚀</div>
+          <div class="dl-title">Startup Compliance Roadmap</div>
+          <p class="dl-desc">Month-by-month compliance calendar for new startups — GST, TDS, PF, ROC filings, and DPIIT recognition steps.</p>
+          <div class="dl-meta"><span class="dl-badge">PDF</span><span class="dl-pages">4 pages · Free</span></div>
+          <button class="dl-btn" onclick="downloadChecklist('startup')">⬇ Download Free Roadmap</button>
+        </div>
+        <div class="dl-card">
+          <div class="dl-icon">✈️</div>
+          <div class="dl-title">NRI Tax Filing Guide</div>
+          <p class="dl-desc">Documents and process for NRIs filing Indian income tax returns — rental income, capital gains, DTAA benefits, and repatriation.</p>
+          <div class="dl-meta"><span class="dl-badge">PDF</span><span class="dl-pages">2 pages · Free</span></div>
+          <button class="dl-btn" onclick="downloadChecklist('nri')">⬇ Download Free Guide</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer><div class="wrap"><div class="footer-bottom"><span class="footer-copy">© 2025 Priyadarshi &amp; Associates. All rights reserved.</span></div></div></footer>
+</div>
+
 <script>
 /* ══════════════════════════════════════
    ALL JAVASCRIPT FOR PRIYADARSHI WEBSITE
@@ -1903,8 +3108,8 @@ function nav(id) {
   // Update nav active states
   document.querySelectorAll('.nav-btn').forEach(function(b){ b.classList.remove('active'); });
   document.querySelectorAll('.mob-link').forEach(function(b){ b.classList.remove('active'); });
-  var servicePages = ['audit','tax','gst','corp','advisory','startup'];
-  var nbMap = {home:'nb-home',about:'nb-about',tools:'nb-tools',blog:'nb-blog',contact:'nb-contact'};
+  var servicePages = ['audit','tax','gst','corp','advisory','startup','itr','gst-reg','company-reg'];
+  var nbMap = {home:'nb-home',about:'nb-about',tools:'nb-tools',blog:'nb-blog',contact:'nb-contact',careers:'nb-careers'};
   if (nbMap[id]) {
     var el = document.getElementById(nbMap[id]);
     if (el) el.classList.add('active');
@@ -2359,13 +3564,526 @@ function heroEnquiry(btn) {
 }
 
 /* ═══════════════════════════
+   NEWSLETTER SUBSCRIPTION
+═══════════════════════════ */
+function subscribeNewsletter() {
+  var email = document.getElementById('nlEmail').value.trim();
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    showToast('⚠️ Please enter a valid email address.');
+    return;
+  }
+  var btn = document.querySelector('.newsletter-btn');
+  btn.textContent = '✓ Subscribed!';
+  btn.style.background = '#22c55e';
+  btn.disabled = true;
+  document.getElementById('nlEmail').value = '';
+  showToast('📧 You\'ve been subscribed! Watch your inbox for monthly tax tips.');
+  setTimeout(function() {
+    btn.textContent = 'Subscribe →';
+    btn.style.background = '';
+    btn.disabled = false;
+  }, 5000);
+}
+
+/* ═══════════════════════════
    INIT ON LOAD
 ═══════════════════════════ */
 window.addEventListener('DOMContentLoaded', function(){
   buildTicker();
   buildAlert();
-  // Start counter animation when page loads (hero stats)
   setTimeout(animateCounters, 600);
+  // Phase 4: init appointment date slots
+  buildApptDates();
+  // Show chat notification after 6 seconds
+  setTimeout(function(){
+    var notif = document.getElementById('chatNotif');
+    if(notif) notif.style.display = 'flex';
+  }, 6000);
+});
+
+/* ═══════════════════════════
+   PHASE 4: LIVE CHAT WIDGET
+═══════════════════════════ */
+var chatOpen = false;
+var chatResponses = {
+  'income tax filing': 'Great! We offer ITR filing from just ₹799. Our CA team handles all ITR forms (ITR-1 to ITR-6) with 48-hour turnaround. Would you like to book a free consultation? 📊',
+  'gst services': 'We provide end-to-end GST services — registration, monthly returns (GSTR-1, 3B), ITC reconciliation, and notice handling. GST registration starts at ₹1,499. Can I connect you with our GST expert? 🧾',
+  'company registration': 'We handle Pvt Ltd, LLP, and OPC incorporation — fully online, all-inclusive. Starting at ₹6,999 with GSTIN + PAN included. Would you like a free consultation call? 🏢',
+  'book appointment': 'I\'ll open our booking calendar for you right now! 📅',
+  'fees': 'Our fees are very competitive! ITR from ₹799, GST from ₹1,499, Company registration from ₹6,999. Would you like a detailed quote?',
+  'contact': 'You can reach us at: 📞 +91 612 345 6789 | ✉️ info@priyadarshiassociates.in | 📍 Fraser Road, Patna. Office hours: Mon–Sat 10AM–7PM.',
+  'hi': 'Hello! 👋 How can I help you today? I can assist with Income Tax, GST, Company Registration, Audit, or booking an appointment.',
+  'hello': 'Hello! 👋 How can I help you today? I can assist with Income Tax, GST, Company Registration, Audit, or booking an appointment.',
+  'default': 'Thanks for your message! 😊 One of our CA team members will respond shortly. For immediate assistance, call us at +91 612 345 6789 or WhatsApp us — we\'re online right now!'
+};
+
+function toggleChat() {
+  chatOpen = !chatOpen;
+  var panel = document.getElementById('chatPanel');
+  var notif = document.getElementById('chatNotif');
+  if(panel) panel.classList.toggle('open', chatOpen);
+  if(notif) notif.style.display = 'none';
+}
+
+function sendChatMsg() {
+  var input = document.getElementById('chatInput');
+  var msgs = document.getElementById('chatMessages');
+  var text = input ? input.value.trim() : '';
+  if(!text) return;
+  // Add user message
+  msgs.innerHTML += '<div class="chat-msg user">' + escapeHtml(text) + '<div class="chat-msg-time">Just now</div></div>';
+  input.value = '';
+  msgs.scrollTop = msgs.scrollHeight;
+  // Show typing indicator
+  var typingId = 'typing_' + Date.now();
+  msgs.innerHTML += '<div class="chat-typing" id="' + typingId + '"><span></span><span></span><span></span></div>';
+  msgs.scrollTop = msgs.scrollHeight;
+  // Find response
+  var key = text.toLowerCase();
+  var response = chatResponses['default'];
+  for(var k in chatResponses) {
+    if(key.indexOf(k) !== -1) { response = chatResponses[k]; break; }
+  }
+  // Show response after delay
+  setTimeout(function(){
+    var typing = document.getElementById(typingId);
+    if(typing) typing.remove();
+    msgs.innerHTML += '<div class="chat-msg agent">' + response + '<div class="chat-msg-time">Just now</div></div>';
+    msgs.scrollTop = msgs.scrollHeight;
+    // If user asked to book appointment, open modal
+    if(key.indexOf('book') !== -1 || key.indexOf('appoint') !== -1) {
+      setTimeout(function(){ openApptModal(); toggleChat(); }, 800);
+    }
+  }, 1200);
+}
+
+function chatQuickReply(topic) {
+  var input = document.getElementById('chatInput');
+  if(input) { input.value = topic; sendChatMsg(); }
+  // Hide quick replies after use
+  var qr = document.getElementById('chatQuickReplies');
+  if(qr) qr.style.display = 'none';
+}
+
+function escapeHtml(text) {
+  return text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+/* ═══════════════════════════
+   PHASE 4: APPOINTMENT BOOKING MODAL
+═══════════════════════════ */
+var apptData = { service:'', date:'', time:'', name:'', phone:'', email:'', note:'' };
+var apptCurrentStep = 1;
+
+function openApptModal() {
+  document.getElementById('apptModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  resetAppt();
+}
+
+function closeApptModal() {
+  document.getElementById('apptModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function resetAppt() {
+  apptData = { service:'', date:'', time:'', name:'', phone:'', email:'', note:'' };
+  apptCurrentStep = 1;
+  // Show step 1, hide others
+  ['apptStep1','apptStep2','apptStep3','apptStep4','apptSuccess'].forEach(function(id){
+    var el = document.getElementById(id);
+    if(el) el.classList.remove('active');
+  });
+  var s1 = document.getElementById('apptStep1');
+  if(s1) s1.classList.add('active');
+  // Reset service selection
+  // Clear form inputs
+  ['apptName','apptPhone','apptEmail','apptNote'].forEach(function(id){
+    var el = document.getElementById(id);
+    if(el) el.value = '';
+  });
+  document.querySelectorAll('.svc-select-card').forEach(function(c){ c.classList.remove('selected'); });
+  var btn1 = document.getElementById('apptBtn1');
+  if(btn1) { btn1.disabled = true; btn1.style.opacity = '.4'; }
+  updateApptProgress(1);
+}
+
+function selectApptSvc(el, svc) {
+  document.querySelectorAll('.svc-select-card').forEach(function(c){ c.classList.remove('selected'); });
+  el.classList.add('selected');
+  apptData.service = svc;
+  var btn = document.getElementById('apptBtn1');
+  if(btn) { btn.disabled = false; btn.style.opacity = '1'; }
+}
+
+function buildApptDates() {
+  var row = document.getElementById('apptDateRow');
+  if(!row) return;
+  var days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var today = new Date();
+  var html = '';
+  for(var i = 1; i <= 7; i++) {
+    var d = new Date(today);
+    d.setDate(today.getDate() + i);
+    if(d.getDay() === 0) continue; // Skip Sundays
+    var label = days[d.getDay()] + ', ' + d.getDate() + ' ' + months[d.getMonth()];
+    var val = d.toISOString().split('T')[0];
+    html += '<button class="date-btn" data-date="' + val + '" data-label="' + label + '" onclick="selectApptDate(this)">' + label + '</button>';
+  }
+  row.innerHTML = html;
+  buildApptSlots();
+}
+
+function buildApptSlots() {
+  var grid = document.getElementById('apptSlotGrid');
+  if(!grid) return;
+  var slots = ['10:00 AM','10:30 AM','11:00 AM','11:30 AM','12:00 PM','12:30 PM','2:00 PM','2:30 PM','3:00 PM','3:30 PM','4:00 PM','4:30 PM','5:00 PM','5:30 PM','6:00 PM'];
+  var taken = [2, 5, 8]; // Some slots marked as taken for realism
+  var html = '';
+  slots.forEach(function(s, idx) {
+    var isTaken = taken.indexOf(idx) !== -1;
+    html += '<button class="slot-btn' + (isTaken ? ' taken' : '') + '" ' + (isTaken ? 'disabled' : 'onclick="selectApptSlot(this,\'' + s + '\')"') + '>' + s + '</button>';
+  });
+  grid.innerHTML = html;
+}
+
+function selectApptDate(el) {
+  document.querySelectorAll('.date-btn').forEach(function(b){ b.classList.remove('selected'); });
+  el.classList.add('selected');
+  apptData.date = el.getAttribute('data-label');
+  checkApptStep2();
+}
+
+function selectApptSlot(el, slot) {
+  document.querySelectorAll('.slot-btn').forEach(function(b){ b.classList.remove('selected'); });
+  el.classList.add('selected');
+  apptData.time = slot;
+  checkApptStep2();
+}
+
+function checkApptStep2() {
+  var btn = document.getElementById('apptBtn2');
+  if(btn) {
+    var ready = apptData.date && apptData.time;
+    btn.disabled = !ready;
+    btn.style.opacity = ready ? '1' : '.4';
+  }
+}
+
+function apptNext(step) {
+  // Validate details when moving FROM step 3 (i.e., going TO step 4)
+  if(step === 4) {
+    var name = document.getElementById('apptName').value.trim();
+    var phone = document.getElementById('apptPhone').value.trim();
+    if(!name) { showToast('⚠️ Please enter your full name.'); return; }
+    if(!phone || phone.replace(/\D/g,'').length < 10) { showToast('⚠️ Please enter a valid 10-digit phone number.'); return; }
+    apptData.name = name;
+    apptData.phone = phone;
+    apptData.email = document.getElementById('apptEmail').value.trim();
+    apptData.note = document.getElementById('apptNote').value.trim();
+    // Populate confirmation screen
+    document.getElementById('confSvc').textContent = apptData.service;
+    document.getElementById('confDate').textContent = apptData.date;
+    document.getElementById('confTime').textContent = apptData.time;
+    document.getElementById('confName').textContent = apptData.name;
+    document.getElementById('confPhone').textContent = apptData.phone;
+  }
+  var currentId = 'apptStep' + apptCurrentStep;
+  var nextId = 'apptStep' + step;
+  var cur = document.getElementById(currentId);
+  var nxt = document.getElementById(nextId);
+  if(cur) cur.classList.remove('active');
+  if(nxt) nxt.classList.add('active');
+  apptCurrentStep = step;
+  updateApptProgress(step);
+  // Scroll modal to top
+  var box = document.querySelector('.appt-box');
+  if(box) box.scrollTop = 0;
+}
+
+function apptBack(step) {
+  var currentId = 'apptStep' + apptCurrentStep;
+  var prevId = 'apptStep' + step;
+  var cur = document.getElementById(currentId);
+  var prev = document.getElementById(prevId);
+  if(cur) cur.classList.remove('active');
+  if(prev) prev.classList.add('active');
+  apptCurrentStep = step;
+  updateApptProgress(step);
+}
+
+function updateApptProgress(step) {
+  for(var i = 1; i <= 4; i++) {
+    var dot = document.getElementById('apptProg' + i);
+    if(dot) dot.classList.toggle('done', i <= step);
+  }
+}
+
+function confirmAppt(btn) {
+  btn.textContent = 'Booking...';
+  btn.disabled = true;
+  setTimeout(function(){
+    // Show success step
+    ['apptStep4'].forEach(function(id){
+      var el = document.getElementById(id);
+      if(el) el.classList.remove('active');
+    });
+    var success = document.getElementById('apptSuccess');
+    if(success) success.classList.add('active');
+    // Update progress to all done
+    updateApptProgress(4);
+    showToast('🎉 Appointment booked! Check your WhatsApp for confirmation.');
+  }, 1400);
+}
+
+/* ═══════════════════════════
+   PHASE 4: CAREERS / APPLY MODAL
+═══════════════════════════ */
+function openApplyModal(jobTitle, dept) {
+  document.getElementById('applyJobTitle').textContent = 'Apply — ' + jobTitle;
+  document.getElementById('applyJobDept').textContent = dept + ' · Priyadarshi & Associates';
+  document.getElementById('applyModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeApplyModal() {
+  document.getElementById('applyModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function submitApply(btn) {
+  var name = document.getElementById('apply-name').value.trim();
+  var email = document.getElementById('apply-email').value.trim();
+  var phone = document.getElementById('apply-phone').value.trim();
+  if(!name || !email || !phone) { showToast('⚠️ Please fill in Name, Email, and Phone.'); return; }
+  btn.textContent = '✓ Application Submitted!';
+  btn.style.background = '#22c55e';
+  btn.disabled = true;
+  showToast('🎉 Application received! We\'ll review and respond within 5 business days.');
+  setTimeout(function(){
+    closeApplyModal();
+    btn.textContent = 'Submit Application →';
+    btn.style.background = '';
+    btn.disabled = false;
+    // Reset form
+    ['apply-name','apply-email','apply-phone','apply-qual','apply-cover'].forEach(function(id){
+      var el = document.getElementById(id);
+      if(el) el.value = '';
+    });
+    var exp = document.getElementById('apply-exp');
+    if(exp) exp.value = '';
+  }, 3000);
+}
+
+/* ═══════════════════════════
+   PHASE 4: DOCUMENT CHECKLIST DOWNLOADS
+═══════════════════════════ */
+var CHECKLIST_DATA = {
+  itr: {
+    title: 'ITR Filing Document Checklist',
+    subtitle: 'Priyadarshi & Associates · Chartered Accountants',
+    items: [
+      'COMMON DOCUMENTS:',
+      '✓ PAN Card (mandatory for all)',
+      '✓ Aadhaar Card (linked with PAN)',
+      '✓ Bank account details (all accounts for FY)',
+      '✓ Last year\'s ITR copy (for reference)',
+      '',
+      'FOR SALARIED INDIVIDUALS:',
+      '✓ Form 16 Part A & Part B from employer',
+      '✓ Form 26AS / AIS from IT portal',
+      '✓ Interest certificate from bank (savings/FD)',
+      '✓ Investment proofs: 80C (ELSS, PPF, LIC, NPS)',
+      '✓ 80D: Health insurance premium receipts',
+      '✓ HRA: Rent receipts + landlord PAN (if applicable)',
+      '✓ Home loan statement (principal + interest)',
+      '',
+      'FOR BUSINESS / FREELANCERS:',
+      '✓ P&L statement and Balance Sheet',
+      '✓ GST returns filed (if registered)',
+      '✓ Bank statements for the full year',
+      '✓ TDS certificates (Form 16A)',
+      '✓ Details of advance tax paid',
+      '✓ Depreciation schedule',
+    ]
+  },
+  gst: {
+    title: 'GST Registration Document Checklist',
+    subtitle: 'Priyadarshi & Associates · Chartered Accountants',
+    items: [
+      'FOR PROPRIETORSHIP:',
+      '✓ PAN Card of proprietor',
+      '✓ Aadhaar Card of proprietor',
+      '✓ Passport photo of proprietor',
+      '✓ Business address proof (rent agreement / electricity bill)',
+      '✓ Bank statement / cancelled cheque',
+      '',
+      'FOR PARTNERSHIP / LLP:',
+      '✓ Partnership deed / LLP agreement',
+      '✓ PAN of firm + all partners',
+      '✓ Aadhaar of all partners',
+      '✓ Business address proof',
+      '✓ Bank statement of firm',
+      '',
+      'FOR PRIVATE LIMITED COMPANY:',
+      '✓ Certificate of Incorporation',
+      '✓ MOA and AOA',
+      '✓ PAN of company',
+      '✓ PAN & Aadhaar of all directors',
+      '✓ Board resolution authorizing GST registration',
+      '✓ Registered office address proof',
+      '✓ Company bank statement',
+    ]
+  },
+  company: {
+    title: 'Company Registration Document Checklist',
+    subtitle: 'Priyadarshi & Associates · Chartered Accountants',
+    items: [
+      'FOR ALL DIRECTORS / DESIGNATED PARTNERS:',
+      '✓ PAN Card',
+      '✓ Aadhaar Card',
+      '✓ Passport-size photograph',
+      '✓ Address proof (Aadhaar / Voter ID / Passport)',
+      '✓ Email ID and mobile number (unique per director)',
+      '',
+      'FOR REGISTERED OFFICE:',
+      '✓ Utility bill (electricity/gas) — not older than 2 months',
+      '✓ Rent agreement (if rented)',
+      '✓ NOC from owner if property is rented',
+      '',
+      'ADDITIONAL FOR PVT LTD:',
+      '✓ Proposed company name (3 options)',
+      '✓ Main business objects / activity description',
+      '✓ Proposed share capital and shareholding ratio',
+      '',
+      'ADDITIONAL FOR LLP:',
+      '✓ Proposed LLP name',
+      '✓ Contribution amount from each partner',
+      '✓ Profit sharing ratio',
+    ]
+  },
+  audit: {
+    title: 'Audit Preparation Guide',
+    subtitle: 'Priyadarshi & Associates · Chartered Accountants',
+    items: [
+      'BOOKS OF ACCOUNTS:',
+      '✓ Cash book (daily/monthly)',
+      '✓ Bank book with reconciliation statement',
+      '✓ Sales ledger with invoices',
+      '✓ Purchase ledger with bills',
+      '✓ Journal / general ledger',
+      '✓ Stock register',
+      '',
+      'SUPPORTING DOCUMENTS:',
+      '✓ All sales invoices (GST + non-GST)',
+      '✓ All purchase bills for the year',
+      '✓ Payment vouchers with supporting bills',
+      '✓ Fixed asset register with additions',
+      '✓ Loan agreements and repayment schedules',
+      '✓ Investment documents (FDs, mutual funds)',
+      '',
+      'COMPLIANCE RECORDS:',
+      '✓ GST returns filed (GSTR-1, 3B, Annual)',
+      '✓ TDS challans and returns (24Q, 26Q)',
+      '✓ Advance tax payment challans',
+      '✓ PF & ESI challans and returns',
+      '✓ ROC filings (for companies)',
+    ]
+  },
+  startup: {
+    title: 'Startup Compliance Roadmap',
+    subtitle: 'Priyadarshi & Associates · Chartered Accountants',
+    items: [
+      'MONTH 1-2 (IMMEDIATELY AFTER INCORPORATION):',
+      '✓ GST Registration (if turnover > ₹20L or B2B)',
+      '✓ PAN and TAN of company',
+      '✓ Open current account',
+      '✓ DPIIT Recognition application',
+      '✓ Appointment of statutory auditor',
+      '✓ First board meeting within 30 days',
+      '',
+      'MONTHLY ONGOING:',
+      '✓ GSTR-1: 11th of following month',
+      '✓ GSTR-3B: 20th of following month',
+      '✓ TDS deduction on vendor payments',
+      '✓ TDS challan deposit by 7th of next month',
+      '✓ PF & ESI (if employees > threshold)',
+      '',
+      'QUARTERLY / ANNUAL:',
+      '✓ Advance tax: 15 Jun, 15 Sep, 15 Dec, 15 Mar',
+      '✓ TDS returns: 26Q (quarterly)',
+      '✓ Statutory audit completion',
+      '✓ AOC-4 & MGT-7 (ROC annual filings)',
+      '✓ ITR filing by 31 Oct',
+      '✓ Section 80-IAC exemption claim (if eligible)',
+    ]
+  },
+  nri: {
+    title: 'NRI Tax Filing Guide',
+    subtitle: 'Priyadarshi & Associates · Chartered Accountants',
+    items: [
+      'WHO MUST FILE:',
+      '✓ NRI with Indian income > ₹2.5 lakhs',
+      '✓ NRI with capital gains on Indian property/shares',
+      '✓ NRI with rental income from Indian property',
+      '✓ NRI wanting to claim TDS refund',
+      '',
+      'DOCUMENTS REQUIRED:',
+      '✓ PAN Card',
+      '✓ Passport (to determine residential status)',
+      '✓ Form 26AS / AIS from IT portal',
+      '✓ NRO/NRE bank statements',
+      '✓ TDS certificates (Form 16A, 26QB)',
+      '✓ Property sale deed + purchase deed (for capital gains)',
+      '✓ Rental agreement (for rental income)',
+      '✓ DTAA country of residence tax ID',
+      '',
+      'KEY BENEFITS AVAILABLE:',
+      '✓ DTAA benefit to avoid double taxation',
+      '✓ TDS refund if excess deducted',
+      '✓ Capital gains indexation (old regime)',
+      '✓ Section 54 exemption on property sale',
+    ]
+  }
+};
+
+function downloadChecklist(type) {
+  var data = CHECKLIST_DATA[type];
+  if(!data) return;
+  // Build PDF-like content as a downloadable text file (simulated)
+  var content = data.title + '\n' + data.subtitle + '\n';
+  content += '━'.repeat(50) + '\n\n';
+  data.items.forEach(function(item) { content += item + '\n'; });
+  content += '\n' + '━'.repeat(50) + '\n';
+  content += 'Contact: +91 612 345 6789 | info@priyadarshiassociates.in\n';
+  content += 'Fraser Road, Patna – 800001, Bihar\n';
+  content += '© 2025 Priyadarshi & Associates. All rights reserved.\n';
+
+  var blob = new Blob([content], {type: 'text/plain'});
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  a.href = url;
+  a.download = type + '-checklist-priyadarshi-associates.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  showToast('⬇ Checklist downloaded! Check your Downloads folder.');
+}
+
+/* ═══════════════════════════
+   KEYBOARD SHORTCUTS
+═══════════════════════════ */
+// Careers nav is already handled in nav() via nbMap — no patch needed
+
+// Keyboard: Escape closes modals
+document.addEventListener('keydown', function(e) {
+  if(e.key === 'Escape') {
+    closeApptModal();
+    closeApplyModal();
+    if(chatOpen) toggleChat();
+  }
 });
 </script>
 </body>
